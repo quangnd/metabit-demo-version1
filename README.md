@@ -1,3 +1,9 @@
+### Changes log
+
+- Add draft-v1 branch
+- Change Facebook API to v2.8.
+- Enable Google+ API for Login with Google feature.
+
 ### Tech stacks
 - **Platform:** node
 - **Framework**: express
@@ -21,11 +27,5 @@
 ### Notes
 
 - Mongo Local Database was created automatically at the first time running.
-- Google, Facebook OpenID was registered for testing purpose. (Google OpenID is not working :( )
+- Google, Facebook OpenID was registered for testing purpose.
 - Inspired by Sahat Yalkabov's projects.
-
-
-### Updated
-
-- Change Facebook API to v2.8.
-- Enable Google+ API for Login with Google feature.
