@@ -22,3 +22,4 @@
 
 - Mongo Local Database was created automatically at the first time running.
 - Google, Facebook OpenID was registered for testing purpose. (change this when deploy).
+- Inspired by SahatSahat Yalkabov's projects.

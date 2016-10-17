@@ -1,7 +1,7 @@
 {
-  "name": "royal-wood",
+  "name": "metabit-demo-version1",
   "version": "1.0.0",
-  "description": "My app description",
+  "description": "A application of metabit team",
   "scripts": {
     "build": "gulp build",
     "build:production": "gulp build --production",
