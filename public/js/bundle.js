@@ -649,6 +649,8 @@ function exchangeCodeForToken(_ref4) {
   return new Promise(function (resolve, reject) {
     var data = Object.assign({}, oauthData, config);
 
+    console.log(config.url);
+
     return fetch(config.url, {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
