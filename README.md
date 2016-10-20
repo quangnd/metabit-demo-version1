@@ -1,5 +1,8 @@
 ### Changes log
 
+- Update Home page for testing react-bootstrap component
+- Add react-router-bootstrap
+- Add react-bootstrap
 - Add draft-v1 branch
 - Change Facebook API to v2.8.
 - Enable Google+ API for Login with Google feature.
