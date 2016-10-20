@@ -3784,7 +3784,7 @@ var Home = function (_get__$Component) {
                   { to: { pathname: '/contact' } },
                   _react2.default.createElement(
                     _Button_Component,
-                    { bsStyle: 'btn btn-primary' },
+                    { className: 'btn btn-default' },
                     'View details'
                   )
                 )
@@ -3815,7 +3815,7 @@ var Home = function (_get__$Component) {
                   { to: { pathname: '/contact' } },
                   _react2.default.createElement(
                     _Button_Component2,
-                    { bsStyle: 'btn btn-success' },
+                    { className: 'btn btn-success' },
                     'View details'
                   )
                 )
@@ -3846,7 +3846,7 @@ var Home = function (_get__$Component) {
                   { to: { pathname: '/contact' } },
                   _react2.default.createElement(
                     _Button_Component3,
-                    { bsStyle: 'btn btn-warning' },
+                    { className: 'btn btn-danger' },
                     'View details'
                   )
                 )

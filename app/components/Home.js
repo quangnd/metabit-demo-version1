@@ -20,7 +20,7 @@ class Home extends React.Component {
                
 
                 <LinkContainer to={{ pathname: '/contact' }}>
-                  <Button bsStyle="btn btn-primary">View details</Button>
+                  <Button className="btn btn-default">View details</Button>
                 </LinkContainer>
               </div>
             </div>
@@ -33,7 +33,7 @@ class Home extends React.Component {
                   mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
                   mollis euismod. Donec sed odio dui.</p>
                 <LinkContainer to={{ pathname: '/contact' }}>
-                  <Button bsStyle="btn btn-success">View details</Button>
+                  <Button className="btn btn-success">View details</Button>
                 </LinkContainer>
               </div>
             </div>
@@ -46,7 +46,7 @@ class Home extends React.Component {
                   mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
                   mollis euismod. Donec sed odio dui.</p>
                 <LinkContainer to={{ pathname: '/contact' }}>
-                  <Button bsStyle="btn btn-warning">View details</Button>
+                  <Button className="btn btn-danger">View details</Button>
                 </LinkContainer>
               </div>
             </div>
