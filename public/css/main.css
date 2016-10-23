@@ -5937,3 +5937,39 @@ textarea {
   border-radius: 2px;
   letter-spacing: 0.2em;
   text-transform: uppercase; }
+
+/*Custom by quangnd*/
+.trademark {
+  font-weight: 600;
+  margin: -10px 0 15px 0;
+  color: #BBB; }
+
+.question-wrapper {
+  padding: 30px 0;
+  border: 1px solid #d8d6d6;
+  margin-top: -1px; }
+
+.question-wrapper.set1 {
+  display: block; }
+
+.question-wrapper .statement {
+  font-weight: 600;
+  padding: 0 15px; }
+
+.question-wrapper .answer {
+  text-align: center;
+  margin-top: 20px;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center; }
+
+.radio-inline {
+  text-align: center;
+  margin-top: 0;
+  margin-left: 30px; }
+
+.test-submit-wrapper {
+  margin-top: 10px; }

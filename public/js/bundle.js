@@ -3476,6 +3476,8 @@ var Header = function (_get__$Component) {
 
       var _Link_Component4 = _get__('Link');
 
+      var _Link_Component5 = _get__('Link');
+
       return _react2.default.createElement(
         'nav',
         { className: 'navbar navbar-default navbar-static-top' },
@@ -3525,6 +3527,15 @@ var Header = function (_get__$Component) {
                   _Link_Component4,
                   { to: '/contact', activeStyle: active },
                   'Contact'
+                )
+              ),
+              _react2.default.createElement(
+                'li',
+                null,
+                _react2.default.createElement(
+                  _Link_Component5,
+                  { to: '/questions', activeStyle: active },
+                  'Question'
                 )
               )
             ),
@@ -4396,6 +4407,8 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactBootstrap = require('react-bootstrap');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -4416,13 +4429,310 @@ var Questions = function (_get__$Component) {
   _createClass(Questions, [{
     key: 'render',
     value: function render() {
+      var progressBarVal = 10;
+
+      var _ProgressBar_Component = _get__('ProgressBar');
+
+      var _FormGroup_Component = _get__('FormGroup');
+
+      var _Radio_Component = _get__('Radio');
+
+      var _Radio_Component2 = _get__('Radio');
+
+      var _Radio_Component3 = _get__('Radio');
+
+      var _Radio_Component4 = _get__('Radio');
+
+      var _Radio_Component5 = _get__('Radio');
+
+      var _Radio_Component6 = _get__('Radio');
+
+      var _Radio_Component7 = _get__('Radio');
+
+      var _FormGroup_Component2 = _get__('FormGroup');
+
+      var _Radio_Component8 = _get__('Radio');
+
+      var _Radio_Component9 = _get__('Radio');
+
+      var _Radio_Component10 = _get__('Radio');
+
+      var _Radio_Component11 = _get__('Radio');
+
+      var _Radio_Component12 = _get__('Radio');
+
+      var _Radio_Component13 = _get__('Radio');
+
+      var _Radio_Component14 = _get__('Radio');
+
+      var _FormGroup_Component3 = _get__('FormGroup');
+
+      var _Radio_Component15 = _get__('Radio');
+
+      var _Radio_Component16 = _get__('Radio');
+
+      var _Radio_Component17 = _get__('Radio');
+
+      var _Radio_Component18 = _get__('Radio');
+
+      var _Radio_Component19 = _get__('Radio');
+
+      var _Radio_Component20 = _get__('Radio');
+
+      var _Radio_Component21 = _get__('Radio');
+
       return _react2.default.createElement(
         'div',
-        null,
+        { className: 'container test-component' },
         _react2.default.createElement(
-          'p',
-          null,
-          'Question Page'
+          'div',
+          { className: 'row' },
+          _react2.default.createElement(
+            'div',
+            { className: 'col-md-12 personality-test' },
+            _react2.default.createElement(
+              'div',
+              { className: 'visible-lg-block' },
+              _react2.default.createElement(
+                'div',
+                { className: 'test-title' },
+                _react2.default.createElement(
+                  'h1',
+                  null,
+                  'Personality test'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'trademark' },
+                'Based on Metabit Explorer',
+                _react2.default.createElement(
+                  'sup',
+                  null,
+                  '\xAE'
+                )
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                'Three things to know before taking the test:'
+              ),
+              _react2.default.createElement(
+                'ol',
+                null,
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  'Takes less than 12 minutes.'
+                ),
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  'Answer honestly, even if you don\u2019t like the answer.'
+                ),
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  'Try not to leave any \u201Cneutral\u201D answers.'
+                )
+              )
+            ),
+            _react2.default.createElement(_ProgressBar_Component, { now: progressBarVal, label: progressBarVal + '%' }),
+            _react2.default.createElement(
+              'form',
+              { method: 'POST', action: '', id: 'test-form' },
+              _react2.default.createElement(
+                'div',
+                { className: 'question-wrapper set1' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'statement' },
+                  'B\u1EA1n th\u1EA5y kh\xF3 \u0111\u1EC3 giao ti\u1EBFp v\u1EDBi ng\u01B0\u1EDDi kh\xE1c'
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'row answer' },
+                  _react2.default.createElement(
+                    _FormGroup_Component,
+                    null,
+                    _react2.default.createElement(
+                      _Radio_Component,
+                      { name: 'answerOptions', inline: true },
+                      '-3'
+                    ),
+                    ' ',
+                    _react2.default.createElement(
+                      _Radio_Component2,
+                      { name: 'answerOptions', inline: true },
+                      '-2'
+                    ),
+                    ' ',
+                    _react2.default.createElement(
+                      _Radio_Component3,
+                      { name: 'answerOptions', inline: true },
+                      '-1'
+                    ),
+                    _react2.default.createElement(
+                      _Radio_Component4,
+                      { name: 'answerOptions', inline: true },
+                      '0'
+                    ),
+                    ' ',
+                    _react2.default.createElement(
+                      _Radio_Component5,
+                      { name: 'answerOptions', inline: true },
+                      '1'
+                    ),
+                    ' ',
+                    _react2.default.createElement(
+                      _Radio_Component6,
+                      { name: 'answerOptions', inline: true },
+                      '2'
+                    ),
+                    _react2.default.createElement(
+                      _Radio_Component7,
+                      { name: 'answerOptions', inline: true },
+                      '3'
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'question-wrapper set1' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'statement' },
+                  'B\u1EA1n r\u1EA5t hi\u1EBFm khi ch\u1EE7 \u0111\u1ED9ng b\u1EAFt chuy\u1EC7n'
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'row answer' },
+                  _react2.default.createElement(
+                    _FormGroup_Component2,
+                    null,
+                    _react2.default.createElement(
+                      _Radio_Component8,
+                      { name: 'answerOptions', inline: true },
+                      '-3'
+                    ),
+                    ' ',
+                    _react2.default.createElement(
+                      _Radio_Component9,
+                      { name: 'answerOptions', inline: true },
+                      '-2'
+                    ),
+                    ' ',
+                    _react2.default.createElement(
+                      _Radio_Component10,
+                      { name: 'answerOptions', inline: true },
+                      '-1'
+                    ),
+                    _react2.default.createElement(
+                      _Radio_Component11,
+                      { name: 'answerOptions', inline: true },
+                      '0'
+                    ),
+                    ' ',
+                    _react2.default.createElement(
+                      _Radio_Component12,
+                      { name: 'answerOptions', inline: true },
+                      '1'
+                    ),
+                    ' ',
+                    _react2.default.createElement(
+                      _Radio_Component13,
+                      { name: 'answerOptions', inline: true },
+                      '2'
+                    ),
+                    _react2.default.createElement(
+                      _Radio_Component14,
+                      { name: 'answerOptions', inline: true },
+                      '3'
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'question-wrapper set1' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'statement' },
+                  'B\u1EA1n lu\xF4n g\u1EB7p kh\xF3 kh\u0103n trong vi\u1EC7c tha th\u1EE9'
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'row answer' },
+                  _react2.default.createElement(
+                    _FormGroup_Component3,
+                    null,
+                    _react2.default.createElement(
+                      _Radio_Component15,
+                      { name: 'answerOptions', inline: true },
+                      '-3'
+                    ),
+                    ' ',
+                    _react2.default.createElement(
+                      _Radio_Component16,
+                      { name: 'answerOptions', inline: true },
+                      '-2'
+                    ),
+                    ' ',
+                    _react2.default.createElement(
+                      _Radio_Component17,
+                      { name: 'answerOptions', inline: true },
+                      '-1'
+                    ),
+                    _react2.default.createElement(
+                      _Radio_Component18,
+                      { name: 'answerOptions', inline: true },
+                      '0'
+                    ),
+                    ' ',
+                    _react2.default.createElement(
+                      _Radio_Component19,
+                      { name: 'answerOptions', inline: true },
+                      '1'
+                    ),
+                    ' ',
+                    _react2.default.createElement(
+                      _Radio_Component20,
+                      { name: 'answerOptions', inline: true },
+                      '2'
+                    ),
+                    _react2.default.createElement(
+                      _Radio_Component21,
+                      { name: 'answerOptions', inline: true },
+                      '3'
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'row test-submit-wrapper' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'col-md-12' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'submit_wrapper setnext' },
+                    _react2.default.createElement(
+                      'button',
+                      { className: 'btn btn-action', id: 'nextbut', type: 'button' },
+                      _react2.default.createElement(
+                        'span',
+                        null,
+                        'NEXT\xA0'
+                      ),
+                      _react2.default.createElement('span', { className: 'fa fa-caret-right' })
+                    )
+                  )
+                )
+              )
+            )
+          )
         )
       );
     }
@@ -4459,6 +4769,15 @@ function _get__(variableName) {
 
 function _get_original__(variableName) {
   switch (variableName) {
+    case 'ProgressBar':
+      return _reactBootstrap.ProgressBar;
+
+    case 'FormGroup':
+      return _reactBootstrap.FormGroup;
+
+    case 'Radio':
+      return _reactBootstrap.Radio;
+
     case 'React':
       return _react2.default;
 
@@ -4562,7 +4881,7 @@ exports.__set__ = _set__;
 exports.__ResetDependency__ = _reset__;
 exports.__RewireAPI__ = _RewireAPI__;
 
-},{"react":524}],17:[function(require,module,exports){
+},{"react":524,"react-bootstrap":307}],17:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
