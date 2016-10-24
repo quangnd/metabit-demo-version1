@@ -9,7 +9,12 @@ import Signup from './components/Account/Signup';
 import Profile from './components/Account/Profile';
 import Forgot from './components/Account/Forgot';
 import Reset from './components/Account/Reset';
+<<<<<<< HEAD
 import Questions from './components/Quiz/Questions';
+=======
+import Test from './components/Test';
+
+>>>>>>> origin/master
 
 export default function getRoutes(store) {
   const ensureAuthenticated = (nextState, replace) => {
@@ -31,6 +36,7 @@ export default function getRoutes(store) {
     <Route path="/" component={App}>
       <IndexRoute component={Home} onLeave={clearMessages}/>
       <Route path="/contact" component={Contact} onLeave={clearMessages}/>
+      <Route path="/test" component={Test} />
       <Route path="/login" component={Login} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>
       <Route path="/signup" component={Signup} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>
       <Route path="/account" component={Profile} onEnter={ensureAuthenticated} onLeave={clearMessages}/>
