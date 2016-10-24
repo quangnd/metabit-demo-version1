@@ -9,12 +9,12 @@ import Signup from './components/Account/Signup';
 import Profile from './components/Account/Profile';
 import Forgot from './components/Account/Forgot';
 import Reset from './components/Account/Reset';
-<<<<<<< HEAD
+
 import Questions from './components/Quiz/Questions';
-=======
+
 import Test from './components/Test';
 
->>>>>>> origin/master
+
 
 export default function getRoutes(store) {
   const ensureAuthenticated = (nextState, replace) => {

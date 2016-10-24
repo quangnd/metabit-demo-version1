@@ -5938,7 +5938,6 @@ textarea {
   letter-spacing: 0.2em;
   text-transform: uppercase; }
 
-<<<<<<< HEAD
 /*Custom by quangnd*/
 .trademark {
   font-weight: 600;
@@ -5975,7 +5974,7 @@ textarea {
 .test-submit-wrapper {
   margin-top: 10px;
   margin-bottom: 10px; }
-=======
+
 .intro-header {
   padding: 100px; }
 
@@ -5984,4 +5983,3 @@ textarea {
 
 .body-type .header {
   padding: 30px; }
->>>>>>> origin/master
