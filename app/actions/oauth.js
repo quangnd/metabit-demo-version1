@@ -29,9 +29,9 @@ export function facebookLogin() {
 // Sign in with Google
 export function googleLogin() {
   const google = {
-    url: 'http://localhost:3000/auth/google',
+    url: 'https://metabit-alpha.herokuapp.com/auth/google',
     clientId: '876806019079-morf1t6esaudp3ru0leva53cqmkpt5od.apps.googleusercontent.com',
-    redirectUri: 'http://localhost:3000/auth/google/callback',
+    redirectUri: 'https://metabit-alpha.herokuapp.com/auth/google/callback',
     authorizationUrl: 'https://accounts.google.com/o/oauth2/auth',
     scope: 'openid profile email',
     width: 452,
