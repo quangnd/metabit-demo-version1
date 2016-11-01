@@ -5941,11 +5941,13 @@ textarea {
 /*Custom by quangnd*/
 .trademark {
   font-weight: 600;
-  margin: -10px 0 15px 0;
+  margin: -10px 0 20px 0;
   color: #BBB; }
 
 .question-wrapper {
-  padding: 30px 0;
+  font-size: 25px;
+  text-align: center;
+  padding: 20px 0;
   border: 1px solid #d8d6d6;
   margin-top: -1px; }
 
@@ -5953,8 +5955,7 @@ textarea {
   display: block; }
 
 .question-wrapper .statement {
-  font-weight: 600;
-  padding: 0 15px; }
+  font-weight: 600; }
 
 .question-wrapper .answer {
   text-align: center;
@@ -5966,20 +5967,45 @@ textarea {
   -webkit-box-align: center;
           align-items: center; }
 
+.test-component .progress {
+  margin-top: 15px;
+  margin-bottom: 10px; }
+
 .radio-inline {
   text-align: center;
   margin-top: 0;
   margin-left: 30px; }
 
 .test-submit-wrapper {
-  margin-top: 10px;
-  margin-bottom: 10px; }
+  margin-top: 12px;
+  margin-bottom: 50px; }
 
 .intro-header {
-  padding: 100px; }
+  padding: 120px; }
 
 .intro-header button {
   padding: 60px; }
 
 .body-type .header {
   padding: 30px; }
+
+.instruction {
+  padding-top: 15px; }
+
+.our-team {
+  padding: 0px 0px 50px 0; }
+
+.about-test {
+  padding: 50px 0px 0px 0px; }
+
+.about-test p {
+  padding: 20px 0 0 0; }
+
+.row {
+  margin-bottom: 15px; }
+
+.personality-card {
+  text-align: center; }
+
+.personality-card h3 {
+  padding-bottom: 15px; }

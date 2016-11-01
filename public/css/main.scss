@@ -33,6 +33,7 @@ $panel-body-padding: 30px;
 @import url("//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CRaleway:100,300,600,700,800");
 @import "vendor/bootstrap";
 
+
 // Scaffolding
 // -------------------------
 
@@ -256,12 +257,19 @@ textarea {
 /*Custom by quangnd*/
  .trademark {
   font-weight: 600;
-  margin: -10px 0 15px 0;
+  margin: -10px 0 20px 0;
   color: #BBB;
+  
+}
+
+.test-title{
+  
 }
 
 .question-wrapper{
-   padding: 30px 0;
+  font-size:  25px;
+  text-align: center;
+  padding: 20px 0;
   border: 1px solid #d8d6d6;
   margin-top: -1px;
 }
@@ -273,7 +281,7 @@ textarea {
 .question-wrapper .statement {
  
   font-weight: 600;
-  padding: 0 15px;
+  
 }
 
 .question-wrapper .answer {
@@ -283,6 +291,12 @@ textarea {
   display: flex;
   -ms-flex-align: center;
   align-items: center;
+  
+}
+
+.test-component .progress{
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 .radio-inline {
@@ -292,14 +306,15 @@ textarea {
 }
 
 .test-submit-wrapper {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 12px;
+  margin-bottom: 50px;
 }
 
 
 
+
 .intro-header {
-  padding: 100px;
+  padding: 120px;
 }
 
 
@@ -309,7 +324,39 @@ textarea {
 
 
 
+
+
 .body-type .header{
   padding: 30px;
 }
 
+.instruction {
+  padding-top: 15px;
+}
+
+.our-team {
+  padding: 0px 0px 50px 0;
+}
+
+.about-test{
+  padding: 50px 0px 0px 0px;
+}
+
+.about-test p{
+  padding: 20px 0 0 0;
+}
+
+
+.row{
+   margin-bottom: 15px;
+}
+
+.personality-card {
+  text-align:center;
+}
+
+
+
+.personality-card h3 {
+  padding-bottom: 15px;
+}

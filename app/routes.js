@@ -9,6 +9,8 @@ import Signup from './components/Account/Signup';
 import Profile from './components/Account/Profile';
 import Forgot from './components/Account/Forgot';
 import Reset from './components/Account/Reset';
+import Result from './components/Quiz/Result';
+
 
 import Questions from './components/Quiz/Questions';
 
@@ -37,6 +39,7 @@ export default function getRoutes(store) {
       <IndexRoute component={Home} onLeave={clearMessages}/>
       <Route path="/contact" component={Contact} onLeave={clearMessages}/>
       <Route path="/test" component={Test} />
+      <Route path="/result" component={Result} />
       <Route path="/login" component={Login} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>
       <Route path="/signup" component={Signup} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>
       <Route path="/account" component={Profile} onEnter={ensureAuthenticated} onLeave={clearMessages}/>
