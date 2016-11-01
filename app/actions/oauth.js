@@ -7,9 +7,9 @@ import { browserHistory } from 'react-router';
 // Sign in with Facebook
 export function facebookLogin() {
   const facebook = {
-    url: 'http://localhost:3000/auth/facebook',
+    url: 'https://metabit-alpha.herokuapp.com/auth/facebook',
     clientId: '204065740026797',
-    redirectUri: 'http://localhost:3000/auth/facebook/callback',
+    redirectUri: 'https://metabit-alpha.herokuapp.com/auth/facebook/callback',
     authorizationUrl: 'https://www.facebook.com/v2.8/dialog/oauth',
     scope: 'email,user_location',
     width: 580,
@@ -30,7 +30,7 @@ export function facebookLogin() {
 export function googleLogin() {
   const google = {
     url: 'https://metabit-alpha.herokuapp.com/auth/google',
-    clientId: '876806019079-morf1t6esaudp3ru0leva53cqmkpt5od.apps.googleusercontent.com',
+    clientId: '876806019079-hrstv4jbed3aukhd2d73hs1nue3dro65.apps.googleusercontent.com',
     redirectUri: 'https://metabit-alpha.herokuapp.com/auth/google/callback',
     authorizationUrl: 'https://accounts.google.com/o/oauth2/auth',
     scope: 'openid profile email',
