@@ -11,7 +11,8 @@
     "test": "npm run test:client && npm run test:server",
     "test:client": "mocha test/client --recursive --compilers js:babel-register",
     "test:server": "mocha test/server --recursive --compilers js:babel-register",
-    "watch": "gulp"
+    "watch": "gulp",
+    "hot-reloading": "node_modules/.bin/watchify app/main.js -t babelify -p livereactload -o public/js/bundle.js"
   },
   "dependencies": {
     "async": "^1.5.2",
@@ -32,6 +33,7 @@
     "gulp-autoprefixer": "^3.1.0",
     "gulp-csso": "^1.1.0",
     "gulp-if": "^2.0.0",
+    "gulp-livereload": "^3.8.1",
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^1.6.0",
@@ -62,13 +64,17 @@
     "yargs": "^4.3.2"
   },
   "devDependencies": {
+    "babel-plugin-react-transform": "^2.0.2",
     "babel-plugin-rewire": "1.0.0-rc-3",
     "babel-register": "^6.8.0",
     "chai": "^3.5.0",
     "enzyme": "^2.3.0",
     "fetch-mock": "3.0.2",
+    "livereactload": "^3.1.0",
     "mocha": "^2.4.5",
+    "nodemon": "^1.11.0",
     "react-addons-test-utils": "^15.0.2",
+    "react-proxy": "^1.1.8",
     "redux-mock-store": "^1.0.2",
     "sinon": "^1.17.3",
     "sinon-chai": "^2.8.0",
