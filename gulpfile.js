@@ -13,7 +13,6 @@ var buffer = require('vinyl-buffer');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 var plumber = require('gulp-plumber');
-var nodemon = require('nodemon');
 var livereload = require('gulp-livereload');
 
 gulp.task('sass', function() {
@@ -65,14 +64,6 @@ gulp.task('watch', function() {
   livereload.listen();
   gulp.watch('public/css/**/*.scss', ['sass']);
 });
-
-gulp.task("watch:server", function() {
-  nodemon({ script: "server.js", ext: "js", ignore: ["gulpfile.js", "bundle.js", "node_modules/*"] })
-    .on("change", function () {})
-    .on("restart", function () {
-      console.log("Server restarted")
-    })
-})
 
 gulp.task('build', ['sass', 'react']);
 gulp.task('default', ['build', 'watch', 'watchify']);
