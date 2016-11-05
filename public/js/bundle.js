@@ -553,9 +553,9 @@ function oauth1(config, dispatch) {
 }
 
 function openPopup(_ref) {
-  var url = _ref.url,
-      config = _ref.config,
-      dispatch = _ref.dispatch;
+  var url = _ref.url;
+  var config = _ref.config;
+  var dispatch = _ref.dispatch;
 
   return new Promise(function (resolve, reject) {
     var width = config.width || 500;
@@ -577,9 +577,9 @@ function openPopup(_ref) {
 }
 
 function getRequestToken(_ref2) {
-  var window = _ref2.window,
-      config = _ref2.config,
-      dispatch = _ref2.dispatch;
+  var window = _ref2.window;
+  var config = _ref2.config;
+  var dispatch = _ref2.dispatch;
 
   return new Promise(function (resolve, reject) {
     return fetch(config.url, {
@@ -599,10 +599,10 @@ function getRequestToken(_ref2) {
 }
 
 function pollPopup(_ref3) {
-  var window = _ref3.window,
-      config = _ref3.config,
-      requestToken = _ref3.requestToken,
-      dispatch = _ref3.dispatch;
+  var window = _ref3.window;
+  var config = _ref3.config;
+  var requestToken = _ref3.requestToken;
+  var dispatch = _ref3.dispatch;
 
   return new Promise(function (resolve, reject) {
     var redirectUri = _get__('url').parse(config.redirectUri);
@@ -648,11 +648,11 @@ function pollPopup(_ref3) {
 }
 
 function exchangeCodeForToken(_ref4) {
-  var oauthData = _ref4.oauthData,
-      config = _ref4.config,
-      window = _ref4.window,
-      interval = _ref4.interval,
-      dispatch = _ref4.dispatch;
+  var oauthData = _ref4.oauthData;
+  var config = _ref4.config;
+  var window = _ref4.window;
+  var interval = _ref4.interval;
+  var dispatch = _ref4.dispatch;
 
   return new Promise(function (resolve, reject) {
     var data = Object.assign({}, oauthData, config);
@@ -683,11 +683,11 @@ function exchangeCodeForToken(_ref4) {
 }
 
 function signIn(_ref5) {
-  var token = _ref5.token,
-      user = _ref5.user,
-      window = _ref5.window,
-      interval = _ref5.interval,
-      dispatch = _ref5.dispatch;
+  var token = _ref5.token;
+  var user = _ref5.user;
+  var window = _ref5.window;
+  var interval = _ref5.interval;
+  var dispatch = _ref5.dispatch;
 
   return new Promise(function (resolve, reject) {
     dispatch({
@@ -702,8 +702,8 @@ function signIn(_ref5) {
 }
 
 function closePopup(_ref6) {
-  var window = _ref6.window,
-      interval = _ref6.interval;
+  var window = _ref6.window;
+  var interval = _ref6.interval;
 
   return new Promise(function (resolve, reject) {
     clearInterval(interval);
@@ -1245,7 +1245,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-  filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/Account/Forgot.js',
+  filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/Account/Forgot.js',
   components: _components,
   locals: [],
   imports: [_react3.default]
@@ -1533,7 +1533,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-  filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/Account/Login.js',
+  filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/Account/Login.js',
   components: _components,
   locals: [],
   imports: [_react3.default]
@@ -1921,7 +1921,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-  filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/Account/Profile.js',
+  filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/Account/Profile.js',
   components: _components,
   locals: [],
   imports: [_react3.default]
@@ -2493,7 +2493,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-  filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/Account/Reset.js',
+  filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/Account/Reset.js',
   components: _components,
   locals: [],
   imports: [_react3.default]
@@ -2788,7 +2788,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-  filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/Account/Signup.js',
+  filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/Account/Signup.js',
   components: _components,
   locals: [],
   imports: [_react3.default]
@@ -3184,7 +3184,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-  filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/App.js',
+  filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/App.js',
   components: _components,
   locals: [],
   imports: [_react3.default]
@@ -3407,7 +3407,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-  filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/Contact.js',
+  filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/Contact.js',
   components: _components,
   locals: [],
   imports: [_react3.default]
@@ -3746,7 +3746,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-  filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/Footer.js',
+  filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/Footer.js',
   components: _components,
   locals: [],
   imports: [_react3.default]
@@ -3957,7 +3957,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-  filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/Header.js',
+  filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/Header.js',
   components: _components,
   locals: [],
   imports: [_react3.default]
@@ -3987,13 +3987,11 @@ var Header = _wrapComponent('Header')(function (_get__$Component) {
   }, {
     key: 'render',
     value: function render() {
-      var active = { borderBottomColor: '#3f51b5' };
+      var active = { borderBottomColor: 'white' };
 
       var _Link_Component = _get__('Link');
 
       var _Link_Component2 = _get__('Link');
-
-      var _Link_Component3 = _get__('Link');
 
       var rightNav = this.props.token ? _react3.default.createElement(
         'ul',
@@ -4045,15 +4043,6 @@ var Header = _wrapComponent('Header')(function (_get__$Component) {
             { to: '/login', activeStyle: active },
             'Log in'
           )
-        ),
-        _react3.default.createElement(
-          'li',
-          null,
-          _react3.default.createElement(
-            _Link_Component3,
-            { to: '/signup', activeStyle: active },
-            'Sign up'
-          )
         )
       );
 
@@ -4061,9 +4050,9 @@ var Header = _wrapComponent('Header')(function (_get__$Component) {
 
       var _IndexLink_Component2 = _get__('IndexLink');
 
-      var _Link_Component4 = _get__('Link');
+      var _Link_Component3 = _get__('Link');
 
-      var _Link_Component5 = _get__('Link');
+      var _Link_Component4 = _get__('Link');
 
       return _react3.default.createElement(
         'nav',
@@ -4094,7 +4083,7 @@ var Header = _wrapComponent('Header')(function (_get__$Component) {
           ),
           _react3.default.createElement(
             'div',
-            { id: 'navbar', className: 'navbar-collapse collapse' },
+            { id: 'navbar', className: 'navbar-collapse collapse navbar-right' },
             _react3.default.createElement(
               'ul',
               { className: 'nav navbar-nav' },
@@ -4111,7 +4100,7 @@ var Header = _wrapComponent('Header')(function (_get__$Component) {
                 'li',
                 null,
                 _react3.default.createElement(
-                  _Link_Component4,
+                  _Link_Component3,
                   { to: '/questions', activeStyle: active },
                   'Personality Test'
                 )
@@ -4120,7 +4109,7 @@ var Header = _wrapComponent('Header')(function (_get__$Component) {
                 'li',
                 null,
                 _react3.default.createElement(
-                  _Link_Component5,
+                  _Link_Component4,
                   { to: '/contact', ativeStyle: active },
                   'About Us'
                 )
@@ -4336,7 +4325,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-  filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/Home.js',
+  filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/Home.js',
   components: _components,
   locals: [],
   imports: [_react3.default]
@@ -4380,24 +4369,91 @@ var Home = _wrapComponent('Home')(function (_get__$Component) {
               'div',
               { className: 'col-sm-12 text-center' },
               _react3.default.createElement(
-                'h1',
-                { className: 'header' },
-                'Personality Test'
+                'div',
+                { className: 'col-sm-6 col-sm-offset-1' },
+                _react3.default.createElement('img', { src: 'images/brand.png', className: 'img-responsive center-block' })
               ),
               _react3.default.createElement(
-                'p',
-                null,
-                'Let\'s find your personality type!'
-              ),
-              _react3.default.createElement(
-                _LinkContainer_Component,
-                { to: { pathname: '/questions' } },
+                'div',
+                { className: 'col-sm-5 metabit-cto' },
                 _react3.default.createElement(
-                  _Button_Component,
-                  { className: 'btn btn-danger' },
-                  'Take the Test'
+                  'h1',
+                  { className: 'header-text' },
+                  'Metabit Test'
+                ),
+                _react3.default.createElement(
+                  _LinkContainer_Component,
+                  { to: { pathname: '/questions' } },
+                  _react3.default.createElement(
+                    _Button_Component,
+                    { className: 'btn cto-button' },
+                    'Take the Test',
+                    _react3.default.createElement('i', { className: 'fa fa-hand-pointer-o click-icon' })
+                  )
+                ),
+                _react3.default.createElement(
+                  'p',
+                  { className: 'header-subtext' },
+                  'Explore yourself !'
                 )
               )
+            )
+          )
+        ),
+        _react3.default.createElement(
+          'div',
+          { className: 'row' },
+          _react3.default.createElement(
+            'div',
+            { className: 'col-sm-12' },
+            _react3.default.createElement(
+              'p',
+              { className: 'text-center metabit-headline' },
+              '"Solving Problems by knowing yourself !"'
+            )
+          )
+        ),
+        _react3.default.createElement(
+          'div',
+          { className: 'row text-center metabit-types' },
+          _react3.default.createElement(
+            'div',
+            { className: 'col-sm-2 col-sm-offset-2' },
+            _react3.default.createElement('img', { src: 'images/monster_01.png', className: 'img-responsive center-block' }),
+            _react3.default.createElement(
+              'h4',
+              null,
+              'Artists'
+            )
+          ),
+          _react3.default.createElement(
+            'div',
+            { className: 'col-sm-2 ' },
+            _react3.default.createElement('img', { src: 'images/monster_02.png', className: 'img-responsive center-block' }),
+            _react3.default.createElement(
+              'h4',
+              null,
+              'Rationals'
+            )
+          ),
+          _react3.default.createElement(
+            'div',
+            { className: 'col-sm-2 ' },
+            _react3.default.createElement('img', { src: 'images/monster_03.png', className: 'img-responsive center-block' }),
+            _react3.default.createElement(
+              'h4',
+              null,
+              'Idealists'
+            )
+          ),
+          _react3.default.createElement(
+            'div',
+            { className: 'col-sm-2' },
+            _react3.default.createElement('img', { src: 'images/monster_04.png', className: 'img-responsive center-block' }),
+            _react3.default.createElement(
+              'h4',
+              null,
+              'Guardians'
             )
           )
         ),
@@ -4615,7 +4671,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-  filename: "/Users/mun/Metabit project/metabit-demo-version1/app/components/Messages.js",
+  filename: "/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/Messages.js",
   components: _components,
   locals: [],
   imports: [_react3.default]
@@ -5007,7 +5063,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-  filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/Quiz/Questions.js',
+  filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/Quiz/Questions.js',
   components: _components,
   locals: [],
   imports: [_react3.default]
@@ -5564,7 +5620,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-    filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/Quiz/Result.js',
+    filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/Quiz/Result.js',
     components: _components,
     locals: [],
     imports: [_react3.default]
@@ -5893,7 +5949,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-  filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/Test.js',
+  filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/Test.js',
   components: _components,
   locals: [],
   imports: [_react3.default]
@@ -7418,14 +7474,14 @@ var _symbol = require("../core-js/symbol");
 
 var _symbol2 = _interopRequireDefault(_symbol);
 
-var _typeof = typeof _symbol2.default === "function" && typeof _iterator2.default === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? "symbol" : typeof obj; };
+var _typeof = typeof _symbol2.default === "function" && typeof _iterator2.default === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default ? "symbol" : typeof obj; };
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = typeof _symbol2.default === "function" && _typeof(_iterator2.default) === "symbol" ? function (obj) {
   return typeof obj === "undefined" ? "undefined" : _typeof(obj);
 } : function (obj) {
-  return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof(obj);
+  return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof(obj);
 };
 },{"../core-js/symbol":36,"../core-js/symbol/iterator":37}],44:[function(require,module,exports){
 /*!
@@ -18089,7 +18145,7 @@ module.exports = toString;
 
 },{"./_baseToString":263}],358:[function(require,module,exports){
 //! moment.js
-//! version : 2.15.2
+//! version : 2.15.1
 //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
 //! license : MIT
 //! momentjs.com
@@ -18920,7 +18976,7 @@ module.exports = toString;
 
     // LOCALES
 
-    var MONTHS_IN_FORMAT = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/;
+    var MONTHS_IN_FORMAT = /D[oD]?(\[[^\[\]]*\]|\s+)+MMMM?/;
     var defaultLocaleMonths = 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_');
     function localeMonths (m, format) {
         if (!m) {
@@ -22285,7 +22341,7 @@ module.exports = toString;
     // Side effect imports
 
 
-    utils_hooks__hooks.version = '2.15.2';
+    utils_hooks__hooks.version = '2.15.1';
 
     setHookCallback(local__createLocal);
 

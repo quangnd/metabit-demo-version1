@@ -1,3 +1,12 @@
+//*Metabit Color Pallet *//
+
+$metabit-blue: #286EBB;
+$dark-blue: #13293D;
+$orange: #FF8B00;
+
+
+
+
 $body-bg: #ffffff;
 $line-height-base: 1.57142857;
 $link-color: #1d7cf4;
@@ -19,7 +28,7 @@ $alert-danger-text: #b61b17;
 $alert-danger-bg: #ffcdd2;
 
 $navbar-height: 56px;
-$navbar-default-bg: #fff;
+$navbar-default-bg: $metabit-blue;
 $navbar-default-border: #e0e0e0;
 $navbar-default-color: #757575;
 $navbar-default-link-color: #262626;
@@ -75,7 +84,7 @@ footer {
   padding-bottom: ($navbar-padding-vertical - 3);
   transition: all 0.25s;
   &:hover {
-    border-bottom-color: #bdbdbd;
+    border-bottom-color: $dark-blue;
   }
   &.navbar-avatar {
     padding-top: $navbar-padding-vertical - 4.5;
@@ -89,7 +98,7 @@ footer {
 }
 
 .navbar-default .navbar-nav > li.active > a {
-  border-bottom-color: #3f51b5;
+  border-bottom-color: white;
 }
 
 // Panels
@@ -311,10 +320,11 @@ textarea {
 }
 
 
-
+//*Jumbo*//
 
 .intro-header {
-  padding: 120px;
+  padding: 20px 10px 80px 10px;
+  background: $dark-blue;
 }
 
 
@@ -322,9 +332,48 @@ textarea {
   padding: 60px;
 }
 
+.intro-header img{
+  padding-top: 80px;
+  
+}
+
+.header-text {
+  color:white;
+  font-size: 70px;
+  padding-top: 40px;
+}
+
+.header-subtext {
+  color:white;
+  padding-top: 20px;
+  font-size: 25px;
+}
+
+.metabit-cto {
+  padding-top: 75px;
+}
+
+.cto-button {
+  margin-top: 5px;
+  padding: 15px 15px;
+  background: $orange;
+  border: none;
+  font-size: 35px;
+  color: white;
+  text-align:center;
+  box-shadow: 0 5px $metabit-blue;
+}
+
+
+.click-icon {
+  padding-left: 15px;
+}
 
 
 
+
+
+//**//
 
 .body-type .header{
   padding: 30px;
@@ -338,12 +387,16 @@ textarea {
   padding: 0px 0px 50px 0;
 }
 
-.about-test{
+.about-test h3{
   padding: 50px 0px 0px 0px;
+  font-size: 40px;
+  color: $metabit-blue;
 }
 
 .about-test p{
   padding: 20px 0 0 0;
+  font-style: italic;
+  font-size: 16px;
 }
 
 
@@ -356,7 +409,48 @@ textarea {
 }
 
 
-
 .personality-card h3 {
   padding-bottom: 15px;
 }
+ 
+
+//* Metabit Nav *//
+
+.navbar-default .navbar-brand {
+  color: white;
+}
+
+.navbar-default .navbar-nav li a {
+  color: white;
+}
+
+.navbar {
+  margin: 0px !important;
+  border:none;
+}
+//*Header*//
+
+.container-fluid {
+  padding:0px;
+}
+
+
+//*Headline*//
+
+.metabit-headline {
+  font-size: 30px;
+  font-style: italic;
+  color: $metabit-blue;
+  text-align: centre;
+  padding-top: 50px;
+  font-weight: bold;
+}
+
+.metabit-types{
+  padding-top: 15px;
+} 
+
+
+.metabit-types h4{
+  padding-top: 10px;
+} 

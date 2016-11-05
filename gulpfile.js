@@ -75,4 +75,4 @@ gulp.task("watch:server", function() {
 })
 
 gulp.task('build', ['sass', 'react']);
-gulp.task('default', ['build', 'watch:server', 'watch', 'watchify']);
+gulp.task('default', ['build', 'watch', 'watchify']);
