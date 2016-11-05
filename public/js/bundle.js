@@ -3449,7 +3449,7 @@ var Contact = _wrapComponent('Contact')(function (_get__$Component) {
 
       return _react3.default.createElement(
         'div',
-        { className: 'container' },
+        { className: 'container-fluid' },
         _react3.default.createElement(
           'div',
           { className: 'row our-team' },
@@ -3457,24 +3457,33 @@ var Contact = _wrapComponent('Contact')(function (_get__$Component) {
             'div',
             { className: 'col-md-12 text-center' },
             _react3.default.createElement(
-              'h1',
+              'p',
               null,
               'Our Team'
-            ),
-            _react3.default.createElement(
-              'div',
-              { className: 'content' },
-              _react3.default.createElement(
-                'p',
-                null,
-                'We are a team of young Vietnameses endeavouring to customize the education system'
-              )
             )
           )
         ),
         _react3.default.createElement(
           'div',
-          { className: 'row' },
+          { className: 'row team-content' },
+          _react3.default.createElement(
+            'div',
+            { className: 'col-sm-offset-2 col-sm-8' },
+            _react3.default.createElement(
+              'p',
+              { className: 'text-center' },
+              _react3.default.createElement('i', { className: 'fa fa-hand-peace-o fa-5x', 'aria-hidden': 'true' })
+            ),
+            _react3.default.createElement(
+              'p',
+              { className: 'text-center' },
+              'We are a team of young entrepreneurs, researchers, geeks trying to customize the education system'
+            )
+          )
+        ),
+        _react3.default.createElement(
+          'div',
+          { className: 'row contact-form' },
           _react3.default.createElement(
             'div',
             { className: 'panel' },
@@ -5143,71 +5152,137 @@ var Questions = _wrapComponent('Questions')(function (_get__$Component) {
 
       return _react3.default.createElement(
         'div',
-        { className: 'container test-component' },
+        { className: 'container-fluid test-component' },
         _react3.default.createElement(
           'div',
-          { className: 'row' },
+          { className: 'row test-title' },
           _react3.default.createElement(
             'div',
-            { className: 'col-md-12 personality-test' },
+            { className: 'col-sm-12' },
             _react3.default.createElement(
               'div',
-              { className: 'visible-lg-block' },
+              { className: 'text-center' },
+              _react3.default.createElement(
+                'p',
+                null,
+                'Personality test'
+              )
+            )
+          )
+        ),
+        _react3.default.createElement(
+          'div',
+          { className: 'row test-notice' },
+          _react3.default.createElement(
+            'div',
+            { className: 'col-sm-offset-3 col-sm-6' },
+            _react3.default.createElement(
+              'p',
+              { className: 'text-center' },
+              'Three things you need to know before taking the test'
+            )
+          )
+        ),
+        _react3.default.createElement(
+          'div',
+          { className: 'row test-graphic' },
+          _react3.default.createElement(
+            'div',
+            { className: 'col-sm-offset-1 col-sm-2' },
+            _react3.default.createElement('img', { src: 'images/notice_01.png', className: 'img-responsive center-block' }),
+            _react3.default.createElement(
+              'p',
+              { className: 'text-center' },
+              'Take less than 12 minutes'
+            )
+          ),
+          _react3.default.createElement(
+            'div',
+            { className: 'col-sm-offset-2 col-sm-2' },
+            _react3.default.createElement('img', { src: 'images/notice_02.png', className: 'img-responsive center-block' }),
+            _react3.default.createElement(
+              'p',
+              { className: 'text-center' },
+              'Answer honestly even if you don\u2019t like the answer'
+            )
+          ),
+          _react3.default.createElement(
+            'div',
+            { className: 'col-sm-offset-2 col-sm-2' },
+            _react3.default.createElement('img', { src: 'images/notice_03.png', className: 'img-responsive center-block' }),
+            _react3.default.createElement(
+              'p',
+              { className: 'text-center' },
+              'Try not to leave any \u201Cneutral\u201D answers'
+            )
+          )
+        ),
+        _react3.default.createElement(
+          'div',
+          { className: 'col-sm-10 col-sm-offset-1' },
+          _react3.default.createElement(_ProgressBar_Component, { now: progressBarVal, label: progressBarVal + '%' })
+        ),
+        _react3.default.createElement(
+          'form',
+          { method: 'POST', action: '', id: 'test-form' },
+          _react3.default.createElement(
+            'div',
+            { className: 'col-sm-10 col-sm-offset-1' },
+            _react3.default.createElement(
+              'div',
+              { className: 'question-wrapper set1' },
               _react3.default.createElement(
                 'div',
-                { className: 'row' },
-                _react3.default.createElement(
-                  'div',
-                  { className: 'col-md-12' },
-                  _react3.default.createElement(
-                    'div',
-                    { className: 'test-title text-center' },
-                    _react3.default.createElement(
-                      'h1',
-                      null,
-                      'Personality test'
-                    )
-                  ),
-                  _react3.default.createElement(
-                    'div',
-                    { className: 'trademark text-center' },
-                    'Based on Metabit Explorer',
-                    _react3.default.createElement(
-                      'sup',
-                      null,
-                      '\xAE'
-                    )
-                  )
-                )
+                { className: 'statement text-center' },
+                'B\u1EA1n th\u1EA5y kh\xF3 \u0111\u1EC3 giao ti\u1EBFp v\u1EDBi ng\u01B0\u1EDDi kh\xE1c'
               ),
               _react3.default.createElement(
                 'div',
-                { className: 'row instruction' },
+                { className: 'row answer' },
                 _react3.default.createElement(
                   'div',
-                  { className: 'col-md-8 col-md-offset-1' },
+                  { className: 'col-sm-5 col-sm-offset-3' },
                   _react3.default.createElement(
-                    'h4',
-                    null,
-                    'Three things to know before taking the test:'
-                  ),
-                  _react3.default.createElement(
-                    'ol',
+                    _FormGroup_Component,
                     null,
                     _react3.default.createElement(
-                      'li',
-                      null,
-                      'Takes less than 12 minutes.'
+                      _Radio_Component,
+                      { name: 'answerOptions', inline: true },
+                      '-3'
+                    ),
+                    ' ',
+                    _react3.default.createElement(
+                      _Radio_Component2,
+                      { name: 'answerOptions', inline: true },
+                      '-2'
+                    ),
+                    ' ',
+                    _react3.default.createElement(
+                      _Radio_Component3,
+                      { name: 'answerOptions', inline: true },
+                      '-1'
                     ),
                     _react3.default.createElement(
-                      'li',
-                      null,
-                      'Answer honestly, even if you don\u2019t like the answer.'
+                      _Radio_Component4,
+                      { name: 'answerOptions', inline: true },
+                      '0'
+                    ),
+                    ' ',
+                    _react3.default.createElement(
+                      _Radio_Component5,
+                      { name: 'answerOptions', inline: true },
+                      '1'
+                    ),
+                    ' ',
+                    _react3.default.createElement(
+                      _Radio_Component6,
+                      { name: 'answerOptions', inline: true },
+                      '2'
                     ),
                     _react3.default.createElement(
-                      'li',
-                      null,
-                      'Try not to leave any \u201Cneutral\u201D answers.'
+                      _Radio_Component7,
+                      { name: 'answerOptions', inline: true },
+                      '3'
                     )
                   )
                 )
@@ -5215,216 +5290,143 @@ var Questions = _wrapComponent('Questions')(function (_get__$Component) {
             ),
             _react3.default.createElement(
               'div',
-              { className: 'col-md-10 col-md-offset-1' },
-              _react3.default.createElement(_ProgressBar_Component, { now: progressBarVal, label: progressBarVal + '%' })
-            ),
-            _react3.default.createElement(
-              'form',
-              { method: 'POST', action: '', id: 'test-form' },
+              { className: 'question-wrapper set1' },
               _react3.default.createElement(
                 'div',
-                { className: 'col-md-10 col-md-offset-1' },
+                { className: 'statement text-center' },
+                'B\u1EA1n r\u1EA5t hi\u1EBFm khi ch\u1EE7 \u0111\u1ED9ng b\u1EAFt chuy\u1EC7n'
+              ),
+              _react3.default.createElement(
+                'div',
+                { className: 'row answer' },
                 _react3.default.createElement(
                   'div',
-                  { className: 'question-wrapper set1' },
+                  { className: 'col-sm-5 col-sm-offset-3' },
                   _react3.default.createElement(
-                    'div',
-                    { className: 'statement text-center' },
-                    'B\u1EA1n th\u1EA5y kh\xF3 \u0111\u1EC3 giao ti\u1EBFp v\u1EDBi ng\u01B0\u1EDDi kh\xE1c'
-                  ),
-                  _react3.default.createElement(
-                    'div',
-                    { className: 'row answer' },
+                    _FormGroup_Component2,
+                    null,
                     _react3.default.createElement(
-                      'div',
-                      { className: 'col-md-5 col-md-offset-3' },
-                      _react3.default.createElement(
-                        _FormGroup_Component,
-                        null,
-                        _react3.default.createElement(
-                          _Radio_Component,
-                          { name: 'answerOptions', inline: true },
-                          '-3'
-                        ),
-                        ' ',
-                        _react3.default.createElement(
-                          _Radio_Component2,
-                          { name: 'answerOptions', inline: true },
-                          '-2'
-                        ),
-                        ' ',
-                        _react3.default.createElement(
-                          _Radio_Component3,
-                          { name: 'answerOptions', inline: true },
-                          '-1'
-                        ),
-                        _react3.default.createElement(
-                          _Radio_Component4,
-                          { name: 'answerOptions', inline: true },
-                          '0'
-                        ),
-                        ' ',
-                        _react3.default.createElement(
-                          _Radio_Component5,
-                          { name: 'answerOptions', inline: true },
-                          '1'
-                        ),
-                        ' ',
-                        _react3.default.createElement(
-                          _Radio_Component6,
-                          { name: 'answerOptions', inline: true },
-                          '2'
-                        ),
-                        _react3.default.createElement(
-                          _Radio_Component7,
-                          { name: 'answerOptions', inline: true },
-                          '3'
-                        )
-                      )
+                      _Radio_Component8,
+                      { name: 'answerOptions2', inline: true },
+                      '-3'
+                    ),
+                    ' ',
+                    _react3.default.createElement(
+                      _Radio_Component9,
+                      { name: 'answerOptions2', inline: true },
+                      '-2'
+                    ),
+                    ' ',
+                    _react3.default.createElement(
+                      _Radio_Component10,
+                      { name: 'answerOptions2', inline: true },
+                      '-1'
+                    ),
+                    _react3.default.createElement(
+                      _Radio_Component11,
+                      { name: 'answerOptions2', inline: true },
+                      '0'
+                    ),
+                    ' ',
+                    _react3.default.createElement(
+                      _Radio_Component12,
+                      { name: 'answerOptions2', inline: true },
+                      '1'
+                    ),
+                    ' ',
+                    _react3.default.createElement(
+                      _Radio_Component13,
+                      { name: 'answerOptions2', inline: true },
+                      '2'
+                    ),
+                    _react3.default.createElement(
+                      _Radio_Component14,
+                      { name: 'answerOptions2', inline: true },
+                      '3'
                     )
                   )
-                ),
+                )
+              )
+            ),
+            _react3.default.createElement(
+              'div',
+              { className: 'question-wrapper set1' },
+              _react3.default.createElement(
+                'div',
+                { className: 'statement text-center' },
+                'B\u1EA1n lu\xF4n g\u1EB7p kh\xF3 kh\u0103n trong vi\u1EC7c tha th\u1EE9'
+              ),
+              _react3.default.createElement(
+                'div',
+                { className: 'row answer' },
                 _react3.default.createElement(
                   'div',
-                  { className: 'question-wrapper set1' },
+                  { className: 'col-sm-5 col-sm-offset-3' },
                   _react3.default.createElement(
-                    'div',
-                    { className: 'statement text-center' },
-                    'B\u1EA1n r\u1EA5t hi\u1EBFm khi ch\u1EE7 \u0111\u1ED9ng b\u1EAFt chuy\u1EC7n'
-                  ),
-                  _react3.default.createElement(
-                    'div',
-                    { className: 'row answer' },
+                    _FormGroup_Component3,
+                    null,
                     _react3.default.createElement(
-                      'div',
-                      { className: 'col-md-5 col-md-offset-3' },
-                      _react3.default.createElement(
-                        _FormGroup_Component2,
-                        null,
-                        _react3.default.createElement(
-                          _Radio_Component8,
-                          { name: 'answerOptions2', inline: true },
-                          '-3'
-                        ),
-                        ' ',
-                        _react3.default.createElement(
-                          _Radio_Component9,
-                          { name: 'answerOptions2', inline: true },
-                          '-2'
-                        ),
-                        ' ',
-                        _react3.default.createElement(
-                          _Radio_Component10,
-                          { name: 'answerOptions2', inline: true },
-                          '-1'
-                        ),
-                        _react3.default.createElement(
-                          _Radio_Component11,
-                          { name: 'answerOptions2', inline: true },
-                          '0'
-                        ),
-                        ' ',
-                        _react3.default.createElement(
-                          _Radio_Component12,
-                          { name: 'answerOptions2', inline: true },
-                          '1'
-                        ),
-                        ' ',
-                        _react3.default.createElement(
-                          _Radio_Component13,
-                          { name: 'answerOptions2', inline: true },
-                          '2'
-                        ),
-                        _react3.default.createElement(
-                          _Radio_Component14,
-                          { name: 'answerOptions2', inline: true },
-                          '3'
-                        )
-                      )
+                      _Radio_Component15,
+                      { name: 'answerOptions', inline: true },
+                      '-3'
+                    ),
+                    ' ',
+                    _react3.default.createElement(
+                      _Radio_Component16,
+                      { name: 'answerOptions', inline: true },
+                      '-2'
+                    ),
+                    ' ',
+                    _react3.default.createElement(
+                      _Radio_Component17,
+                      { name: 'answerOptions', inline: true },
+                      '-1'
+                    ),
+                    _react3.default.createElement(
+                      _Radio_Component18,
+                      { name: 'answerOptions', inline: true },
+                      '0'
+                    ),
+                    ' ',
+                    _react3.default.createElement(
+                      _Radio_Component19,
+                      { name: 'answerOptions', inline: true },
+                      '1'
+                    ),
+                    ' ',
+                    _react3.default.createElement(
+                      _Radio_Component20,
+                      { name: 'answerOptions', inline: true },
+                      '2'
+                    ),
+                    _react3.default.createElement(
+                      _Radio_Component21,
+                      { name: 'answerOptions', inline: true },
+                      '3'
                     )
                   )
-                ),
+                )
+              )
+            ),
+            _react3.default.createElement(
+              'div',
+              { className: 'row test-submit-wrapper' },
+              _react3.default.createElement(
+                'div',
+                { className: 'col-sm-4 col-sm-offset-5' },
                 _react3.default.createElement(
                   'div',
-                  { className: 'question-wrapper set1' },
+                  { className: 'submit_wrapper setnext' },
                   _react3.default.createElement(
-                    'div',
-                    { className: 'statement text-center' },
-                    'B\u1EA1n lu\xF4n g\u1EB7p kh\xF3 kh\u0103n trong vi\u1EC7c tha th\u1EE9'
-                  ),
-                  _react3.default.createElement(
-                    'div',
-                    { className: 'row answer' },
+                    _LinkContainer_Component,
+                    { to: { pathname: '/result' } },
                     _react3.default.createElement(
-                      'div',
-                      { className: 'col-md-5 col-md-offset-3' },
+                      'button',
+                      { className: 'btn btn-action', id: 'nextbut', type: 'button' },
                       _react3.default.createElement(
-                        _FormGroup_Component3,
+                        'span',
                         null,
-                        _react3.default.createElement(
-                          _Radio_Component15,
-                          { name: 'answerOptions', inline: true },
-                          '-3'
-                        ),
-                        ' ',
-                        _react3.default.createElement(
-                          _Radio_Component16,
-                          { name: 'answerOptions', inline: true },
-                          '-2'
-                        ),
-                        ' ',
-                        _react3.default.createElement(
-                          _Radio_Component17,
-                          { name: 'answerOptions', inline: true },
-                          '-1'
-                        ),
-                        _react3.default.createElement(
-                          _Radio_Component18,
-                          { name: 'answerOptions', inline: true },
-                          '0'
-                        ),
-                        ' ',
-                        _react3.default.createElement(
-                          _Radio_Component19,
-                          { name: 'answerOptions', inline: true },
-                          '1'
-                        ),
-                        ' ',
-                        _react3.default.createElement(
-                          _Radio_Component20,
-                          { name: 'answerOptions', inline: true },
-                          '2'
-                        ),
-                        _react3.default.createElement(
-                          _Radio_Component21,
-                          { name: 'answerOptions', inline: true },
-                          '3'
-                        )
-                      )
-                    )
-                  )
-                ),
-                _react3.default.createElement(
-                  'div',
-                  { className: 'row test-submit-wrapper' },
-                  _react3.default.createElement(
-                    'div',
-                    { className: 'col-md-4 col-md-offset-5' },
-                    _react3.default.createElement(
-                      'div',
-                      { className: 'submit_wrapper setnext' },
-                      _react3.default.createElement(
-                        _LinkContainer_Component,
-                        { to: { pathname: '/result' } },
-                        _react3.default.createElement(
-                          'button',
-                          { className: 'btn btn-action', id: 'nextbut', type: 'button' },
-                          _react3.default.createElement(
-                            'span',
-                            null,
-                            'NEXT\xA0'
-                          )
-                        )
+                        'NEXT\xA0'
                       )
                     )
                   )

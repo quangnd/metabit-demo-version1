@@ -272,8 +272,34 @@ textarea {
 }
 
 .test-title{
-  
+  background: $dark-blue;
+  color: white;
+  padding: 60px 0px;
 }
+
+.test-title p{
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.test-notice {
+  color: $orange;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 700;
+  padding-top: 20px;
+}
+
+.test-graphic{
+  margin: 40px;
+
+}
+
+.test-graphic p{
+  font-weight: bold;
+  padding-top: 25px;
+}
+
 
 .question-wrapper{
   font-size:  25px;
@@ -373,7 +399,7 @@ textarea {
 
 
 
-//**//
+//*Contact Us*//
 
 .body-type .header{
   padding: 30px;
@@ -384,8 +410,16 @@ textarea {
 }
 
 .our-team {
-  padding: 0px 0px 50px 0;
+  padding: 60px;
+  background: $dark-blue;
+  color:white;
 }
+
+.our-team p{
+  font-size: 50px;
+  font-weight: bold;
+}
+
 
 .about-test h3{
   padding: 50px 0px 0px 0px;
@@ -399,6 +433,14 @@ textarea {
   font-size: 16px;
 }
 
+.team-content {
+  font-size: 20px;
+  padding: 30px 0;
+}
+
+.team-content i {
+  padding-bottom: 25px;
+}
 
 .row{
    margin-bottom: 15px;
@@ -447,7 +489,7 @@ textarea {
 }
 
 .metabit-types{
-  padding-top: 15px;
+  padding-top: 20px;
 } 
 
 

@@ -20,17 +20,24 @@ class Contact extends React.Component {
 
   render() {
     return (  
-      <div className="container">
+      <div className="container-fluid">
+
         <div className="row our-team">
-                    <div className="col-md-12 text-center">
-                      <h1>Our Team</h1>
-                        <div className="content">
-                          <p>We are a team of young Vietnameses endeavouring to customize the education system</p>  
-                            
-                        </div>  
-                    </div>
-                </div>
-        <div className="row">
+          <div className="col-md-12 text-center">
+            <p>Our Team</p>
+          </div>
+        </div>
+
+        <div className="row team-content">
+          <div className="col-sm-offset-2 col-sm-8">
+            <p className="text-center"><i className="fa fa-hand-peace-o fa-5x" aria-hidden="true"></i></p>
+            <p className="text-center">We are a team of young entrepreneurs, researchers, geeks trying to customize the education system</p>
+          </div>
+        </div>
+
+
+
+        <div className="row contact-form">
           <div className="panel">
             <div className="panel-heading">
               <h3 className="panel-title">Contact Form</h3>

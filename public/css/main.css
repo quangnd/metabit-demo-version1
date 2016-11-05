@@ -5944,6 +5944,29 @@ textarea {
   margin: -10px 0 20px 0;
   color: #BBB; }
 
+.test-title {
+  background: #13293D;
+  color: white;
+  padding: 60px 0px; }
+
+.test-title p {
+  font-size: 50px;
+  font-weight: bold; }
+
+.test-notice {
+  color: #FF8B00;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 700;
+  padding-top: 20px; }
+
+.test-graphic {
+  margin: 40px; }
+
+.test-graphic p {
+  font-weight: bold;
+  padding-top: 25px; }
+
 .question-wrapper {
   font-size: 25px;
   text-align: center;
@@ -6023,7 +6046,13 @@ textarea {
   padding-top: 15px; }
 
 .our-team {
-  padding: 0px 0px 50px 0; }
+  padding: 60px;
+  background: #13293D;
+  color: white; }
+
+.our-team p {
+  font-size: 50px;
+  font-weight: bold; }
 
 .about-test h3 {
   padding: 50px 0px 0px 0px;
@@ -6034,6 +6063,13 @@ textarea {
   padding: 20px 0 0 0;
   font-style: italic;
   font-size: 16px; }
+
+.team-content {
+  font-size: 20px;
+  padding: 30px 0; }
+
+.team-content i {
+  padding-bottom: 25px; }
 
 .row {
   margin-bottom: 15px; }
@@ -6066,7 +6102,7 @@ textarea {
   font-weight: bold; }
 
 .metabit-types {
-  padding-top: 15px; }
+  padding-top: 20px; }
 
 .metabit-types h4 {
   padding-top: 10px; }
