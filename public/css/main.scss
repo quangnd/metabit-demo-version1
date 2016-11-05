@@ -5,13 +5,10 @@ $dark-blue: #13293D;
 $orange: #FF8B00;
 
 
-
-
 $body-bg: #ffffff;
 $line-height-base: 1.57142857;
 $link-color: #1d7cf4;
 $link-hover-decoration: none;
-
 
 $brand-success: #29b35b;
 $brand-danger: #b61b17;
@@ -496,3 +493,7 @@ textarea {
 .metabit-types h4{
   padding-top: 10px;
 } 
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #fff;
+}

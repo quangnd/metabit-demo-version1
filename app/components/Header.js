@@ -15,7 +15,7 @@ class Header extends React.Component {
       <ul className="nav navbar-nav navbar-right">
         <li className="dropdown">
           <a href="#" data-toggle="dropdown" className="navbar-avatar dropdown-toggle">
-            <img src={this.props.user.picture || this.props.user.gravatar}/>
+            <img src={this.props.user.picture || this.props.user.gravatar} />
             {' '}{this.props.user.name || this.props.user.email || this.props.user.id}{' '}
             <i className="caret"></i>
           </a>
@@ -27,10 +27,14 @@ class Header extends React.Component {
         </li>
       </ul>
     ) : (
-      <ul className="nav navbar-nav navbar-right">
-        <li><Link to="/login" activeStyle={active}>Log in</Link></li>
-      </ul>
-    );
+        <ul className="nav navbar-nav navbar-right">
+          <li>
+              <Link to="/login" activeStyle={active}>
+                  <i className="fa fa-key" aria-hidden="true"></i> &nbsp; LOG IN
+              </Link>
+          </li>
+        </ul>
+      );
     return (
       <nav className="navbar navbar-default navbar-static-top">
         <div className="container">
@@ -41,13 +45,25 @@ class Header extends React.Component {
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-            <IndexLink to="/" className="navbar-brand">Metabit project</IndexLink>
+            <IndexLink to="/" className="navbar-brand">METABIT PROJECT</IndexLink>
           </div>
           <div id="navbar" className="navbar-collapse collapse navbar-right">
             <ul className="nav navbar-nav">
-              <li><IndexLink to="/" activeStyle={active}>Home</IndexLink></li>
-              <li><Link to="/questions" activeStyle={active}>Personality Test</Link></li>
-              <li><Link to="/contact" ativeStyle={active}>About Us</Link></li>
+              <li>
+                <IndexLink to="/" activeStyle={active}>
+                  <i className="fa fa-home" aria-hidden="true"></i> &nbsp; HOME
+                  </IndexLink>
+              </li>
+              <li>
+                <Link to="/questions" activeStyle={active}>
+                  <i className="fa fa-flask" aria-hidden="true"></i>&nbsp; PERSONALITY TEST
+                     </Link>
+              </li>
+              <li>
+                <Link to="/contact" activeStyle={active}>
+                    <i className="fa fa-users" aria-hidden="true"></i>&nbsp; ABOUT US
+                </Link>   
+              </li>
             </ul>
             {rightNav}
           </div>
