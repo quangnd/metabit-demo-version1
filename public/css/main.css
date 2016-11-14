@@ -5978,7 +5978,8 @@ textarea {
   display: block; }
 
 .question-wrapper .statement {
-  font-weight: 600; }
+  font-weight: 600;
+  padding-left: 15px; }
 
 .question-wrapper .answer {
   text-align: center;
@@ -6109,3 +6110,9 @@ textarea {
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
   color: #fff; }
+
+.user-prompt {
+  padding: 15px; }
+
+.padding-me {
+  padding: 10px 0px; }

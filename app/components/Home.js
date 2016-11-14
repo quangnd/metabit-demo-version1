@@ -4,6 +4,7 @@ import Messages from './Messages';
 import { Button, Jumbotron } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
+
 class Home extends React.Component {
   render() {
     return (
@@ -22,7 +23,7 @@ class Home extends React.Component {
                 </div>
                 <div className="col-sm-5 metabit-cto">
                   <h1 className="header-text">Metabit Test</h1>
-                  <LinkContainer to={{ pathname: '/questions' }}>
+                  <LinkContainer to={{ pathname: '/userprompt' }}>
                     <Button className="btn cto-button">Take the Test<i className="fa fa-hand-pointer-o click-icon"></i></Button>
                   </LinkContainer>
                   <p className="header-subtext">Explore yourself !</p>

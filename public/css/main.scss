@@ -313,6 +313,7 @@ textarea {
 .question-wrapper .statement {
  
   font-weight: 600;
+  padding-left: 15px;
   
 }
 
@@ -323,7 +324,6 @@ textarea {
   display: flex;
   -ms-flex-align: center;
   align-items: center;
-  
 }
 
 .test-component .progress{
@@ -496,4 +496,22 @@ textarea {
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
   color: #fff;
+}
+
+
+
+//*Result Page*//
+
+
+//*User prompt*//
+
+.user-prompt{
+  padding: 15px;
+}
+
+
+//*Snap rule*//
+
+.padding-me{
+  padding: 10px 0px;
 }

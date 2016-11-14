@@ -1,8 +1,15 @@
 import React from 'react';
-import {ProgressBar} from 'react-bootstrap';
+import StatBar from './StatBar';
 
 class Result extends React.Component {
     render() {
+        const text = "Introverted";
+
+        const greenBar = "progress-bar-success";
+        const blueBar = "progress-bar-info";
+        const yellowBar = "progress-bar-warning";
+        const redBar = "progress-bar-danger";
+
         return (
             <div className="container">
                 <div className="row">
@@ -10,14 +17,13 @@ class Result extends React.Component {
                         <h1 className=" text-center">The Adventure - ISFP</h1>
                         <p className="text-center">"One way to get the most out of life is to look upon it as an adventure. 
                         William Feather"</p>
-                        
+                        <img src="http://placehold.it/200x250" className="img-responsive center-block"/>
                     </div>
                 </div>            
 
                 <div className="row">
                     <div className="col-md-8">
                         <h3>You Love Adventure and Enjoy Challenge</h3>
-
                         <p>
                             ISFP personality types are true artists, but not necessarily in the typical sense where they're out painting happy little trees.
                             Often enough though, they are perfectly capable of this. Rather, it's that they use aesthetics, design and even their choices and actions to push the limits of social convention.
@@ -40,24 +46,12 @@ class Result extends React.Component {
 
                     <div className="col-md-4 personality-card">
                         <h3>The adventure - ISFP</h3>
-                        <div className="col-md-3">
-                        <h5>Introverted</h5>
-                        <h5>Introverted</h5>
-                        <h5>Introverted</h5>
-                        <h5>Introverted</h5>
-                        </div>
-                        <div className="col-md-6">
-                            <ProgressBar striped bsStyle="success" now={40} />
-                            <ProgressBar striped bsStyle="info" now={20}  />
-                            <ProgressBar striped bsStyle="warning" now={60}  />
-                            <ProgressBar striped bsStyle="danger" now={80}  />
-                        </div>
-                        <div className="col-md-3">
-                        <h5>Extroverted</h5>
-                        <h5>Extroverted</h5>
-                        <h5>Extroverted</h5>
-                        <h5>Extroverted</h5>
-                        </div>
+                      
+                        <StatBar statTitLeft={"Introverted"} statTitRight={"Extroverted"} />
+                        <StatBar statTitLeft={"Intuition"} statTitRight={"Sensing"} />
+                        <StatBar statTitLeft={"Thinking"} statTitRight={"Feeling"} />
+                        <StatBar statTitLeft={"Juding"} statTitRight={"Perceiving"} />
+                                   
                     </div>
                 </div>
 

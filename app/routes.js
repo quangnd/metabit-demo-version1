@@ -10,7 +10,7 @@ import Profile from './components/Account/Profile';
 import Forgot from './components/Account/Forgot';
 import Reset from './components/Account/Reset';
 import Result from './components/Quiz/Result';
-
+import QuestionUser from './components/Quiz/QuestionUser';
 
 import Questions from './components/Quiz/Questions';
 
@@ -46,6 +46,7 @@ export default function getRoutes(store) {
       <Route path="/forgot" component={Forgot} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>
       <Route path='/reset/:token' component={Reset} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>
       <Route path='/questions' component={Questions} onLeave={clearMessages}/>
+      <Route path='/userprompt' component={QuestionUser} onLeave={clearMessages}/>
       <Route path="*" component={NotFound} onLeave={clearMessages}/>
     </Route>
   );
