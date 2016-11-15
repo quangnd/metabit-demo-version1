@@ -5341,7 +5341,7 @@ var QuestionUser = _wrapComponent('QuestionUser')(function (_get__$Component) {
                                     _react3.default.createElement(
                                         'span',
                                         null,
-                                        'START\xA0'
+                                        'B\u1EAFt \u0110\u1EA7u\xA0'
                                     )
                                 )
                             )
@@ -5556,54 +5556,6 @@ var Questions = _wrapComponent('Questions')(function (_get__$Component) {
 
       var _ProgressBar_Component = _get__('ProgressBar');
 
-      var _FormGroup_Component = _get__('FormGroup');
-
-      var _Radio_Component = _get__('Radio');
-
-      var _Radio_Component2 = _get__('Radio');
-
-      var _Radio_Component3 = _get__('Radio');
-
-      var _Radio_Component4 = _get__('Radio');
-
-      var _Radio_Component5 = _get__('Radio');
-
-      var _Radio_Component6 = _get__('Radio');
-
-      var _Radio_Component7 = _get__('Radio');
-
-      var _FormGroup_Component2 = _get__('FormGroup');
-
-      var _Radio_Component8 = _get__('Radio');
-
-      var _Radio_Component9 = _get__('Radio');
-
-      var _Radio_Component10 = _get__('Radio');
-
-      var _Radio_Component11 = _get__('Radio');
-
-      var _Radio_Component12 = _get__('Radio');
-
-      var _Radio_Component13 = _get__('Radio');
-
-      var _Radio_Component14 = _get__('Radio');
-
-      var _FormGroup_Component3 = _get__('FormGroup');
-
-      var _Radio_Component15 = _get__('Radio');
-
-      var _Radio_Component16 = _get__('Radio');
-
-      var _Radio_Component17 = _get__('Radio');
-
-      var _Radio_Component18 = _get__('Radio');
-
-      var _Radio_Component19 = _get__('Radio');
-
-      var _Radio_Component20 = _get__('Radio');
-
-      var _Radio_Component21 = _get__('Radio');
-
       var _LinkContainer_Component = _get__('LinkContainer');
 
       return _react3.default.createElement(
@@ -5675,269 +5627,345 @@ var Questions = _wrapComponent('Questions')(function (_get__$Component) {
         ),
         _react3.default.createElement(
           'div',
-          { className: 'col-sm-10 col-sm-offset-1' },
-          _react3.default.createElement(_ProgressBar_Component, { now: progressBarVal, label: progressBarVal + '%' })
-        ),
-        _react3.default.createElement(
-          'form',
-          { method: 'POST', action: '', id: 'test-form' },
+          { className: 'row' },
           _react3.default.createElement(
             'div',
             { className: 'col-sm-10 col-sm-offset-1' },
+            _react3.default.createElement(_ProgressBar_Component, { now: progressBarVal, label: progressBarVal + '%' })
+          )
+        ),
+        _react3.default.createElement(
+          'form',
+          null,
+          _react3.default.createElement(
+            'div',
+            { className: 'question-wrapper' },
             _react3.default.createElement(
               'div',
-              { className: 'question-wrapper set1' },
-              _react3.default.createElement(
-                'div',
-                { className: 'statement' },
-                'B\u1EA1n th\u1EA5y kh\xF3 \u0111\u1EC3 giao ti\u1EBFp v\u1EDBi ng\u01B0\u1EDDi kh\xE1c'
-              ),
-              _react3.default.createElement(
-                'div',
-                { className: 'row answer' },
-                _react3.default.createElement(
-                  'div',
-                  { className: 'col-sm-offset-2 col-sm-1' },
-                  _react3.default.createElement(
-                    'h3',
-                    { className: 'text-center' },
-                    'Agree'
-                  )
-                ),
-                _react3.default.createElement(
-                  'div',
-                  { className: 'col-sm-6' },
-                  _react3.default.createElement(
-                    _FormGroup_Component,
-                    null,
-                    _react3.default.createElement(
-                      _Radio_Component,
-                      { name: 'answerOptions', inline: true },
-                      '-3'
-                    ),
-                    ' ',
-                    _react3.default.createElement(
-                      _Radio_Component2,
-                      { name: 'answerOptions', inline: true },
-                      '-2'
-                    ),
-                    ' ',
-                    _react3.default.createElement(
-                      _Radio_Component3,
-                      { name: 'answerOptions', inline: true },
-                      '-1'
-                    ),
-                    _react3.default.createElement(
-                      _Radio_Component4,
-                      { name: 'answerOptions', inline: true },
-                      '0'
-                    ),
-                    ' ',
-                    _react3.default.createElement(
-                      _Radio_Component5,
-                      { name: 'answerOptions', inline: true },
-                      '1'
-                    ),
-                    ' ',
-                    _react3.default.createElement(
-                      _Radio_Component6,
-                      { name: 'answerOptions', inline: true },
-                      '2'
-                    ),
-                    _react3.default.createElement(
-                      _Radio_Component7,
-                      { name: 'answerOptions', inline: true },
-                      '3'
-                    )
-                  )
-                ),
-                _react3.default.createElement(
-                  'div',
-                  { className: 'col-sm-1' },
-                  _react3.default.createElement(
-                    'h3',
-                    { className: 'text-center' },
-                    'Disagree'
-                  )
-                )
-              )
+              { className: 'statement' },
+              'You find it difficult to introduce yourself to other people.'
             ),
             _react3.default.createElement(
               'div',
-              { className: 'question-wrapper set1' },
+              { className: 'row answer' },
               _react3.default.createElement(
                 'div',
-                { className: 'statement text-center' },
-                'B\u1EA1n r\u1EA5t hi\u1EBFm khi ch\u1EE7 \u0111\u1ED9ng b\u1EAFt chuy\u1EC7n'
+                { className: 'col-sm-3 caption left' },
+                'C\xF3'
               ),
               _react3.default.createElement(
                 'div',
-                { className: 'row answer' },
+                { className: 'col-sm-6 btn-group options' },
                 _react3.default.createElement(
-                  'div',
-                  { className: 'col-sm-offset-2 col-sm-1' },
-                  _react3.default.createElement(
-                    'h3',
-                    { className: 'text-center' },
-                    'Agree'
-                  )
+                  'label',
+                  { className: 'btn btn-default option testing max ' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
                 ),
                 _react3.default.createElement(
-                  'div',
-                  { className: 'col-sm-6' },
-                  _react3.default.createElement(
-                    _FormGroup_Component2,
-                    null,
-                    _react3.default.createElement(
-                      _Radio_Component8,
-                      { name: 'answerOptions2', inline: true },
-                      '-3'
-                    ),
-                    ' ',
-                    _react3.default.createElement(
-                      _Radio_Component9,
-                      { name: 'answerOptions2', inline: true },
-                      '-2'
-                    ),
-                    ' ',
-                    _react3.default.createElement(
-                      _Radio_Component10,
-                      { name: 'answerOptions2', inline: true },
-                      '-1'
-                    ),
-                    _react3.default.createElement(
-                      _Radio_Component11,
-                      { name: 'answerOptions2', inline: true },
-                      '0'
-                    ),
-                    ' ',
-                    _react3.default.createElement(
-                      _Radio_Component12,
-                      { name: 'answerOptions2', inline: true },
-                      '1'
-                    ),
-                    ' ',
-                    _react3.default.createElement(
-                      _Radio_Component13,
-                      { name: 'answerOptions2', inline: true },
-                      '2'
-                    ),
-                    _react3.default.createElement(
-                      _Radio_Component14,
-                      { name: 'answerOptions2', inline: true },
-                      '3'
-                    )
-                  )
+                  'label',
+                  { className: 'btn btn-default option agree med' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
                 ),
                 _react3.default.createElement(
-                  'div',
-                  { className: 'col-sm-1' },
-                  _react3.default.createElement(
-                    'h3',
-                    { className: 'text-center' },
-                    'Disagree'
-                  )
+                  'label',
+                  { className: 'btn btn-default option agree min' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default neutral option' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default disagree option min' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default disagree option med' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default disagree option max' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
                 )
-              )
-            ),
-            _react3.default.createElement(
-              'div',
-              { className: 'question-wrapper set1' },
-              _react3.default.createElement(
-                'div',
-                { className: 'statement' },
-                'B\u1EA1n lu\xF4n g\u1EB7p kh\xF3 kh\u0103n trong vi\u1EC7c tha th\u1EE9'
               ),
               _react3.default.createElement(
                 'div',
-                { className: 'row answer' },
-                _react3.default.createElement(
-                  'div',
-                  { className: 'col-sm-offset-2 col-sm-1' },
-                  _react3.default.createElement(
-                    'h3',
-                    { className: 'text-center' },
-                    'Agree'
-                  )
-                ),
-                _react3.default.createElement(
-                  'div',
-                  { className: 'col-sm-6' },
-                  _react3.default.createElement(
-                    _FormGroup_Component3,
-                    null,
-                    _react3.default.createElement(
-                      _Radio_Component15,
-                      { name: 'answerOptions', inline: true },
-                      '-3'
-                    ),
-                    ' ',
-                    _react3.default.createElement(
-                      _Radio_Component16,
-                      { name: 'answerOptions', inline: true },
-                      '-2'
-                    ),
-                    ' ',
-                    _react3.default.createElement(
-                      _Radio_Component17,
-                      { name: 'answerOptions', inline: true },
-                      '-1'
-                    ),
-                    _react3.default.createElement(
-                      _Radio_Component18,
-                      { name: 'answerOptions', inline: true },
-                      '0'
-                    ),
-                    ' ',
-                    _react3.default.createElement(
-                      _Radio_Component19,
-                      { name: 'answerOptions', inline: true },
-                      '1'
-                    ),
-                    ' ',
-                    _react3.default.createElement(
-                      _Radio_Component20,
-                      { name: 'answerOptions', inline: true },
-                      '2'
-                    ),
-                    _react3.default.createElement(
-                      _Radio_Component21,
-                      { name: 'answerOptions', inline: true },
-                      '3'
-                    )
-                  )
-                ),
-                _react3.default.createElement(
-                  'div',
-                  { className: 'col-sm-1' },
-                  _react3.default.createElement(
-                    'h3',
-                    { className: 'text-center' },
-                    'Disagree'
-                  )
-                )
+                { className: 'col-sm-3 caption right' },
+                'Kh\xF4ng'
               )
+            )
+          ),
+          _react3.default.createElement(
+            'div',
+            { className: 'question-wrapper' },
+            _react3.default.createElement(
+              'div',
+              { className: 'statement' },
+              'You often get so lost in thoughts that you ignore or forget your surroundings.'
             ),
             _react3.default.createElement(
               'div',
-              { className: 'row test-submit-wrapper' },
+              { className: 'row answer' },
               _react3.default.createElement(
                 'div',
-                { className: 'col-sm-offset-5 col-sm-2' },
+                { className: 'col-sm-3 caption left' },
+                'C\xF3'
+              ),
+              _react3.default.createElement(
+                'div',
+                { className: 'col-sm-6 btn-group options' },
                 _react3.default.createElement(
-                  'div',
-                  { className: 'submit_wrapper setnext' },
+                  'label',
+                  { className: 'btn btn-default option testing max ' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default option agree med' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default option agree min' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default neutral option' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default disagree option min' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default disagree option med' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default disagree option max' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                )
+              ),
+              _react3.default.createElement(
+                'div',
+                { className: 'col-sm-3 caption right' },
+                'Kh\xF4ng'
+              )
+            )
+          ),
+          _react3.default.createElement(
+            'div',
+            { className: 'question-wrapper' },
+            _react3.default.createElement(
+              'div',
+              { className: 'statement' },
+              'You try to respond to your e-mails as soon as possible and cannot stand a messy'
+            ),
+            _react3.default.createElement(
+              'div',
+              { className: 'row answer' },
+              _react3.default.createElement(
+                'div',
+                { className: 'col-sm-3 caption left' },
+                'C\xF3'
+              ),
+              _react3.default.createElement(
+                'div',
+                { className: 'col-sm-6 btn-group options' },
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default option testing max ' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default option agree med' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default option agree min' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default neutral option' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default disagree option min' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default disagree option med' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default disagree option max' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                )
+              ),
+              _react3.default.createElement(
+                'div',
+                { className: 'col-sm-3 caption right' },
+                'Kh\xF4ng'
+              )
+            )
+          ),
+          _react3.default.createElement(
+            'div',
+            { className: 'question-wrapper' },
+            _react3.default.createElement(
+              'div',
+              { className: 'statement' },
+              'You find it easy to stay relaxed and focused even when there is some pressure.'
+            ),
+            _react3.default.createElement(
+              'div',
+              { className: 'row answer' },
+              _react3.default.createElement(
+                'div',
+                { className: 'col-sm-3 caption left' },
+                'C\xF3'
+              ),
+              _react3.default.createElement(
+                'div',
+                { className: 'col-sm-6 btn-group options' },
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default option testing max ' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default option agree med' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default option agree min' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default neutral option' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default disagree option min' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default disagree option med' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default disagree option max' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                )
+              ),
+              _react3.default.createElement(
+                'div',
+                { className: 'col-sm-3 caption right' },
+                'Kh\xF4ng'
+              )
+            )
+          ),
+          _react3.default.createElement(
+            'div',
+            { className: 'question-wrapper' },
+            _react3.default.createElement(
+              'div',
+              { className: 'statement' },
+              'You do not usually initiate conversations.'
+            ),
+            _react3.default.createElement(
+              'div',
+              { className: 'row answer' },
+              _react3.default.createElement(
+                'div',
+                { className: 'col-sm-3 caption left' },
+                'C\xF3'
+              ),
+              _react3.default.createElement(
+                'div',
+                { className: 'col-sm-6 btn-group options' },
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default option testing max ' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default option agree med' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default option agree min' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default neutral option' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default disagree option min' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default disagree option med' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                ),
+                _react3.default.createElement(
+                  'label',
+                  { className: 'btn btn-default disagree option max' },
+                  _react3.default.createElement('input', { type: 'radio', name: 'options' })
+                )
+              ),
+              _react3.default.createElement(
+                'div',
+                { className: 'col-sm-3 caption right' },
+                'Kh\xF4ng'
+              )
+            )
+          ),
+          _react3.default.createElement(
+            'div',
+            { className: 'row test-submit-wrapper' },
+            _react3.default.createElement(
+              'div',
+              { className: 'col-sm-offset-5 col-sm-2' },
+              _react3.default.createElement(
+                'div',
+                { className: 'submit_wrapper setnext' },
+                _react3.default.createElement(
+                  _LinkContainer_Component,
+                  { to: { pathname: '/result' } },
                   _react3.default.createElement(
-                    _LinkContainer_Component,
-                    { to: { pathname: '/result' } },
+                    'button',
+                    { className: 'btn btn-action center-block', id: 'nextbut', type: 'button' },
                     _react3.default.createElement(
-                      'button',
-                      { className: 'btn btn-action center-block', id: 'nextbut', type: 'button' },
-                      _react3.default.createElement(
-                        'span',
-                        null,
-                        'NEXT\xA0'
-                      )
+                      'span',
+                      null,
+                      'Ti\u1EBFp Theo\xA0'
                     )
                   )
                 )
@@ -5982,12 +6010,6 @@ function _get_original__(variableName) {
   switch (variableName) {
     case 'ProgressBar':
       return _reactBootstrap.ProgressBar;
-
-    case 'FormGroup':
-      return _reactBootstrap.FormGroup;
-
-    case 'Radio':
-      return _reactBootstrap.Radio;
 
     case 'LinkContainer':
       return _reactRouterBootstrap.LinkContainer;

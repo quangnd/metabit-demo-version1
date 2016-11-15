@@ -42,173 +42,248 @@ class Questions extends React.Component {
           </div>
         </div>
 
-
-
-        <div className="col-sm-10 col-sm-offset-1">
-          <ProgressBar now={progressBarVal} label={`${progressBarVal}%`} />
+       <div className="row">
+          <div className="col-sm-10 col-sm-offset-1">
+            <ProgressBar now={progressBarVal} label={`${progressBarVal}%`} />
+          </div>
         </div>
         {/* Begin form  */}
 
-        <form method="POST" action="" id="test-form">
-          <div className="col-sm-10 col-sm-offset-1">
-            <div className="question-wrapper set1">
-              <div className="statement">
-                Bạn thấy khó để giao tiếp với người khác
-                </div>
-              <div className="row answer">
-
-                <div className="col-sm-offset-2 col-sm-1">
-                  <h3 className="text-center">Agree</h3>
-                </div>
-
-                <div className="col-sm-6">
-                  <FormGroup>
-                    
-                    <Radio name="answerOptions" inline>
-                      -3
-                            </Radio>
-                    {' '}
-                    <Radio name="answerOptions" inline>
-                      -2
-                            </Radio>
-                    {' '}
-                    <Radio name="answerOptions" inline>
-                      -1
-                          </Radio>
-                    <Radio name="answerOptions" inline>
-                      0
-                            </Radio>
-                    {' '}
-                    <Radio name="answerOptions" inline>
-                      1
-                            </Radio>
-                    {' '}
-                    <Radio name="answerOptions" inline>
-                      2
-                          </Radio>
-                    <Radio name="answerOptions" inline>
-                      3
-                          </Radio>
-                  </FormGroup>
-                </div>
-
-                <div className="col-sm-1">
-                  <h3 className="text-center">Disagree</h3>
-                </div>
-             
-              </div>
+        <form>
+          <div className="question-wrapper">
+            <div className="statement">
+              You find it difficult to introduce yourself to other people.
             </div>
 
-            <div className="question-wrapper set1">
-              <div className="statement text-center">
-                Bạn rất hiếm khi chủ động bắt chuyện
-                </div>
-              <div className="row answer">
-             
-              <div className="col-sm-offset-2 col-sm-1">
-                  <h3 className="text-center">Agree</h3>
-                </div>
-
-                <div className="col-sm-6">
-                  <FormGroup>
-                    <Radio name="answerOptions2" inline>
-                      -3
-                        </Radio>
-                    {' '}
-                    <Radio name="answerOptions2" inline>
-                      -2
-                        </Radio>
-                    {' '}
-                    <Radio name="answerOptions2" inline>
-                      -1
-                      </Radio>
-                    <Radio name="answerOptions2" inline>
-                      0
-                        </Radio>
-                    {' '}
-                    <Radio name="answerOptions2" inline>
-                      1
-                        </Radio>
-                    {' '}
-                    <Radio name="answerOptions2" inline>
-                      2
-                      </Radio>
-                    <Radio name="answerOptions2" inline>
-                      3
-                      </Radio>
-                  </FormGroup>
-                </div>
-                 <div className="col-sm-1">
-                  <h3 className="text-center">Disagree</h3>
-                </div>
+            <div className="row answer">
+              <div className="col-sm-3 caption left">
+                Có
               </div>
-            </div>
 
-            <div className="question-wrapper set1">
-              <div className="statement">
-                Bạn luôn gặp khó khăn trong việc tha thứ
+                <div className="col-sm-6 btn-group options">
+                
+                    <label className="btn btn-default option testing max ">
+                        <input type="radio" name="options" />
+                    </label>
+                    <label className="btn btn-default option agree med">
+                        <input type="radio" name="options"/>
+                    </label>
+                    <label className="btn btn-default option agree min">
+                        <input type="radio" name="options"/>
+                    </label>
+                    <label className="btn btn-default neutral option">
+                        <input type="radio" name="options"/>
+                    </label>
+                    <label className="btn btn-default disagree option min">
+                        <input type="radio" name="options"/>
+                    </label>
+                    <label className="btn btn-default disagree option med">
+                        <input type="radio" name="options"/>
+                    </label>
+                    <label className="btn btn-default disagree option max">
+                        <input type="radio" name="options"/>
+                    </label>
                 </div>
-              <div className="row answer">
-              <div className="col-sm-offset-2 col-sm-1">
-                  <h3 className="text-center">Agree</h3>
-                </div>
-                <div className="col-sm-6">
-                  <FormGroup>
 
-                    <Radio name="answerOptions" inline>
-                      -3
-                    </Radio>
-                    {' '}
-                    <Radio name="answerOptions" inline>
-                      -2
-                    </Radio>
-                    {' '}
-                    <Radio name="answerOptions" inline>
-                      -1
-                   </Radio>
-                    <Radio name="answerOptions" inline>
-                      0
-                    </Radio>
-                    {' '}
-                    <Radio name="answerOptions" inline>
-                      1
-                    </Radio>
-                    {' '}
-                    <Radio name="answerOptions" inline>
-                      2
-                   </Radio>
-                    <Radio name="answerOptions" inline>
-                      3
-                   </Radio>
-                  </FormGroup>
-                </div>
-                 <div className="col-sm-1">
-                  <h3 className="text-center">Disagree</h3>
-                </div>
+              <div className="col-sm-3 caption right">
+                Không
               </div>
-            </div>
-
-
-            <div className="row test-submit-wrapper">
-              <div className="col-sm-offset-5 col-sm-2">
-                <div className="submit_wrapper setnext">
-
-                  <LinkContainer to={{ pathname: '/result' }}>
-                    <button className="btn btn-action center-block" id="nextbut" type="button"><span>NEXT&nbsp;</span></button>
-                  </LinkContainer>
-
-                </div>
-
-              </div>
+              
             </div>
           </div>
+
+
+<div className="question-wrapper">
+            <div className="statement">
+              You often get so lost in thoughts that you ignore or forget your surroundings.
+            </div>
+
+            <div className="row answer">
+              <div className="col-sm-3 caption left">
+                Có
+              </div>
+
+                <div className="col-sm-6 btn-group options">
+                
+                    <label className="btn btn-default option testing max ">
+                        <input type="radio" name="options" />
+                    </label>
+                    <label className="btn btn-default option agree med">
+                        <input type="radio" name="options"/>
+                    </label>
+                    <label className="btn btn-default option agree min">
+                        <input type="radio" name="options"/>
+                    </label>
+                    <label className="btn btn-default neutral option">
+                        <input type="radio" name="options"/>
+                    </label>
+                    <label className="btn btn-default disagree option min">
+                        <input type="radio" name="options"/>
+                    </label>
+                    <label className="btn btn-default disagree option med">
+                        <input type="radio" name="options"/>
+                    </label>
+                    <label className="btn btn-default disagree option max">
+                        <input type="radio" name="options"/>
+                    </label>
+                </div>
+
+              <div className="col-sm-3 caption right">
+                Không
+              </div>
+              
+            </div>
+          </div>
+
+
+          <div className="question-wrapper">
+            <div className="statement">
+              You try to respond to your e-mails as soon as possible and cannot stand a messy 
+            </div>
+
+            <div className="row answer">
+              <div className="col-sm-3 caption left">
+                Có
+              </div>
+
+                <div className="col-sm-6 btn-group options">
+                
+                    <label className="btn btn-default option testing max ">
+                        <input type="radio" name="options" />
+                    </label>
+                    <label className="btn btn-default option agree med">
+                        <input type="radio" name="options"/>
+                    </label>
+                    <label className="btn btn-default option agree min">
+                        <input type="radio" name="options"/>
+                    </label>
+                    <label className="btn btn-default neutral option">
+                        <input type="radio" name="options"/>
+                    </label>
+                    <label className="btn btn-default disagree option min">
+                        <input type="radio" name="options"/>
+                    </label>
+                    <label className="btn btn-default disagree option med">
+                        <input type="radio" name="options"/>
+                    </label>
+                    <label className="btn btn-default disagree option max">
+                        <input type="radio" name="options"/>
+                    </label>
+                </div>
+
+              <div className="col-sm-3 caption right">
+                Không
+              </div>
+              
+            </div>
+          </div>
+
+
+          <div className="question-wrapper">
+            <div className="statement">
+              You find it easy to stay relaxed and focused even when there is some pressure.
+            </div>
+
+            <div className="row answer">
+              <div className="col-sm-3 caption left">
+                Có
+              </div>
+
+                <div className="col-sm-6 btn-group options">
+                
+                    <label className="btn btn-default option testing max ">
+                        <input type="radio" name="options" />
+                    </label>
+                    <label className="btn btn-default option agree med">
+                        <input type="radio" name="options"/>
+                    </label>
+                    <label className="btn btn-default option agree min">
+                        <input type="radio" name="options"/>
+                    </label>
+                    <label className="btn btn-default neutral option">
+                        <input type="radio" name="options"/>
+                    </label>
+                    <label className="btn btn-default disagree option min">
+                        <input type="radio" name="options"/>
+                    </label>
+                    <label className="btn btn-default disagree option med">
+                        <input type="radio" name="options"/>
+                    </label>
+                    <label className="btn btn-default disagree option max">
+                        <input type="radio" name="options"/>
+                    </label>
+                </div>
+
+              <div className="col-sm-3 caption right">
+                Không
+              </div>
+              
+            </div>
+          </div>
+
+
+          <div className="question-wrapper">
+            <div className="statement">
+              You do not usually initiate conversations.
+            </div>
+
+            <div className="row answer">
+              <div className="col-sm-3 caption left">
+                Có
+              </div>
+
+                <div className="col-sm-6 btn-group options">
+                
+                    <label className="btn btn-default option testing max ">
+                        <input type="radio" name="options" />
+                    </label>
+                    <label className="btn btn-default option agree med">
+                        <input type="radio" name="options"/>
+                    </label>
+                    <label className="btn btn-default option agree min">
+                        <input type="radio" name="options"/>
+                    </label>
+                    <label className="btn btn-default neutral option">
+                        <input type="radio" name="options"/>
+                    </label>
+                    <label className="btn btn-default disagree option min">
+                        <input type="radio" name="options"/>
+                    </label>
+                    <label className="btn btn-default disagree option med">
+                        <input type="radio" name="options"/>
+                    </label>
+                    <label className="btn btn-default disagree option max">
+                        <input type="radio" name="options"/>
+                    </label>
+                </div>
+
+              <div className="col-sm-3 caption right">
+                Không
+              </div>
+              
+            </div>
+          </div>
+
+           <div className="row test-submit-wrapper">
+                    <div className="col-sm-offset-5 col-sm-2">
+                        <div className="submit_wrapper setnext">
+
+                            <LinkContainer to={{ pathname: '/result' }}>
+                                <button className="btn btn-action center-block" id="nextbut" type="button"><span>Tiếp Theo&nbsp;</span></button>
+                            </LinkContainer>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
         </form>
+
+         
         {/* End form  */}
 
       </div>
-
-
-
     );
   }
 }

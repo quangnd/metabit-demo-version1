@@ -142,7 +142,7 @@ class QuestionUser extends React.Component {
                         <div className="submit_wrapper setnext">
 
                             <LinkContainer to={{ pathname: '/questions' }}>
-                                <button className="btn btn-action center-block" id="nextbut" type="button"><span>START&nbsp;</span></button>
+                                <button className="btn btn-action center-block" id="nextbut" type="button"><span>Bắt Đầu&nbsp;</span></button>
                             </LinkContainer>
 
                         </div>
