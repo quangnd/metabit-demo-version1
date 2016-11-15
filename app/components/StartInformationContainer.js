@@ -54,22 +54,22 @@ class StartInformationContainer extends React.Component {
 
        
         if (!age) { //empty or undefined
-            errors.push('Please enter age');
+            errors.push('Bạn phải nhập tuổi.');
         }
         if (isNaN(age)) {
-            errors.push('Age must be number');
+            errors.push('Tuổi phải có dạng số.');
         }
         if (!gender) {
-            errors.push('Please enter gender');
+            errors.push('Bạn phải chọn giới tính');
         }
         if (!subjects || subjects.length === 0) {
-            errors.push('You must choose at least a subject!');
+            errors.push('Bạn phải chọn ít nhất một môn học.');
         } 
         if (!subjectScores || subjectScores.length === 0) {
-            errors.push('You must choose at least a subject score!');
+            errors.push('Bạn phải chọn ít nhất một môn học với điểm tương ứng.');
         }
         if (!hobbies || hobbies.length === 0) {
-            errors.push('You must choose at least a hobbie!');
+            errors.push('Bạn phải chọn ít nhất một sở thích.');
         }
 
         if (errors.length > 0) { 
@@ -103,11 +103,11 @@ class StartInformationContainer extends React.Component {
         //     });
          
         console.log(this.state.error);
-        //if (this.validateInput()) {
+        if (this.validateInput()) {
             this.props.updateUserInfo({
                 userInfo: this.state.userInfo
             })
-       // }   
+        }   
     }
 
     handleChange(event) {

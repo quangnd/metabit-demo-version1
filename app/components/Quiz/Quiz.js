@@ -6,14 +6,11 @@ import { LinkContainer } from 'react-router-bootstrap';
 const Quiz = ({questions, isLastStep, onSubmit, onNext, onOptionChange}) => {
     return (
         <div className="test-component">
-
-
             <div className="row test-notice">
                 <div className="col-sm-offset-3 col-sm-6">
                     <p className="text-center">Three things you need to know before taking the test</p>
                 </div>
             </div>
-
 
             <div className="row test-graphic">
                 <div className="col-sm-offset-1 col-sm-2">

@@ -4000,8 +4000,6 @@ var Header = _wrapComponent('Header')(function (_get__$Component) {
 
       var _Link_Component = _get__('Link');
 
-      var _Link_Component2 = _get__('Link');
-
       var rightNav = this.props.token ? _react3.default.createElement(
         'ul',
         { className: 'nav navbar-nav navbar-right' },
@@ -4041,28 +4039,25 @@ var Header = _wrapComponent('Header')(function (_get__$Component) {
             )
           )
         )
-      ) : _react3.default.createElement(
-        'ul',
-        { className: 'nav navbar-nav navbar-right' },
-        _react3.default.createElement(
-          'li',
-          null,
-          _react3.default.createElement(
-            _Link_Component2,
-            { to: '/login', activeStyle: active },
-            _react3.default.createElement('i', { className: 'fa fa-key', 'aria-hidden': 'true' }),
-            ' \xA0 LOG IN'
-          )
-        )
-      );
+      ) : '';
+      //=====Disable Login features (quangnd)
+      // (
+      //   <ul className="nav navbar-nav navbar-right">
+      //     <li>
+      //         <Link to="/login" activeStyle={active}>
+      //             <i className="fa fa-key" aria-hidden="true"></i> &nbsp; LOG IN
+      //         </Link>
+      //     </li>
+      //   </ul>
+      // );
 
       var _IndexLink_Component = _get__('IndexLink');
 
       var _IndexLink_Component2 = _get__('IndexLink');
 
-      var _Link_Component3 = _get__('Link');
+      var _Link_Component2 = _get__('Link');
 
-      var _Link_Component4 = _get__('Link');
+      var _Link_Component3 = _get__('Link');
 
       return _react3.default.createElement(
         'nav',
@@ -4111,7 +4106,7 @@ var Header = _wrapComponent('Header')(function (_get__$Component) {
                 'li',
                 null,
                 _react3.default.createElement(
-                  _Link_Component3,
+                  _Link_Component2,
                   { to: '/metabit-test', activeStyle: active },
                   _react3.default.createElement('i', { className: 'fa fa-flask', 'aria-hidden': 'true' }),
                   '\xA0 PERSONALITY TEST'
@@ -4121,7 +4116,7 @@ var Header = _wrapComponent('Header')(function (_get__$Component) {
                 'li',
                 null,
                 _react3.default.createElement(
-                  _Link_Component4,
+                  _Link_Component3,
                   { to: '/contact', activeStyle: active },
                   _react3.default.createElement('i', { className: 'fa fa-users', 'aria-hidden': 'true' }),
                   '\xA0 ABOUT US'
@@ -4396,7 +4391,7 @@ var Home = _wrapComponent('Home')(function (_get__$Component) {
                 ),
                 _react3.default.createElement(
                   _LinkContainer_Component,
-                  { to: { pathname: '/userprompt' } },
+                  { to: { pathname: '/metabit-test' } },
                   _react3.default.createElement(
                     _Button_Component,
                     { className: 'btn cto-button' },
@@ -5382,11 +5377,11 @@ var Question = function Question(_ref) {
             _react2.default.createElement(
                 'div',
                 { className: 'col-sm-3 caption left' },
-                'C\xF3'
+                'Kh\xF4ng'
             ),
             _react2.default.createElement(
                 _RadioGroup_Component,
-                { name: question.name, key: question.id },
+                { name: question.id, key: question.id },
                 question.choices.map(function (choice) {
                     var classDegreeName = '';
                     switch (choice.value) {
@@ -5425,12 +5420,7 @@ var Question = function Question(_ref) {
             _react2.default.createElement(
                 'div',
                 { className: 'col-sm-3 caption right' },
-                'Kh\xF4ng'
-            ),
-            _react2.default.createElement(
-                'p',
-                { className: 'testP' },
-                ' abc '
+                'C\xF3'
             )
         )
     );
@@ -7992,11 +7982,12 @@ var QuizContainer = _wrapComponent('QuizContainer')(function (_get__$Component) 
             formValues: [],
             result: [],
             questions: [],
-            perOnPage: 3,
+            perOnPage: 5,
             currentStep: 1,
             totalStep: 0,
             isLastStep: false,
-            userInfor: {}
+            userInfor: {},
+            previousCheckedvalue: ''
         };
 
         _this.handleFormSubmit = _this.handleFormSubmit.bind(_this);
@@ -8015,8 +8006,7 @@ var QuizContainer = _wrapComponent('QuizContainer')(function (_get__$Component) 
                 currentStep: 1,
                 totalStep: questionsInit.length / perOnPage
             });
-
-            console.log(this.props.userInfoData);
+            //console.log(this.props.userInfoData);
         }
     }, {
         key: 'handleNextClick',
@@ -8037,73 +8027,50 @@ var QuizContainer = _wrapComponent('QuizContainer')(function (_get__$Component) 
     }, {
         key: 'handleOptionChange',
         value: function handleOptionChange(event) {
-            var questionId = event.target.name.slice(-1);
+            var questionId = event.target.name;
+
+            if (this.state.previousCheckedvalue) this.clearClassName(questionId, this.state.previousCheckedvalue);
 
             if (event.target.checked) {
+                //active constants
+                var disagreeActiveMax = 'disagree option disagreeActive max';
+                var disagreeActiveMed = 'disagree option disagreeActive med';
+                var disagreeActiveMin = 'disagree option disagreeActive min';
+                var agreeActiveMax = 'option testing max';
+                var agreeActiveMed = 'option testing med';
+                var agreeActiveMin = 'option testing min';
+                var neutralActive = 'neutralActive option';
+
                 var labelId = '[data-lblid=lbl' + questionId + event.target.value + ']';
                 var lbl = document.querySelectorAll(labelId);
 
                 var className = '';
                 switch (event.target.value) {
                     case '-3':
-                        className = 'disagree option disagreeActive max';
+                        className = disagreeActiveMax;
                         break;
                     case '-2':
-                        className = 'disagree option disagreeActive med';
+                        className = disagreeActiveMed;
                         break;
                     case '-1':
-                        className = 'disagree option disagreeActive min';
+                        className = disagreeActiveMin;
                         break;
                     case '1':
-                        className = 'option testing min';
+                        className = agreeActiveMin;
                         break;
                     case '2':
-                        className = 'option testing med';
+                        className = agreeActiveMed;
                         break;
                     case '3':
-                        className = 'option testing max';
+                        className = agreeActiveMax;
                         break;
                     default:
-                        className = 'neutralActive option';
+                        className = neutralActive;
                         break;
                 }
 
                 lbl[0].className = 'btn btn-default ' + className;
-
-                //Check if className dang la active thi phai unactive
             }
-            //    else {
-            //         let labelId = `[data-lblid=lbl${questionId}${event.target.value}]`;
-            //        var lbl = document.querySelectorAll(labelId);
-
-            //        let className = '';
-            //        switch (event.target.value) {
-            //            case '-3':
-            //              className = 'disagree option max';
-            //              break;
-            //            case '-2':
-            //              className = 'disagree option med';
-            //              break;
-            //            case '-1':
-            //              className = 'disagree option min';
-            //              break;
-            //            case '1':
-            //              className = 'option agree min';
-            //              break;
-            //            case '2':
-            //              className = 'option agree med';
-            //              break;
-            //            case '3':
-            //              className = 'option agree max';
-            //              break;
-            //            default:
-            //              className = 'neutral option';
-            //              break;
-            //        }
-
-            //        lbl[0].className = `btn btn-default ${className}` 
-            //    }
-
             var questionChoosed = {
                 id: questionId,
                 name: event.target.name,
@@ -8124,10 +8091,53 @@ var QuizContainer = _wrapComponent('QuizContainer')(function (_get__$Component) 
 
             this.setState({
                 formValues: formValues,
-                question: questionChoosed
+                question: questionChoosed,
+                previousCheckedvalue: event.target.value
             });
 
             console.log('Name ' + event.target.name + ' with value = ' + event.target.value);
+        }
+    }, {
+        key: 'clearClassName',
+        value: function clearClassName(questionId, checkedValue) {
+            //normal constants
+            var disagreeMax = 'disagree option max';
+            var disagreeMed = 'disagree option med';
+            var disagreeMin = 'disagree option min';
+            var agreeMax = 'option agree max';
+            var agreeMed = 'option agree med';
+            var agreeMin = 'option agree min';
+            var neutra = 'neutral option';
+
+            var labelId = '[data-lblid=lbl' + questionId + checkedValue + ']';
+            var lbl = document.querySelectorAll(labelId);
+
+            var className = '';
+            switch (checkedValue) {
+                case '-3':
+                    className = disagreeMax;
+                    break;
+                case '-2':
+                    className = disagreeMed;
+                    break;
+                case '-1':
+                    className = disagreeMin;
+                    break;
+                case '1':
+                    className = agreeMin;
+                    break;
+                case '2':
+                    className = agreeMed;
+                    break;
+                case '3':
+                    className = agreeMax;
+                    break;
+                default:
+                    className = neutra;
+                    break;
+            }
+
+            lbl[0].className = 'btn btn-default ' + className;
         }
     }, {
         key: 'handleFormSubmit',
@@ -8138,6 +8148,9 @@ var QuizContainer = _wrapComponent('QuizContainer')(function (_get__$Component) 
                 result: this.state.formValues,
                 userInfo: this.props.userInfoData
             });
+
+            var path = '/result';
+            this.context.router.push(path);
         }
     }, {
         key: 'render',
@@ -8164,6 +8177,10 @@ var QuizContainer = _wrapComponent('QuizContainer')(function (_get__$Component) 
 
     return QuizContainer;
 }(_get__('React').Component));
+
+_get__('QuizContainer').contextTypes = {
+    router: _get__('React').PropTypes.object
+};
 
 exports.default = _get__('QuizContainer');
 var _RewiredData__ = {};
@@ -8418,22 +8435,22 @@ var StartInformationContainer = _wrapComponent('StartInformationContainer')(func
 
             if (!age) {
                 //empty or undefined
-                errors.push('Please enter age');
+                errors.push('Bạn phải nhập tuổi.');
             }
             if (isNaN(age)) {
-                errors.push('Age must be number');
+                errors.push('Tuổi phải có dạng số.');
             }
             if (!gender) {
-                errors.push('Please enter gender');
+                errors.push('Bạn phải chọn giới tính');
             }
             if (!subjects || subjects.length === 0) {
-                errors.push('You must choose at least a subject!');
+                errors.push('Bạn phải chọn ít nhất một môn học.');
             }
             if (!subjectScores || subjectScores.length === 0) {
-                errors.push('You must choose at least a subject score!');
+                errors.push('Bạn phải chọn ít nhất một môn học với điểm tương ứng.');
             }
             if (!hobbies || hobbies.length === 0) {
-                errors.push('You must choose at least a hobbie!');
+                errors.push('Bạn phải chọn ít nhất một sở thích.');
             }
 
             if (errors.length > 0) {
@@ -8467,11 +8484,11 @@ var StartInformationContainer = _wrapComponent('StartInformationContainer')(func
             //     });
 
             console.log(this.state.error);
-            //if (this.validateInput()) {
-            this.props.updateUserInfo({
-                userInfo: this.state.userInfo
-            });
-            // }   
+            if (this.validateInput()) {
+                this.props.updateUserInfo({
+                    userInfo: this.state.userInfo
+                });
+            }
         }
     }, {
         key: 'handleChange',
@@ -9947,6 +9964,155 @@ module.exports={
       "questionType": "radio",
       "title": "Bạn ít khi làm những việc kì lạ và ngẫu hứng",
       "questionGroup": "energy",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    }
+    ,
+    {
+      "id": "7",
+      "name": "question7",
+      "questionType": "radio",
+      "title": "Bạn cảm thấy mình giỏi hơn những người xung quanh",
+      "questionGroup": "nature",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "question8",
+      "questionType": "radio",
+      "title": "Với bạn, có tổ chức luôn quan trọng hơn sự thích nghi với hoàn cảnh",
+      "questionGroup": "tactics",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "question9",
+      "questionType": "radio",
+      "title": "Bạn thường cảm thấy có động lực cao và nhiều nặng lượng",
+      "questionGroup": "mind",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "question10",
+      "questionType": "radio",
+      "title": "Chiến thằng một quộc tranh luận thì ít quan trọng hơn là việc làm mọi người xung quanh hài lòng",
+      "questionGroup": "nature",
       "choices": [
         {
           "value": "-3",

@@ -26,15 +26,17 @@ class Header extends React.Component {
           </ul>
         </li>
       </ul>
-    ) : (
-        <ul className="nav navbar-nav navbar-right">
-          <li>
-              <Link to="/login" activeStyle={active}>
-                  <i className="fa fa-key" aria-hidden="true"></i> &nbsp; LOG IN
-              </Link>
-          </li>
-        </ul>
-      );
+    ) : '' 
+      //=====Disable Login features (quangnd)
+      // (
+      //   <ul className="nav navbar-nav navbar-right">
+      //     <li>
+      //         <Link to="/login" activeStyle={active}>
+      //             <i className="fa fa-key" aria-hidden="true"></i> &nbsp; LOG IN
+      //         </Link>
+      //     </li>
+      //   </ul>
+      // );
     return (
       <nav className="navbar navbar-default navbar-static-top">
         <div className="container">

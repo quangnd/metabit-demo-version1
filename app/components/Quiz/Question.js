@@ -10,10 +10,10 @@ const Question = ({question, onChange}) => {
             </div>
              <div className="row answer">
               <div className="col-sm-3 caption left">
-                Có
+                Không
               </div>
    
-                <RadioGroup name={question.name} key={question.id}>
+                <RadioGroup name={question.id} key={question.id}>
                     {question.choices.map(choice => {
                         let classDegreeName = ''
                         switch(choice.value) {
@@ -49,7 +49,7 @@ const Question = ({question, onChange}) => {
                 </RadioGroup>
            
              <div className="col-sm-3 caption right">
-                Không
+                Có
               </div>
               
             </div>

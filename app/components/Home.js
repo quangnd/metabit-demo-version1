@@ -23,7 +23,7 @@ class Home extends React.Component {
                 </div>
                 <div className="col-sm-5 metabit-cto">
                   <h1 className="header-text">Metabit Test</h1>
-                  <LinkContainer to={{ pathname: '/userprompt' }}>
+                  <LinkContainer to={{ pathname: '/metabit-test' }}>
                     <Button className="btn cto-button">Take the Test<i className="fa fa-hand-pointer-o click-icon"></i></Button>
                   </LinkContainer>
                   <p className="header-subtext">Explore yourself !</p>

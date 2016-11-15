@@ -6000,12 +6000,12 @@ textarea {
 .question-wrapper .answer .caption.left {
   text-align: right;
   padding-right: 0;
-  color: #286EBB; }
+  color: #FF8B00; }
 
 .question-wrapper .answer .caption.right {
   text-align: left;
   padding-left: 0;
-  color: #FF8B00; }
+  color: #286EBB; }
 
 .question-wrapper .answer .options {
   display: -webkit-box;
@@ -6055,6 +6055,11 @@ textarea {
 
 .question-wrapper .answer .options .option.neutral:active {
   background: #ececeb; }
+
+.question-wrapper .answer .options .option.neutralActive {
+  background: #ececeb;
+  width: 28px;
+  height: 28px; }
 
 .question-wrapper .answer .options .option.neutral:hover {
   background: #ececeb; }

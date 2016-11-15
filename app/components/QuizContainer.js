@@ -9,11 +9,12 @@ class QuizContainer extends React.Component {
             formValues: [],
             result: [],
             questions: [],
-            perOnPage: 3,
+            perOnPage: 5,
             currentStep: 1,
             totalStep: 0,
             isLastStep: false,
-            userInfor: {}
+            userInfor: {},
+            previousCheckedvalue: ''
         }
 
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
@@ -29,9 +30,7 @@ class QuizContainer extends React.Component {
             currentStep: 1,
             totalStep: questionsInit.length / perOnPage
         })
-
-       
-        console.log(this.props.userInfoData);
+        //console.log(this.props.userInfoData);
     }
 
     
@@ -52,73 +51,52 @@ class QuizContainer extends React.Component {
     }
 
     handleOptionChange(event) {
-        const questionId = event.target.name.slice(-1);
+       const questionId = event.target.name;
+       
+       if (this.state.previousCheckedvalue)
+         this.clearClassName(questionId, this.state.previousCheckedvalue);
        
        if (event.target.checked) {
+           //active constants
+           const disagreeActiveMax = 'disagree option disagreeActive max';
+           const disagreeActiveMed = 'disagree option disagreeActive med';
+           const disagreeActiveMin = 'disagree option disagreeActive min';
+           const agreeActiveMax = 'option testing max';
+           const agreeActiveMed = 'option testing med';
+           const agreeActiveMin = 'option testing min';
+           const neutralActive = 'neutralActive option';
+
            let labelId = `[data-lblid=lbl${questionId}${event.target.value}]`;
-           var lbl = document.querySelectorAll(labelId);
+           let lbl = document.querySelectorAll(labelId);
 
            let className = '';
            switch (event.target.value) {
                case '-3':
-                 className = 'disagree option disagreeActive max';
+                 className = disagreeActiveMax;
                  break;
                case '-2':
-                 className = 'disagree option disagreeActive med';
+                 className = disagreeActiveMed;
                  break;
                case '-1':
-                 className = 'disagree option disagreeActive min';
+                 className = disagreeActiveMin;
                  break;
                case '1':
-                 className = 'option testing min';
+                 className = agreeActiveMin;
                  break;
                case '2':
-                 className = 'option testing med';
+                 className = agreeActiveMed;
                  break;
                case '3':
-                 className = 'option testing max';
+                 className = agreeActiveMax;
                  break;
                default:
-                 className = 'neutralActive option';
+                 className = neutralActive;
                  break;
            }
          
            lbl[0].className = `btn btn-default ${className}`;
-
-           //Check if className dang la active thi phai unactive
-       }
-    //    else {
-    //         let labelId = `[data-lblid=lbl${questionId}${event.target.value}]`;
-    //        var lbl = document.querySelectorAll(labelId);
-
-    //        let className = '';
-    //        switch (event.target.value) {
-    //            case '-3':
-    //              className = 'disagree option max';
-    //              break;
-    //            case '-2':
-    //              className = 'disagree option med';
-    //              break;
-    //            case '-1':
-    //              className = 'disagree option min';
-    //              break;
-    //            case '1':
-    //              className = 'option agree min';
-    //              break;
-    //            case '2':
-    //              className = 'option agree med';
-    //              break;
-    //            case '3':
-    //              className = 'option agree max';
-    //              break;
-    //            default:
-    //              className = 'neutral option';
-    //              break;
-    //        }
-         
-    //        lbl[0].className = `btn btn-default ${className}` 
-    //    }
-        
+           
+       }  
         let questionChoosed = {
             id: questionId,
             name: event.target.name,
@@ -139,11 +117,53 @@ class QuizContainer extends React.Component {
 
         this.setState({
             formValues,
-            question: questionChoosed
+            question: questionChoosed,
+            previousCheckedvalue: event.target.value
         })
 
         console.log(`Name ${event.target.name} with value = ${event.target.value}`);
 
+    }
+
+    clearClassName(questionId, checkedValue) {
+           //normal constants
+           const disagreeMax = 'disagree option max';
+           const disagreeMed = 'disagree option med';
+           const disagreeMin = 'disagree option min';
+           const agreeMax = 'option agree max';
+           const agreeMed = 'option agree med';
+           const agreeMin = 'option agree min';
+           const neutra = 'neutral option';
+           
+           let labelId = `[data-lblid=lbl${questionId}${checkedValue}]`;
+           let lbl = document.querySelectorAll(labelId);
+
+           let className = '';
+           switch (checkedValue) {
+               case '-3':
+                 className = disagreeMax;
+                 break;
+               case '-2':
+                 className = disagreeMed;
+                 break;
+               case '-1':
+                 className = disagreeMin;
+                 break;
+               case '1':
+                 className = agreeMin;
+                 break;
+               case '2':
+                 className = agreeMed;
+                 break;
+               case '3':
+                 className = agreeMax;
+                 break;
+               default:
+                 className = neutra;
+                 break;
+           }
+         
+           lbl[0].className = `btn btn-default ${className}`;
     }
 
     handleFormSubmit(e) {
@@ -153,6 +173,9 @@ class QuizContainer extends React.Component {
             result: this.state.formValues,
             userInfo: this.props.userInfoData
         })
+
+        const path = '/result';
+        this.context.router.push(path)
     }
 
     render() {
@@ -173,5 +196,10 @@ class QuizContainer extends React.Component {
         )
     }
 }
+
+
+QuizContainer.contextTypes = {
+    router: React.PropTypes.object
+};
 
 export default QuizContainer;

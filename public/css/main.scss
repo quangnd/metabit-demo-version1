@@ -339,13 +339,13 @@ textarea {
 .question-wrapper .answer .caption.left{
   text-align: right;
   padding-right: 0;
-  color: $metabit-blue;
+  color: $orange;
 }
 
 .question-wrapper .answer .caption.right{
   text-align: left;
   padding-left: 0;
-  color: $orange;
+  color: $metabit-blue;
 }
 
 .question-wrapper .answer .options {
@@ -402,6 +402,12 @@ textarea {
 
 .question-wrapper .answer .options .option.neutral:active {
   background: #ececeb;
+}
+
+.question-wrapper .answer .options .option.neutralActive {
+  background: #ececeb;
+  width: 28px;
+  height: 28px;
 }
 
 .question-wrapper .answer .options .option.neutral:hover {

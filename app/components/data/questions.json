@@ -222,5 +222,154 @@
         }
       ]
     }
+    ,
+    {
+      "id": "7",
+      "name": "question7",
+      "questionType": "radio",
+      "title": "Bạn cảm thấy mình giỏi hơn những người xung quanh",
+      "questionGroup": "nature",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "question8",
+      "questionType": "radio",
+      "title": "Với bạn, có tổ chức luôn quan trọng hơn sự thích nghi với hoàn cảnh",
+      "questionGroup": "tactics",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "question9",
+      "questionType": "radio",
+      "title": "Bạn thường cảm thấy có động lực cao và nhiều nặng lượng",
+      "questionGroup": "mind",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "question10",
+      "questionType": "radio",
+      "title": "Chiến thằng một quộc tranh luận thì ít quan trọng hơn là việc làm mọi người xung quanh hài lòng",
+      "questionGroup": "nature",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    }
   ]
 }
