@@ -381,10 +381,14 @@ textarea {
 
 }
 
-
 .question-wrapper .answer .options .option.agree:active {
   background: $metabit-blue;
 }
+
+.question-wrapper .answer .options .option.agreeActive {
+  background: $metabit-blue;
+}
+
 .question-wrapper .answer .options .option.agree:hover {
   background: $metabit-blue;
 }
@@ -399,6 +403,7 @@ textarea {
 .question-wrapper .answer .options .option.neutral:active {
   background: #ececeb;
 }
+
 .question-wrapper .answer .options .option.neutral:hover {
   background: #ececeb;
 }
@@ -411,6 +416,11 @@ textarea {
 .question-wrapper .answer .options .option.disagree:active {
   background: $orange;
 }
+
+.question-wrapper .answer .options .option.disagreeActive {
+  background: $orange;
+}
+
 .question-wrapper .answer .options .option.disagree:hover {
   background: $orange;
 }

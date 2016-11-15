@@ -55,7 +55,7 @@ class Header extends React.Component {
                   </IndexLink>
               </li>
               <li>
-                <Link to="/userprompt" activeStyle={active}>
+                <Link to="/metabit-test" activeStyle={active}>
                   <i className="fa fa-flask" aria-hidden="true"></i>&nbsp; PERSONALITY TEST
                      </Link>
               </li>

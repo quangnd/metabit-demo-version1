@@ -15,7 +15,7 @@ import QuestionUser from './components/Quiz/QuestionUser';
 import Questions from './components/Quiz/Questions';
 
 import Test from './components/Test';
-
+import MainTest from './components/MainTest';
 
 
 export default function getRoutes(store) {
@@ -46,7 +46,7 @@ export default function getRoutes(store) {
       <Route path="/forgot" component={Forgot} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>
       <Route path='/reset/:token' component={Reset} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>
       <Route path='/questions' component={Questions} onLeave={clearMessages}/>
-      <Route path='/userprompt' component={QuestionUser} onLeave={clearMessages}/>
+      <Route path='/metabit-test' component={MainTest} onLeave={clearMessages}/>
       <Route path="*" component={NotFound} onLeave={clearMessages}/>
     </Route>
   );

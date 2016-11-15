@@ -1,0 +1,62 @@
+{
+    "nameEng": "Subject list",
+    "nameVi": "Danh sách môn học",
+    "list": [
+        {
+            "id": 1,
+            "subjectEng": "Math",
+            "subjectVi": "Toán"
+        },
+        {
+            "id": 2,
+            "subjectEng": "Biology",
+            "subjectVi": "Sinh học"
+        },
+        {
+            "id": 3,
+            "subjectEng": "Chemistry",
+            "subjectVi": "Hoá học"
+        },
+        {
+            "id": 4,
+            "subjectEng": "Physics",
+            "subjectVi": "Vật lý"
+        },
+        {
+            "id": 5,
+            "subjectEng": "Vietnamese Literature",
+            "subjectVi": "Văn học Việt Nam"
+        },
+        {
+            "id": 6,
+            "subjectEng": "English (Literature)",
+            "subjectVi": "Văn học nước ngoài"
+        },
+        {
+            "id": 7,
+            "subjectEng": "Geography",
+            "subjectVi": "Địa lý"
+        },
+        {
+            "id": 8,
+            "subjectEng": "History",
+            "subjectVi": "Lịch sử"
+        },
+        
+        {
+            "id": 9,
+            "subjectEng": "Art",
+            "subjectVi": "Nghệ thuật"
+        },
+        {
+            "id": 10,
+            "subjectEng": "Music",
+            "subjectVi": "Âm nhạc"
+        },
+        {
+            "id": 11,
+            "subjectEng": "IT",
+            "subjectVi": "Công nghệ thông tin"
+        }
+    ]
+}

@@ -1,0 +1,226 @@
+{
+  "questions": [
+    {
+      "id": "1",
+      "name": "question1",
+      "questionType": "radio",
+      "title": "Bạn cảm thấy khó khăn khi giới thiệu bản thân với người khác",
+      "questionGroup": "mind",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "question2",
+      "questionType": "radio",
+      "title": "Bạn hay tập trung cao độ tới mức không để ý hoặc quên đi không gian xung quanh",
+      "questionGroup": "energy",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "question3",
+      "questionType": "radio",
+      "title": "Bạn thường cố trả lời email sớm nhất có thể để tránh làm lộn xộn hòm thư của mình",
+      "questionGroup": "tactics",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "question4",
+      "questionType": "radio",
+      "title": "Bạn cảm thấy thoải mái và có thể tập trung cao độ dưới áp lực",
+      "questionGroup": "identity",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "question5",
+      "questionType": "radio",
+      "title": "Bạn thường không là người bắt đầu một cuộc đối thoại với ngừoi khác",
+      "questionGroup": "mind",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "question6",
+      "questionType": "radio",
+      "title": "Bạn ít khi làm những việc kì lạ và ngẫu hứng",
+      "questionGroup": "energy",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    }
+  ]
+}

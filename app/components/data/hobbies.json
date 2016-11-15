@@ -1,0 +1,72 @@
+{
+    "nameEng": "Hobby list",
+    "nameVi": "Danh mục sở thích",
+    "list": [
+        {
+            "id": 1,
+            "hobbyEng": "Playing sports, including swimming and other athletics",
+            "hobbyVi": "Chơi thể thao, bao gồm bơi và các môn chạy điền kinh"
+        },
+        {
+            "id": 2,
+            "hobbyEng": "Outdoor activities, such as hiking, kayaking, etc.",
+            "hobbyVi": "Hoạt động ngoài trời, ví dụ như leo núi, trèo thuyền kayak, etc"
+        },
+        {
+            "id": 3,
+            "hobbyEng": "Dancing",
+            "hobbyVi": "Nhảy"
+        },
+        {
+            "id": 4,
+            "hobbyEng": "Painting, drawing, or other forms of art",
+            "hobbyVi": "Sơn, vẽ và các môn nghệ thuật khác"
+        },
+        {
+            "id": 5,
+            "hobbyEng": "Theatricals, acting of any sorts",
+            "hobbyVi": "diễn kịch"
+        },
+        {
+            "id": 6,
+            "hobbyEng": "Playing games (computer)",
+            "hobbyVi": "Chơi trò chơi điện tử"
+        },
+        {
+            "id": 7,
+            "hobbyEng": "Playing games (offline)",
+            "hobbyVi": "Chơi trò chơi các loại ngoài đời thực"
+        },
+        {
+            "id": 8,
+            "hobbyEng": "Reading books, or research materials",
+            "hobbyVi": "đọc sách hoặc nghiên cứu"
+        },
+        
+        {
+            "id": 9,
+            "hobbyEng": "Reading magazines, pamphlets, or other materials that may be more image- than text-based",
+            "hobbyVi": "đọc tạp chí, tờ rơi hoặc một loại tài liệu có nhiều hình ảnh, hơn là chữ không"
+        },
+        {
+            "id": 10,
+            "hobbyEng": "Socializing with friends of any kinds",
+            "hobbyVi": "Giao tiếp xã hội với bạn bè"
+        },
+        {
+            "id": 11,
+            "hobbyEng": "Spending time with family, be it meals, holidays, whatever",
+            "hobbyVi": "Giành thời gian cho gia đình, có thể là ăn tối, đi du lịch"
+        },
+        {
+            "id": 12,
+            "hobbyEng": "Engaging in public events, such as expos and other that interests you",
+            "hobbyVi": "Trực tiếp tham giao vào các sự kiện công cộng, ví dụ như triển lãm"
+        },
+        {
+            "id": 13,
+            "hobbyEng": "Relaxing, either in your home or outside areas",
+            "hobbyVi": "Nghỉ ngơi, kể cả ở nhà hoặc ở khu vực ngoài trời"
+        }
+    ]
+}

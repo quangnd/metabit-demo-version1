@@ -6041,6 +6041,9 @@ textarea {
 .question-wrapper .answer .options .option.agree:active {
   background: #286EBB; }
 
+.question-wrapper .answer .options .option.agreeActive {
+  background: #286EBB; }
+
 .question-wrapper .answer .options .option.agree:hover {
   background: #286EBB; }
 
@@ -6061,6 +6064,9 @@ textarea {
   border: 4px solid #FF8B00; }
 
 .question-wrapper .answer .options .option.disagree:active {
+  background: #FF8B00; }
+
+.question-wrapper .answer .options .option.disagreeActive {
   background: #FF8B00; }
 
 .question-wrapper .answer .options .option.disagree:hover {
