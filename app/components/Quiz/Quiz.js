@@ -3,7 +3,7 @@ import Question from './Question'
 import { ProgressBar } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
-const Quiz = ({questions, isLastStep, onSubmit, onNext, onOptionChange}) => {
+const Quiz = ({questions, isLastStep, onSubmit, onNext, onOptionChange, progressBarValue, progressBarMax}) => {
     return (
         <div className="test-component">
             <div className="row test-notice">
@@ -29,7 +29,7 @@ const Quiz = ({questions, isLastStep, onSubmit, onNext, onOptionChange}) => {
 
             <div className="row">
                 <div className="col-sm-10 col-sm-offset-1">
-                    <ProgressBar now={10} label={10} />
+                    <ProgressBar now={progressBarValue} label={progressBarValue} max={progressBarMax}/>
                 </div>
             </div>
 
@@ -54,7 +54,9 @@ Quiz.propTypes = {
     isLastStep: React.PropTypes.bool.isRequired,
     onSubmit: React.PropTypes.func.isRequired,
     onNext: React.PropTypes.func.isRequired,
-    onOptionChange: React.PropTypes.func.isRequired
+    onOptionChange: React.PropTypes.func.isRequired,
+    progressBarValue: React.PropTypes.number.isRequired,
+    progressBarMax: React.PropTypes.number.isRequired
 }
 
 export default Quiz;

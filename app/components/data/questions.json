@@ -221,8 +221,7 @@
           "text": "Level 3"
         }
       ]
-    }
-    ,
+    },
     {
       "id": "7",
       "name": "question7",
@@ -340,6 +339,1856 @@
       "questionType": "radio",
       "title": "Chiến thằng một quộc tranh luận thì ít quan trọng hơn là việc làm mọi người xung quanh hài lòng",
       "questionGroup": "nature",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "name": "question11",
+      "questionType": "radio",
+      "title": "Bạn thường cảm thấy mình so sánh với người khác",
+      "questionGroup": "identity",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+       "id": "12",
+      "name": "question12",
+      "questionType": "radio",
+      "title": "Nơi ở và nơi làm việc của bạn thường luôn ngăn nắp",
+      "questionGroup": "tactics",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "13",
+      "name": "question13",
+      "questionType": "radio",
+      "title": "Bạn không ngại làm trung tâm của mọi sự chú ý",
+      "questionGroup": "mind",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "name": "question14",
+      "questionType": "radio",
+      "title": "Bạn coi bản thân mình thực tế hơn là sáng tạo",
+      "questionGroup": "energy",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+       "id": "15",
+      "name": "question15",
+      "questionType": "radio",
+      "title": "Người khác ít khi làm bạn buồn",
+      "questionGroup": "identity",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "name": "question16",
+      "questionType": "radio",
+      "title": "Kế hoạch du lịch của bạn luôn được tính toán một cách kĩ càng trước khi đi",
+      "questionGroup": "tactics",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "name": "question17",
+      "questionType": "radio",
+      "title": "Bạn thường cảm thấy khó hiểu được cảm xúc của người khác",
+      "questionGroup": "nature",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+       "id": "18",
+      "name": "question18",
+      "questionType": "radio",
+      "title": "Tâm trạng của bạn thường thay đổi liên tục",
+      "questionGroup": "identity",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+       "id": "19",
+      "name": "question19",
+      "questionType": "radio",
+      "title": "Trong một của đối thoại, sự thật nên được đề cao hơn là sự nhạy cảm của người khác",
+      "questionGroup": "nature",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+       "id": "20",
+      "name": "question20",
+      "questionType": "radio",
+      "title": "Bạn ít khi quan tâm hành động của bạn sẽ ảnh hướng tới người khác ra sao",
+      "questionGroup": "nature",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "name": "question21",
+      "questionType": "radio",
+      "title": "Phong cách làm việc của bạn thường rất ngẫu hứng hơn là một cách có phương pháp và hệ thống",
+      "questionGroup": "tactics",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "22",
+      "name": "question22",
+      "questionType": "radio",
+      "title": "Bạn hay đố kị với người khác",
+      "questionGroup": "identity",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "23",
+      "name": "question23",
+      "questionType": "radio",
+      "title": "Một quyển sách thú vị hoặc một trò chơi game sẽ thường hấp dẫn bạn hơn là một sự kiện xã hội",
+      "questionGroup": "mind",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "24",
+      "name": "question24",
+      "questionType": "radio",
+      "title": "Tạo ra một kế hoạch cụ thể và bám vào nó để hoạt động là phần quan trọng nhất đối với mọi dự án",
+      "questionGroup": "tactics",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "name": "question25",
+      "questionType": "radio",
+      "title": "Bạn ít khi nghĩ tới sự tưởng tượng hoặc ý tưởng lạ",
+      "questionGroup": "energy",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "26",
+      "name": "question26",
+      "questionType": "radio",
+      "title": "Bạn thường mải suy nghĩ khi đi bộ quanh tự nhiên",
+      "questionGroup": "energy",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "name": "question27",
+      "questionType": "radio",
+      "title": "Nếu ai đó không trả lời email của bạn sớm, bạn thường cảm thấy lo lắng là bạn đã viết gì sai",
+      "questionGroup": "identity",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "28",
+      "name": "question28",
+      "questionType": "radio",
+      "title": "Với thiên chức là bố mẹ, bạn thà con mình lớn lên tốt bụng hơn là thông minh",
+      "questionGroup": "nature",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "name": "question29",
+      "questionType": "radio",
+      "title": "Bạn không dễ để người khác tác động đến hành động của bạn",
+      "questionGroup": "identity",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "name": "question30",
+      "questionType": "radio",
+      "title": "Những giấc mơ của bạn thường tập trung vào thế giới thực và nhữg sự kiện quanh nó",
+      "questionGroup": "energy",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "31",
+      "name": "question31",
+      "questionType": "radio",
+      "title": "Nó không tốn nhiều thời gian để bạn bắt đầu tham gia vào hoạt động xã hội tại nơi làm việc mới",
+      "questionGroup": "mind",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "32",
+      "name": "question32",
+      "questionType": "radio",
+      "title": "Bạn thường là người ứng biến tự nhiên hơn là lên kế hoạch cẩn thận",
+      "questionGroup": "tactics",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "33",
+      "name": "question33",
+      "questionType": "radio",
+      "title": "Cảm xúc kiếm soát bạn hơn là bạn kiếm soát cảm xúc",
+      "questionGroup": "identity",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "34",
+      "name": "question34",
+      "questionType": "radio",
+      "title": "Bạn thích tham gia các hoạt động xã hội mà có hoạt động hoá trang hoặc trò chơi nhập vai",
+      "questionGroup": "mind",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "35",
+      "name": "question35",
+      "questionType": "radio",
+      "title": "Bạn thường bỏ nhiều thời gian khám phá những gì thiếu tính thực tiễn và thực tế, tuy nhiên vô cùng thú vị",
+      "questionGroup": "energy",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "36",
+      "name": "question36",
+      "questionType": "radio",
+      "title": "Bạn sẽ chọn ứng biến hơn là bỏ thời gian ra lên một kế hoạch cụ thể",
+      "questionGroup": "tactics",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "37",
+      "name": "question37",
+      "questionType": "radio",
+      "title": "Bạn là một người khá là kín đáo và trầm lặng",
+      "questionGroup": "mind",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "38",
+      "name": "question38",
+      "questionType": "radio",
+      "title": "Nếu bạn có một cơ sở kinh doanh, bạn sẽ cảm thấy rất khó để sa thải một người trung thành nhưng thiếu hiệu quả",
+      "questionGroup": "nature",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "39",
+      "name": "question39",
+      "questionType": "radio",
+      "title": "Bạn thường trầm ngâm suy nghĩ về lý do tồn tại của con người",
+      "questionGroup": "energy",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "40",
+      "name": "question40",
+      "questionType": "radio",
+      "title": "Lý trí luôn quan trọng hơn là tình cảm khi bạn đưa ra một quyết định quan trọng",
+      "questionGroup": "nature",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "41",
+      "name": "question41",
+      "questionType": "radio",
+      "title": "Có nhiều sự lựa chọn sẽ luôn quan trọng hơn là cố một danh sách việc sẽ phải làm",
+      "questionGroup": "tactics",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "42",
+      "name": "question42",
+      "questionType": "radio",
+      "title": "Nếu bạn của bạn buồn vì việc gì đó, bạn sẽ thường chia sẽ cảm xúc với người đó hơn là tìm cách giải quyết vấn đề đó",
+      "questionGroup": "nature",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "43",
+      "name": "question43",
+      "questionType": "radio",
+      "title": "Bạn ít khi cảm thấy thiếu sự an toàn",
+      "questionGroup": "identity",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "44",
+      "name": "question44",
+      "questionType": "radio",
+      "title": "Bạn ít gặp khó khăn để lên thời gian biểu cá nhân và làm theo nó",
+      "questionGroup": "tactics",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "45",
+      "name": "question45",
+      "questionType": "radio",
+      "title": "Điều đúng lẽ phải luôn quan trọng hơn là hợp tác khi làm việc nhóm",
+      "questionGroup": "nature",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "46",
+      "name": "question46",
+      "questionType": "radio",
+      "title": "Bạn tin là quan điểm của mọi người đều nên được tôn trọng cho dù nó có đúng sự thật hay không",
+      "questionGroup": "nature",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "47",
+      "name": "question47",
+      "questionType": "radio",
+      "title": "Bạn cảm thấy mình có nhiều năng lượng khi giành thời gian với một nhóm bạn",
+      "questionGroup": "mind",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "48",
+      "name": "question48",
+      "questionType": "radio",
+      "title": "Bạn hay nhầm vị trí của đồ vật xung quanh",
+      "questionGroup": "tactics",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "49",
+      "name": "question49",
+      "questionType": "radio",
+      "title": "Bạn tự cho bản thân là người có cảm xúc rất ổn định",
+      "questionGroup": "identity",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "50",
+      "name": "question50",
+      "questionType": "radio",
+      "title": "Tâm trí bạn luôn đầy những ý tưởng và kế hoạch mới lại chưa được thực hiện",
+      "questionGroup": "energy",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "51",
+      "name": "question51",
+      "questionType": "radio",
+      "title": "Bạn không coi bản thân là một người mơ mộng",
+      "questionGroup": "energy",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "52",
+      "name": "question52",
+      "questionType": "radio",
+      "title": "Bạn hay cảm thấy khó khăn để trở nên bình tĩnh trước mặt người khác",
+      "questionGroup": "mind",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "53",
+      "name": "question53",
+      "questionType": "radio",
+      "title": "Nói chung, bạn thường dựa vào kinh nghiệm hơn là sự tưởng tượng",
+      "questionGroup": "energy",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "54",
+      "name": "question54",
+      "questionType": "radio",
+      "title": "Bạn hay lo lắng quá mức về những suy nghĩ của người khác",
+      "questionGroup": "identity",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "55",
+      "name": "question55",
+      "questionType": "radio",
+      "title": "Nếu một phòng đang rất đông đúc, bạn thường chọn đứng gần tường và tránh đứng ở trung tâm",
+      "questionGroup": "mind",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "56",
+      "name": "question56",
+      "questionType": "radio",
+      "title": "Bạn có thói quen nước đến chân mới nhảy",
+      "questionGroup": "tactics",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "57",
+      "name": "question57",
+      "questionType": "radio",
+      "title": "Bạn cảm thấy vô cùng lo lắng trong tình huống căng thẳng",
+      "questionGroup": "identity",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "58",
+      "name": "question58",
+      "questionType": "radio",
+      "title": "Bạn tin rằng được mọi người yêu mến tốt hơn là mạnh mẽ hơn người khác",
+      "questionGroup": "nature",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "59",
+      "name": "question59",
+      "questionType": "radio",
+      "title": "Bạn đã luôn thích thú với những thứ độc đào và mơ hồ (ví dụ như sách, tác phẩm nghê thuật hay phim)",
+      "questionGroup": "energy",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "60",
+      "name": "question60",
+      "questionType": "radio",
+      "title": "Bạn thường là người khởi xướng trong một tình huống xã hội",
+      "questionGroup": "mind",
       "choices": [
         {
           "value": "-3",
