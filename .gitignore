@@ -29,5 +29,5 @@ bower_components
 Thumbs.db
 
 # bundle
-bundle.js
-bundle.js.map
+**/bundle.js
+**/bundle.js.map
