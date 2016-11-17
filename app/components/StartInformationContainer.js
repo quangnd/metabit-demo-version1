@@ -1,5 +1,7 @@
 import React from 'react'
 import StartInformation from './Quiz/StartInformation'
+import {validateEmail} from '../library/commonFuncs'
+
 //import $ from 'jquery'
 
 class StartInformationContainer extends React.Component {
@@ -46,19 +48,37 @@ class StartInformationContainer extends React.Component {
 
     validateInput() {
         let errors = [];
+        let fullName = this.state.userInfo.fullName;
+        let email = this.state.userInfo.email;
         let age = this.state.userInfo.age;
         let gender = this.state.userInfo.gender;
         let subjects = this.state.userInfo.subjects;
         let subjectScores = this.state.userInfo.subjectScores;
         let hobbies = this.state.userInfo.hobbies;
 
-       
+        if (!fullName) { //empty or undefined
+            errors.push('Bạn phải nhập họ tên.');
+        }
+        if (!email) {
+            errors.push('Bạn phải nhập email.');
+        } 
+        else {
+            if (!validateEmail(email)) {
+                errors.push('Email phải đúng định dạng.');
+            }
+        }
         if (!age) { //empty or undefined
             errors.push('Bạn phải nhập tuổi.');
         }
-        if (isNaN(age)) {
-            errors.push('Tuổi phải có dạng số.');
+        else {
+            if (isNaN(age)) {
+                errors.push('Tuổi phải có dạng số.');
+            }
+            else if (age > 60) {
+                errors.push('Tuổi phải nhỏ hơn 60 :D.');
+            }
         }
+        
         if (!gender) {
             errors.push('Bạn phải chọn giới tính');
         }
@@ -101,12 +121,12 @@ class StartInformationContainer extends React.Component {
         //         // here we will handle errors and validation messages
         //     });
          
-        console.log(this.state.error);
-       // if (this.validateInput()) {
+        //console.log(this.state.error);
+        if (this.validateInput()) {
             this.props.updateUserInfo({
                 userInfo: this.state.userInfo
             })
-        //}   
+        }   
     }
 
     handleChange(event) {
@@ -115,6 +135,8 @@ class StartInformationContainer extends React.Component {
 
         let userInfo = this.state.userInfo;
 
+        if (inputName === 'fullName') userInfo.fullName = inputValue;
+        if (inputName === 'email') userInfo.email = inputValue;
         if (inputName === 'age') userInfo.age = inputValue;
         if (inputName === 'gender') userInfo.gender = inputValue;
         if (inputName === 'otherSubject') userInfo.otherSubject = inputValue;
@@ -147,13 +169,12 @@ class StartInformationContainer extends React.Component {
                 hobbies.splice(hobbies.indexOf(inputValue), 1);
         }
         userInfo.hobbies = hobbies;
-        
+        userInfo.userId = Math.floor(Date.now() / 1000); //assign userId = current timestamp
+
         this.setState({
             userInfo,
             error: false
         })
-
-
         console.log(userInfo);
     }
 

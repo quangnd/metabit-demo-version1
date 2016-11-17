@@ -29,6 +29,7 @@ var User = require('./models/User');
 // Controllers
 var userController = require('./controllers/user');
 var contactController = require('./controllers/contact');
+var quizController = require('./controllers/quiz');
 
 // React and Server-Side Rendering
 var routes = require('./app/routes');
@@ -77,6 +78,11 @@ app.use(function(req, res, next) {
     next();
   }
 });
+
+app.get('/api/getResult/:name', quizController.getResult);
+app.post('/api/create', quizController.create);
+app.post('/api/createQuestions', quizController.createQuestions);
+app.post('/api/createUserInfo', quizController.createUserInfo);
 
 app.post('/contact', contactController.contactPost);
 app.put('/account', userController.ensureAuthenticated, userController.accountPut);

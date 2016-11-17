@@ -11,8 +11,17 @@ const StartInformation = ({subjects, hobbies, onNextClick, onChange, errorMessag
                 </div>
 
                 <hr/>
-
-
+             {/* WARNING: All &nbsp; symbol for temporari. Please replace these soon! */}
+             <div style={{ width: 700 }} className="form-inline container">
+                <label htmlFor="fullName">Họ tên của bạn &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; </label>
+                <input type="text" className="form-control" name="fullName" id="fullName" placeholder="Fullname" onChange={onChange} width="250px"/>
+            </div>
+            <br/> 
+              <div style={{ width: 700 }} className="form-inline container">
+                <label htmlFor="email">Địa chỉ email &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;  &nbsp;</label>
+                <input type="text" className="form-control" name="email" id="email" placeholder="Email" onChange={onChange} width="250px" />
+            </div>
+            <br/> 
             <div style={{ width: 700 }} className="form-inline container">
                 <label htmlFor="age">Nhập tuổi của bạn &nbsp;&nbsp; &nbsp;  </label>
                 <input type="text" className="form-control" name="age" id="age" placeholder="Age" onChange={onChange} />

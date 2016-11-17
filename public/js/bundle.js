@@ -5365,6 +5365,8 @@ var Question = function Question(_ref) {
     var question = _ref.question,
         onChange = _ref.onChange;
 
+    var questionName = question.id.concat('|').concat(question.questionGroup);
+
     var _RadioGroup_Component = _get__('RadioGroup');
 
     return _react2.default.createElement(
@@ -5388,7 +5390,7 @@ var Question = function Question(_ref) {
                 ),
                 _react2.default.createElement(
                     _RadioGroup_Component,
-                    { name: question.id, key: question.id },
+                    { name: questionName, key: question.id },
                     question.choices.map(function (choice) {
                         var classDegreeName = '';
                         switch (choice.value) {
@@ -6183,6 +6185,28 @@ var StartInformation = function StartInformation(_ref) {
             { style: { width: 700 }, className: 'form-inline container' },
             _react2.default.createElement(
                 'label',
+                { htmlFor: 'fullName' },
+                'H\u1ECD t\xEAn c\u1EE7a b\u1EA1n \xA0\xA0 \xA0 \xA0 \xA0  \xA0 '
+            ),
+            _react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'fullName', id: 'fullName', placeholder: 'Fullname', onChange: onChange, width: '250px' })
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+            'div',
+            { style: { width: 700 }, className: 'form-inline container' },
+            _react2.default.createElement(
+                'label',
+                { htmlFor: 'email' },
+                '\u0110\u1ECBa ch\u1EC9 email \xA0\xA0 \xA0\xA0\xA0 \xA0\xA0\xA0 \xA0  \xA0'
+            ),
+            _react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'email', id: 'email', placeholder: 'Email', onChange: onChange, width: '250px' })
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+            'div',
+            { style: { width: 700 }, className: 'form-inline container' },
+            _react2.default.createElement(
+                'label',
                 { htmlFor: 'age' },
                 'Nh\u1EADp tu\u1ED5i c\u1EE7a b\u1EA1n \xA0\xA0 \xA0  '
             ),
@@ -6717,7 +6741,7 @@ var QuizContainer = _wrapComponent('QuizContainer')(function (_get__$Component) 
             currentStep: 1,
             totalStep: 0,
             isLastStep: false,
-            userInfor: {},
+            userInfo: {},
             previousCheckedvalue: '',
             progressBarValue: 0,
             progressBarMax: 0
@@ -6737,6 +6761,7 @@ var QuizContainer = _wrapComponent('QuizContainer')(function (_get__$Component) 
             var progressBarValue = perOnPage;
             this.setState({
                 questions: questionsInit.slice(0, perOnPage),
+                userInfo: this.props.userInfoData,
                 currentStep: 1,
                 totalStep: questionsInit.length / perOnPage,
                 progressBarValue: progressBarValue,
@@ -6745,9 +6770,6 @@ var QuizContainer = _wrapComponent('QuizContainer')(function (_get__$Component) 
             //console.log(this.props.userInfoData);
             document.body.scrollTop = document.documentElement.scrollTop = 0;
         }
-    }, {
-        key: 'componentDidMount',
-        value: function componentDidMount() {}
     }, {
         key: 'handleNextClick',
         value: function handleNextClick(event) {
@@ -6778,7 +6800,9 @@ var QuizContainer = _wrapComponent('QuizContainer')(function (_get__$Component) 
     }, {
         key: 'handleOptionChange',
         value: function handleOptionChange(event) {
-            var questionId = event.target.name;
+            var questionName = event.target.name.split('|');
+            var questionId = questionName[0];
+            var questionGroup = questionName[1];
 
             if (this.state.previousCheckedvalue) this.clearClassName(questionId, this.state.previousCheckedvalue);
 
@@ -6824,7 +6848,7 @@ var QuizContainer = _wrapComponent('QuizContainer')(function (_get__$Component) 
             }
             var questionChoosed = {
                 id: questionId,
-                name: event.target.name,
+                questionGroup: questionGroup,
                 value: event.target.value
             };
             var formValues = this.state.formValues;
@@ -6895,18 +6919,29 @@ var QuizContainer = _wrapComponent('QuizContainer')(function (_get__$Component) 
         value: function handleFormSubmit(e) {
             e.preventDefault();
 
+            //set remain question to neutral value (0)
+            var formValueArr = this.state.formValues.slice();
+            var questionArr = this.props.questions;
             this.setState({
+                formValues: formValueArr,
                 result: this.state.formValues,
                 userInfo: this.props.userInfoData
             });
 
-            fetch('/reset/' + pathToken, {
+            var resultObj = {
+                "quizResult": this.state.formValues
+            };
+            fetch('/api/createUserInfo', {
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    password: password,
-                    confirm: confirm
+                    userInfo: this.state.userInfo,
+                    quizResult: resultObj
                 })
+            }).then(function (data) {
+                console.log('request succeeded with JSON response', data);
+            }).catch(function (error) {
+                console.log('request failed', error);
             });
 
             var path = '/result';
@@ -6917,10 +6952,6 @@ var QuizContainer = _wrapComponent('QuizContainer')(function (_get__$Component) 
         value: function render() {
             var questions = this.state.questions;
             var isLastStep = this.state.isLastStep;
-
-            // if (this.state.result.length > 0) {
-            //     return <Results results={this.state.result} userInfo={this.state.userInfo} />
-            // }
 
             var _Quiz_Component = _get__('Quiz');
 
@@ -7103,6 +7134,8 @@ var _StartInformation = require('./Quiz/StartInformation');
 
 var _StartInformation2 = _interopRequireDefault(_StartInformation);
 
+var _commonFuncs = require('../library/commonFuncs');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -7187,19 +7220,36 @@ var StartInformationContainer = _wrapComponent('StartInformationContainer')(func
         key: 'validateInput',
         value: function validateInput() {
             var errors = [];
+            var fullName = this.state.userInfo.fullName;
+            var email = this.state.userInfo.email;
             var age = this.state.userInfo.age;
             var gender = this.state.userInfo.gender;
             var subjects = this.state.userInfo.subjects;
             var subjectScores = this.state.userInfo.subjectScores;
             var hobbies = this.state.userInfo.hobbies;
 
+            if (!fullName) {
+                //empty or undefined
+                errors.push('Bạn phải nhập họ tên.');
+            }
+            if (!email) {
+                errors.push('Bạn phải nhập email.');
+            } else {
+                if (!_get__('validateEmail')(email)) {
+                    errors.push('Email phải đúng định dạng.');
+                }
+            }
             if (!age) {
                 //empty or undefined
                 errors.push('Bạn phải nhập tuổi.');
+            } else {
+                if (isNaN(age)) {
+                    errors.push('Tuổi phải có dạng số.');
+                } else if (age > 60) {
+                    errors.push('Tuổi phải nhỏ hơn 60 :D.');
+                }
             }
-            if (isNaN(age)) {
-                errors.push('Tuổi phải có dạng số.');
-            }
+
             if (!gender) {
                 errors.push('Bạn phải chọn giới tính');
             }
@@ -7242,12 +7292,12 @@ var StartInformationContainer = _wrapComponent('StartInformationContainer')(func
             //         // here we will handle errors and validation messages
             //     });
 
-            console.log(this.state.error);
-            // if (this.validateInput()) {
-            this.props.updateUserInfo({
-                userInfo: this.state.userInfo
-            });
-            //}   
+            //console.log(this.state.error);
+            if (this.validateInput()) {
+                this.props.updateUserInfo({
+                    userInfo: this.state.userInfo
+                });
+            }
         }
     }, {
         key: 'handleChange',
@@ -7257,6 +7307,8 @@ var StartInformationContainer = _wrapComponent('StartInformationContainer')(func
 
             var userInfo = this.state.userInfo;
 
+            if (inputName === 'fullName') userInfo.fullName = inputValue;
+            if (inputName === 'email') userInfo.email = inputValue;
             if (inputName === 'age') userInfo.age = inputValue;
             if (inputName === 'gender') userInfo.gender = inputValue;
             if (inputName === 'otherSubject') userInfo.otherSubject = inputValue;
@@ -7280,12 +7332,12 @@ var StartInformationContainer = _wrapComponent('StartInformationContainer')(func
                 if (event.target.checked) hobbies.push(inputValue);else hobbies.splice(hobbies.indexOf(inputValue), 1);
             }
             userInfo.hobbies = hobbies;
+            userInfo.userId = Math.floor(Date.now() / 1000); //assign userId = current timestamp
 
             this.setState({
                 userInfo: userInfo,
                 error: false
             });
-
             console.log(userInfo);
         }
     }, {
@@ -7335,6 +7387,9 @@ function _get__(variableName) {
 
 function _get_original__(variableName) {
     switch (variableName) {
+        case 'validateEmail':
+            return _commonFuncs.validateEmail;
+
         case 'StartInformation':
             return _StartInformation2.default;
 
@@ -7441,7 +7496,7 @@ exports.__set__ = _set__;
 exports.__ResetDependency__ = _reset__;
 exports.__RewireAPI__ = _RewireAPI__;
 
-},{"./Quiz/StartInformation":24,"livereactload/babel-transform":225,"react":689}],28:[function(require,module,exports){
+},{"../library/commonFuncs":35,"./Quiz/StartInformation":24,"livereactload/babel-transform":225,"react":689}],28:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -9176,6 +9231,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.animateScrollTo = animateScrollTo;
+exports.validateEmail = validateEmail;
 function animateScrollTo(elem, style, unit, from, to, time, prop) {
     if (!elem) return;
     var start = new Date().getTime(),
@@ -9189,6 +9245,11 @@ function animateScrollTo(elem, style, unit, from, to, time, prop) {
         if (step == 1) clearInterval(timer);
     }, 25);
     elem.style[style] = from + unit;
+}
+
+function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
 }
 
 },{}],36:[function(require,module,exports){

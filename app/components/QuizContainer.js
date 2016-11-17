@@ -1,6 +1,6 @@
 import React from 'react'
 import Quiz from './Quiz/Quiz'
-import {animateScrollTo, total} from '../library/commonFuncs'
+import { animateScrollTo, total } from '../library/commonFuncs'
 
 class QuizContainer extends React.Component {
     constructor() {
@@ -13,7 +13,7 @@ class QuizContainer extends React.Component {
             currentStep: 1,
             totalStep: 0,
             isLastStep: false,
-            userInfor: {},
+            userInfo: {},
             previousCheckedvalue: '',
             progressBarValue: 0,
             progressBarMax: 0
@@ -30,6 +30,7 @@ class QuizContainer extends React.Component {
         const progressBarValue = perOnPage;
         this.setState({
             questions: questionsInit.slice(0, perOnPage),
+            userInfo: this.props.userInfoData,
             currentStep: 1,
             totalStep: questionsInit.length / perOnPage,
             progressBarValue,
@@ -39,17 +40,13 @@ class QuizContainer extends React.Component {
         document.body.scrollTop = document.documentElement.scrollTop = 0;
     }
 
-    componentDidMount() {
-        
-    }
-
     handleNextClick(event) {
         event.preventDefault();
 
         //scroll to question div
         var target = document.getElementById("questionsDiv");
         let positionMoveTo = target.offsetTop + 180;
-        animateScrollTo(document.body, "scrollTop", "", 0, positionMoveTo , 100, true);
+        animateScrollTo(document.body, "scrollTop", "", 0, positionMoveTo, 100, true);
 
         let currentTotalQuestion = this.state.perOnPage * this.state.currentStep;
         let currentQuestions = this.props.questions.slice(currentTotalQuestion, currentTotalQuestion + this.state.perOnPage);
@@ -72,7 +69,9 @@ class QuizContainer extends React.Component {
     }
 
     handleOptionChange(event) {
-        const questionId = event.target.name;
+        const questionName = event.target.name.split('|');
+        const questionId = questionName[0];
+        const questionGroup = questionName[1];
 
         if (this.state.previousCheckedvalue)
             this.clearClassName(questionId, this.state.previousCheckedvalue);
@@ -120,7 +119,7 @@ class QuizContainer extends React.Component {
         }
         let questionChoosed = {
             id: questionId,
-            name: event.target.name,
+            questionGroup,
             value: event.target.value
         };
         let formValues = this.state.formValues;
@@ -145,8 +144,6 @@ class QuizContainer extends React.Component {
         console.log(`Name ${event.target.name} with value = ${event.target.value}`);
 
     }
-
-    
 
     clearClassName(questionId, checkedValue) {
         //normal constants
@@ -189,23 +186,35 @@ class QuizContainer extends React.Component {
         lbl[0].className = `btn btn-default ${className}`;
     }
 
-  
+
     handleFormSubmit(e) {
         e.preventDefault();
 
+        //set remain question to neutral value (0)
+        var formValueArr = this.state.formValues.slice();
+        var questionArr = this.props.questions;
         this.setState({
+            formValues: formValueArr,
             result: this.state.formValues,
             userInfo: this.props.userInfoData
         });
 
-        fetch(`/reset/${pathToken}`, {
+
+        let resultObj = {
+            "quizResult": this.state.formValues
+        }
+        fetch('/api/createUserInfo', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                password: password,
-                confirm: confirm
-           })
-        })
+                userInfo: this.state.userInfo,
+                quizResult: resultObj
+            })
+        }).then(function (data) {
+            console.log('request succeeded with JSON response', data)
+        }).catch(function (error) {
+            console.log('request failed', error)
+        });
 
         const path = '/result';
         this.context.router.push(path)
@@ -214,10 +223,6 @@ class QuizContainer extends React.Component {
     render() {
         let questions = this.state.questions;
         let isLastStep = this.state.isLastStep;
-
-        // if (this.state.result.length > 0) {
-        //     return <Results results={this.state.result} userInfo={this.state.userInfo} />
-        // }
 
         return (
             <Quiz questions={questions}

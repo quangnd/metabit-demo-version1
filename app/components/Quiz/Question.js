@@ -3,6 +3,7 @@ import RadioOption from '../common/RadioOption'
 import RadioGroup from '../common/RadioGroup'
 
 const Question = ({question, onChange}) => {
+    let questionName = question.id.concat('|').concat(question.questionGroup);
     return (
        <div className="col-sm-10 col-sm-offset-1"> 
         <div key={question.id} className="question-wrapper">
@@ -14,7 +15,7 @@ const Question = ({question, onChange}) => {
                 Không
               </div>
               
-                <RadioGroup name={question.id} key={question.id}>
+                <RadioGroup name={questionName} key={question.id}>
                     {question.choices.map(choice => {
                         let classDegreeName = ''
                         switch(choice.value) {
