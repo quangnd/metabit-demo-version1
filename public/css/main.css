@@ -5968,7 +5968,7 @@ textarea {
   padding-top: 25px; }
 
 .question-wrapper {
-  font-size: 25px;
+  font-size: 22px;
   text-align: center;
   padding: 20px 0;
   border: 2px solid #d8d6d6;
@@ -6141,6 +6141,15 @@ textarea {
 .click-icon {
   padding-left: 15px; }
 
+.contact-form {
+  padding: 0px 10px; }
+
+.form-button {
+  padding: 10px 40px;
+  background: #286EBB;
+  border: white;
+  color: white; }
+
 .body-type .header {
   padding: 30px; }
 
@@ -6212,8 +6221,21 @@ textarea {
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
   color: #fff; }
 
+.result .header .page-header h1 {
+  color: #13293D;
+  font-size: 40px; }
+
 .user-prompt {
   padding: 15px; }
 
 .padding-me {
   padding: 10px 0px; }
+
+.metabit-button {
+  padding: 10px 45px;
+  background: #286EBB;
+  font-size: 15px;
+  color: white; }
+
+.metabit-button:active {
+  color: white; }

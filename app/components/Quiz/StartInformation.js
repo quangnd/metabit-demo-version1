@@ -12,6 +12,7 @@ const StartInformation = ({subjects, hobbies, onNextClick, onChange, errorMessag
 
                 <hr/>
 
+
             <div style={{ width: 700 }} className="form-inline container">
                 <label htmlFor="age">Nhập tuổi của bạn &nbsp;&nbsp; &nbsp;  </label>
                 <input type="text" className="form-control" name="age" id="age" placeholder="Age" onChange={onChange} />
@@ -35,7 +36,7 @@ const StartInformation = ({subjects, hobbies, onNextClick, onChange, errorMessag
             </div>
 
             <div className="checkBoxGroup container" style={{ width: 700 }}>
-                <h4>2. Môn học nào bạn đượcđược điểm từ 7/70%/B hay cao hơn?</h4>
+                <h4>2. Môn học nào bạn được điểm từ 7/70%/B hay cao hơn?</h4>
                 {subjects.map(subject => (
                     <CheckBox key={subject.id} name={"subjectScore"} value={subject.subjectEng} onChange={onChange} label={subject.subjectVi} />
                 ))}
@@ -55,7 +56,7 @@ const StartInformation = ({subjects, hobbies, onNextClick, onChange, errorMessag
             </div>
             <br/>
             <div>
-               <button name="startQuiz" type="button" className="btn btn-action center-block" onClick={onNextClick}>Start Quiz</button>
+               <button name="startQuiz" type="button" className="btn btn-action center-block metabit-button" onClick={onNextClick}>Start Quiz</button>
             </div>
         </div>
     )

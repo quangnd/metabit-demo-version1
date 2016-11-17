@@ -553,9 +553,9 @@ function oauth1(config, dispatch) {
 }
 
 function openPopup(_ref) {
-  var url = _ref.url,
-      config = _ref.config,
-      dispatch = _ref.dispatch;
+  var url = _ref.url;
+  var config = _ref.config;
+  var dispatch = _ref.dispatch;
 
   return new Promise(function (resolve, reject) {
     var width = config.width || 500;
@@ -577,9 +577,9 @@ function openPopup(_ref) {
 }
 
 function getRequestToken(_ref2) {
-  var window = _ref2.window,
-      config = _ref2.config,
-      dispatch = _ref2.dispatch;
+  var window = _ref2.window;
+  var config = _ref2.config;
+  var dispatch = _ref2.dispatch;
 
   return new Promise(function (resolve, reject) {
     return fetch(config.url, {
@@ -599,10 +599,10 @@ function getRequestToken(_ref2) {
 }
 
 function pollPopup(_ref3) {
-  var window = _ref3.window,
-      config = _ref3.config,
-      requestToken = _ref3.requestToken,
-      dispatch = _ref3.dispatch;
+  var window = _ref3.window;
+  var config = _ref3.config;
+  var requestToken = _ref3.requestToken;
+  var dispatch = _ref3.dispatch;
 
   return new Promise(function (resolve, reject) {
     var redirectUri = _get__('url').parse(config.redirectUri);
@@ -648,11 +648,11 @@ function pollPopup(_ref3) {
 }
 
 function exchangeCodeForToken(_ref4) {
-  var oauthData = _ref4.oauthData,
-      config = _ref4.config,
-      window = _ref4.window,
-      interval = _ref4.interval,
-      dispatch = _ref4.dispatch;
+  var oauthData = _ref4.oauthData;
+  var config = _ref4.config;
+  var window = _ref4.window;
+  var interval = _ref4.interval;
+  var dispatch = _ref4.dispatch;
 
   return new Promise(function (resolve, reject) {
     var data = Object.assign({}, oauthData, config);
@@ -683,11 +683,11 @@ function exchangeCodeForToken(_ref4) {
 }
 
 function signIn(_ref5) {
-  var token = _ref5.token,
-      user = _ref5.user,
-      window = _ref5.window,
-      interval = _ref5.interval,
-      dispatch = _ref5.dispatch;
+  var token = _ref5.token;
+  var user = _ref5.user;
+  var window = _ref5.window;
+  var interval = _ref5.interval;
+  var dispatch = _ref5.dispatch;
 
   return new Promise(function (resolve, reject) {
     dispatch({
@@ -702,8 +702,8 @@ function signIn(_ref5) {
 }
 
 function closePopup(_ref6) {
-  var window = _ref6.window,
-      interval = _ref6.interval;
+  var window = _ref6.window;
+  var interval = _ref6.interval;
 
   return new Promise(function (resolve, reject) {
     clearInterval(interval);
@@ -1245,7 +1245,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-  filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/Account/Forgot.js',
+  filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/Account/Forgot.js',
   components: _components,
   locals: [],
   imports: [_react3.default]
@@ -1533,7 +1533,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-  filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/Account/Login.js',
+  filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/Account/Login.js',
   components: _components,
   locals: [],
   imports: [_react3.default]
@@ -1921,7 +1921,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-  filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/Account/Profile.js',
+  filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/Account/Profile.js',
   components: _components,
   locals: [],
   imports: [_react3.default]
@@ -2493,7 +2493,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-  filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/Account/Reset.js',
+  filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/Account/Reset.js',
   components: _components,
   locals: [],
   imports: [_react3.default]
@@ -2788,7 +2788,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-  filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/Account/Signup.js',
+  filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/Account/Signup.js',
   components: _components,
   locals: [],
   imports: [_react3.default]
@@ -3184,7 +3184,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-  filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/App.js',
+  filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/App.js',
   components: _components,
   locals: [],
   imports: [_react3.default]
@@ -3407,7 +3407,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-  filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/Contact.js',
+  filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/Contact.js',
   components: _components,
   locals: [],
   imports: [_react3.default]
@@ -3486,75 +3486,79 @@ var Contact = _wrapComponent('Contact')(function (_get__$Component) {
           { className: 'row contact-form' },
           _react3.default.createElement(
             'div',
-            { className: 'panel' },
+            { className: 'col-sm-8 col-sm-offset-2' },
             _react3.default.createElement(
               'div',
-              { className: 'panel-heading' },
+              { className: 'panel' },
               _react3.default.createElement(
-                'h3',
-                { className: 'panel-title' },
-                'Contact Form'
-              )
-            ),
-            _react3.default.createElement(
-              'div',
-              { className: 'panel-body' },
-              _react3.default.createElement(_Messages_Component, { messages: this.props.messages }),
+                'div',
+                { className: 'panel-heading' },
+                _react3.default.createElement(
+                  'h3',
+                  { className: 'panel-title' },
+                  'Contact Form'
+                )
+              ),
               _react3.default.createElement(
-                'form',
-                { onSubmit: this.handleSubmit.bind(this), className: 'form-horizontal' },
+                'div',
+                { className: 'panel-body' },
+                _react3.default.createElement(_Messages_Component, { messages: this.props.messages }),
                 _react3.default.createElement(
-                  'div',
-                  { className: 'form-group' },
-                  _react3.default.createElement(
-                    'label',
-                    { htmlFor: 'name', className: 'col-sm-2' },
-                    'Name'
-                  ),
+                  'form',
+                  { onSubmit: this.handleSubmit.bind(this), className: 'form-horizontal' },
                   _react3.default.createElement(
                     'div',
-                    { className: 'col-sm-8' },
-                    _react3.default.createElement('input', { type: 'text', name: 'name', id: 'name', className: 'form-control', value: this.state.name, onChange: this.handleChange.bind(this), autoFocus: true })
-                  )
-                ),
-                _react3.default.createElement(
-                  'div',
-                  { className: 'form-group' },
-                  _react3.default.createElement(
-                    'label',
-                    { htmlFor: 'email', className: 'col-sm-2' },
-                    'Email'
-                  ),
-                  _react3.default.createElement(
-                    'div',
-                    { className: 'col-sm-8' },
-                    _react3.default.createElement('input', { type: 'email', name: 'email', id: 'email', className: 'form-control', value: this.state.email, onChange: this.handleChange.bind(this) })
-                  )
-                ),
-                _react3.default.createElement(
-                  'div',
-                  { className: 'form-group' },
-                  _react3.default.createElement(
-                    'label',
-                    { htmlFor: 'message', className: 'col-sm-2' },
-                    'Body'
-                  ),
-                  _react3.default.createElement(
-                    'div',
-                    { className: 'col-sm-8' },
-                    _react3.default.createElement('textarea', { name: 'message', id: 'message', rows: '7', className: 'form-control', value: this.state.message, onChange: this.handleChange.bind(this) })
-                  )
-                ),
-                _react3.default.createElement(
-                  'div',
-                  { className: 'form-group' },
-                  _react3.default.createElement(
-                    'div',
-                    { className: 'col-sm-offset-2 col-sm-8' },
+                    { className: 'form-group' },
                     _react3.default.createElement(
-                      'button',
-                      { type: 'submit', className: 'btn btn-success' },
-                      'Send'
+                      'label',
+                      { htmlFor: 'name', className: 'col-sm-2' },
+                      'Name'
+                    ),
+                    _react3.default.createElement(
+                      'div',
+                      { className: 'col-sm-8' },
+                      _react3.default.createElement('input', { type: 'text', name: 'name', id: 'name', className: 'form-control', value: this.state.name, onChange: this.handleChange.bind(this), autoFocus: true })
+                    )
+                  ),
+                  _react3.default.createElement(
+                    'div',
+                    { className: 'form-group' },
+                    _react3.default.createElement(
+                      'label',
+                      { htmlFor: 'email', className: 'col-sm-2' },
+                      'Email'
+                    ),
+                    _react3.default.createElement(
+                      'div',
+                      { className: 'col-sm-8' },
+                      _react3.default.createElement('input', { type: 'email', name: 'email', id: 'email', className: 'form-control', value: this.state.email, onChange: this.handleChange.bind(this) })
+                    )
+                  ),
+                  _react3.default.createElement(
+                    'div',
+                    { className: 'form-group' },
+                    _react3.default.createElement(
+                      'label',
+                      { htmlFor: 'message', className: 'col-sm-2' },
+                      'Body'
+                    ),
+                    _react3.default.createElement(
+                      'div',
+                      { className: 'col-sm-8' },
+                      _react3.default.createElement('textarea', { name: 'message', id: 'message', rows: '7', className: 'form-control', value: this.state.message, onChange: this.handleChange.bind(this) })
+                    )
+                  ),
+                  _react3.default.createElement(
+                    'div',
+                    { className: 'form-group' },
+                    _react3.default.createElement(
+                      'div',
+                      { className: 'col-sm-offset-2 col-sm-8' },
+                      _react3.default.createElement(
+                        'button',
+                        { type: 'submit', className: 'btn btn-default center-block form-button' },
+                        'SEND'
+                      )
                     )
                   )
                 )
@@ -3755,7 +3759,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-  filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/Footer.js',
+  filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/Footer.js',
   components: _components,
   locals: [],
   imports: [_react3.default]
@@ -3966,7 +3970,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-  filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/Header.js',
+  filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/Header.js',
   components: _components,
   locals: [],
   imports: [_react3.default]
@@ -4333,7 +4337,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-  filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/Home.js',
+  filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/Home.js',
   components: _components,
   locals: [],
   imports: [_react3.default]
@@ -4699,7 +4703,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-    filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/MainTest.js',
+    filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/MainTest.js',
     components: _components,
     locals: [],
     imports: [_react3.default]
@@ -4980,7 +4984,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-  filename: "/Users/mun/Metabit project/metabit-demo-version1/app/components/Messages.js",
+  filename: "/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/Messages.js",
   components: _components,
   locals: [],
   imports: [_react3.default]
@@ -5358,69 +5362,73 @@ var _RadioGroup2 = _interopRequireDefault(_RadioGroup);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Question = function Question(_ref) {
-    var question = _ref.question,
-        onChange = _ref.onChange;
+    var question = _ref.question;
+    var onChange = _ref.onChange;
 
     var _RadioGroup_Component = _get__('RadioGroup');
 
     return _react2.default.createElement(
         'div',
-        { key: question.id, className: 'question-wrapper' },
+        { className: 'col-sm-10 col-sm-offset-1' },
         _react2.default.createElement(
             'div',
-            { className: 'statement' },
-            question.title
-        ),
-        _react2.default.createElement(
-            'div',
-            { className: 'row answer' },
+            { key: question.id, className: 'question-wrapper' },
             _react2.default.createElement(
                 'div',
-                { className: 'col-sm-3 caption left' },
-                'Kh\xF4ng'
-            ),
-            _react2.default.createElement(
-                _RadioGroup_Component,
-                { name: question.id, key: question.id },
-                question.choices.map(function (choice) {
-                    var classDegreeName = '';
-                    switch (choice.value) {
-                        case '3':
-                            classDegreeName = 'option agree max';
-                            break;
-                        case '2':
-                            classDegreeName = 'option agree med';
-                            break;
-                        case '1':
-                            classDegreeName = 'option agree min';
-                            break;
-                        case '0':
-                            classDegreeName = 'neutral option';
-                            break;
-                        case '-1':
-                            classDegreeName = 'disagree option min';
-                            break;
-                        case '-2':
-                            classDegreeName = 'disagree option med';
-                            break;
-                        case '-3':
-                            classDegreeName = 'disagree option max';
-                            break;
-                        default:
-                            classDegreeName = '';
-                    }
-
-                    var labelClassName = 'btn btn-default ' + classDegreeName;
-
-                    var _RadioOption_Component = _get__('RadioOption');
-
-                    return _react2.default.createElement(_RadioOption_Component, { key: choice.value, label: "", value: choice.value, onChange: onChange, labelClassName: labelClassName, lblId: 'lbl' + question.id + choice.value });
-                })
+                { className: 'statement' },
+                question.title
             ),
             _react2.default.createElement(
                 'div',
-                { className: 'col-sm-3 caption right' },
-                'C\xF3'
+                { className: 'row answer' },
+                _react2.default.createElement(
+                    'div',
+                    { className: 'col-sm-3 caption left' },
+                    'Kh\xF4ng'
+                ),
+                _react2.default.createElement(
+                    _RadioGroup_Component,
+                    { name: question.id, key: question.id },
+                    question.choices.map(function (choice) {
+                        var classDegreeName = '';
+                        switch (choice.value) {
+                            case '3':
+                                classDegreeName = 'option agree max';
+                                break;
+                            case '2':
+                                classDegreeName = 'option agree med';
+                                break;
+                            case '1':
+                                classDegreeName = 'option agree min';
+                                break;
+                            case '0':
+                                classDegreeName = 'neutral option';
+                                break;
+                            case '-1':
+                                classDegreeName = 'disagree option min';
+                                break;
+                            case '-2':
+                                classDegreeName = 'disagree option med';
+                                break;
+                            case '-3':
+                                classDegreeName = 'disagree option max';
+                                break;
+                            default:
+                                classDegreeName = '';
+                        }
+
+                        var labelClassName = 'btn btn-default ' + classDegreeName;
+
+                        var _RadioOption_Component = _get__('RadioOption');
+
+                        return _react2.default.createElement(_RadioOption_Component, { key: choice.value, label: "", value: choice.value, onChange: onChange, labelClassName: labelClassName, lblId: 'lbl' + question.id + choice.value });
+                    })
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'col-sm-3 caption right' },
+                    'C\xF3'
+                )
             )
         )
     );
@@ -5593,13 +5601,13 @@ var _reactRouterBootstrap = require('react-router-bootstrap');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Quiz = function Quiz(_ref) {
-    var questions = _ref.questions,
-        isLastStep = _ref.isLastStep,
-        onSubmit = _ref.onSubmit,
-        onNext = _ref.onNext,
-        onOptionChange = _ref.onOptionChange,
-        progressBarValue = _ref.progressBarValue,
-        progressBarMax = _ref.progressBarMax;
+    var questions = _ref.questions;
+    var isLastStep = _ref.isLastStep;
+    var onSubmit = _ref.onSubmit;
+    var onNext = _ref.onNext;
+    var onOptionChange = _ref.onOptionChange;
+    var progressBarValue = _ref.progressBarValue;
+    var progressBarMax = _ref.progressBarMax;
 
     var _ProgressBar_Component = _get__('ProgressBar');
 
@@ -5665,21 +5673,25 @@ var Quiz = function Quiz(_ref) {
         _react2.default.createElement(
             'form',
             { onSubmit: onSubmit },
-            questions.map(function (question) {
-                var _Question_Component = _get__('Question');
-
-                return _react2.default.createElement(_Question_Component, { key: question.id, question: question, onChange: onOptionChange });
-            }),
             _react2.default.createElement(
                 'div',
-                { style: { paddingTop: 10 } },
+                { className: 'row' },
+                questions.map(function (question) {
+                    var _Question_Component = _get__('Question');
+
+                    return _react2.default.createElement(_Question_Component, { key: question.id, question: question, onChange: onOptionChange });
+                })
+            ),
+            _react2.default.createElement(
+                'div',
+                { style: { paddingTop: 10 }, className: 'row' },
                 isLastStep ? _react2.default.createElement(
                     'button',
-                    { className: 'btn btn-primary center-block', type: 'submit' },
+                    { className: 'btn btn-primary center-block metabit-button', type: 'submit' },
                     'Save'
                 ) : _react2.default.createElement(
                     'button',
-                    { className: 'btn btn-action center-block', onClick: onNext },
+                    { className: 'btn btn-action center-block metabit-button', onClick: onNext },
                     'Next'
                 )
             )
@@ -5873,7 +5885,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-    filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/Quiz/Result.js',
+    filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/Quiz/Result.js',
     components: _components,
     locals: [],
     imports: [_react3.default]
@@ -5914,16 +5926,16 @@ var Result = _wrapComponent('Result')(function (_get__$Component) {
 
             return _react3.default.createElement(
                 'div',
-                { className: 'container' },
+                { className: 'container result' },
                 _react3.default.createElement(
                     'div',
-                    { className: 'row' },
+                    { className: 'row header' },
                     _react3.default.createElement(
                         'div',
                         { className: 'col-md-12 page-header' },
                         _react3.default.createElement(
                             'h1',
-                            { className: ' text-center' },
+                            { className: 'text-center' },
                             'The Adventure - ISFP'
                         ),
                         _react3.default.createElement(
@@ -5936,7 +5948,7 @@ var Result = _wrapComponent('Result')(function (_get__$Component) {
                 ),
                 _react3.default.createElement(
                     'div',
-                    { className: 'row' },
+                    { className: 'row content' },
                     _react3.default.createElement(
                         'div',
                         { className: 'col-md-8' },
@@ -6142,11 +6154,11 @@ var _CheckBox2 = _interopRequireDefault(_CheckBox);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var StartInformation = function StartInformation(_ref) {
-    var subjects = _ref.subjects,
-        hobbies = _ref.hobbies,
-        onNextClick = _ref.onNextClick,
-        onChange = _ref.onChange,
-        errorMessage = _ref.errorMessage;
+    var subjects = _ref.subjects;
+    var hobbies = _ref.hobbies;
+    var onNextClick = _ref.onNextClick;
+    var onChange = _ref.onChange;
+    var errorMessage = _ref.errorMessage;
 
     return _react2.default.createElement(
         'div',
@@ -6218,7 +6230,7 @@ var StartInformation = function StartInformation(_ref) {
             _react2.default.createElement(
                 'h4',
                 null,
-                '2. M\xF4n h\u1ECDc n\xE0o b\u1EA1n \u0111\u01B0\u1EE3c\u0111\u01B0\u1EE3c \u0111i\u1EC3m t\u1EEB 7/70%/B hay cao h\u01A1n?'
+                '2. M\xF4n h\u1ECDc n\xE0o b\u1EA1n \u0111\u01B0\u1EE3c \u0111i\u1EC3m t\u1EEB 7/70%/B hay cao h\u01A1n?'
             ),
             subjects.map(function (subject) {
                 var _CheckBox_Component2 = _get__('CheckBox');
@@ -6253,7 +6265,7 @@ var StartInformation = function StartInformation(_ref) {
             null,
             _react2.default.createElement(
                 'button',
-                { name: 'startQuiz', type: 'button', className: 'btn btn-action center-block', onClick: onNextClick },
+                { name: 'startQuiz', type: 'button', className: 'btn btn-action center-block metabit-button', onClick: onNextClick },
                 'Start Quiz'
             )
         )
@@ -6438,7 +6450,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-    filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/Quiz/StatBar.js',
+    filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/Quiz/StatBar.js',
     components: _components,
     locals: [],
     imports: [_react3.default]
@@ -6674,7 +6686,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-    filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/QuizContainer.js',
+    filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/QuizContainer.js',
     components: _components,
     locals: [],
     imports: [_react3.default]
@@ -7083,7 +7095,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-    filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/StartInformationContainer.js',
+    filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/StartInformationContainer.js',
     components: _components,
     locals: [],
     imports: [_react3.default]
@@ -7425,10 +7437,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 //Stateless Functional Components
 var CheckBox = function CheckBox(_ref) {
-    var name = _ref.name,
-        value = _ref.value,
-        onChange = _ref.onChange,
-        label = _ref.label;
+    var name = _ref.name;
+    var value = _ref.value;
+    var onChange = _ref.onChange;
+    var label = _ref.label;
 
     return _react2.default.createElement(
         "div",
@@ -7621,7 +7633,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-    filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/common/RadioGroup.js',
+    filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/common/RadioGroup.js',
     components: _components,
     locals: [],
     imports: [_react3.default]
@@ -7823,12 +7835,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 //Stateless Functional Components
 var RadioOption = function RadioOption(_ref) {
-    var name = _ref.name,
-        value = _ref.value,
-        onChange = _ref.onChange,
-        label = _ref.label,
-        labelClassName = _ref.labelClassName,
-        lblId = _ref.lblId;
+    var name = _ref.name;
+    var value = _ref.value;
+    var onChange = _ref.onChange;
+    var label = _ref.label;
+    var labelClassName = _ref.labelClassName;
+    var lblId = _ref.lblId;
 
     return _react2.default.createElement(
         "label",
@@ -10396,7 +10408,7 @@ var _components = {
 };
 
 var _livereactloadBabelTransform2 = (0, _babelTransform2.default)({
-  filename: '/Users/mun/Metabit project/metabit-demo-version1/app/components/design/Questions.js',
+  filename: '/Users/nguyenhoangduy/Documents/metabit_02/metabit-demo-version1/app/components/design/Questions.js',
   components: _components,
   locals: [],
   imports: [_react3.default]
@@ -12310,14 +12322,14 @@ var _symbol = require("../core-js/symbol");
 
 var _symbol2 = _interopRequireDefault(_symbol);
 
-var _typeof = typeof _symbol2.default === "function" && typeof _iterator2.default === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? "symbol" : typeof obj; };
+var _typeof = typeof _symbol2.default === "function" && typeof _iterator2.default === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default ? "symbol" : typeof obj; };
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = typeof _symbol2.default === "function" && _typeof(_iterator2.default) === "symbol" ? function (obj) {
   return typeof obj === "undefined" ? "undefined" : _typeof(obj);
 } : function (obj) {
-  return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof(obj);
+  return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof(obj);
 };
 },{"../core-js/symbol":48,"../core-js/symbol/iterator":49}],56:[function(require,module,exports){
 /*!
@@ -22981,7 +22993,7 @@ module.exports = toString;
 
 },{"./_baseToString":275}],370:[function(require,module,exports){
 //! moment.js
-//! version : 2.15.2
+//! version : 2.15.1
 //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
 //! license : MIT
 //! momentjs.com
@@ -23812,7 +23824,7 @@ module.exports = toString;
 
     // LOCALES
 
-    var MONTHS_IN_FORMAT = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/;
+    var MONTHS_IN_FORMAT = /D[oD]?(\[[^\[\]]*\]|\s+)+MMMM?/;
     var defaultLocaleMonths = 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_');
     function localeMonths (m, format) {
         if (!m) {
@@ -27177,7 +27189,7 @@ module.exports = toString;
     // Side effect imports
 
 
-    utils_hooks__hooks.version = '2.15.2';
+    utils_hooks__hooks.version = '2.15.1';
 
     setHookCallback(local__createLocal);
 

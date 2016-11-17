@@ -11,17 +11,17 @@ class Result extends React.Component {
         const redBar = "progress-bar-danger";
 
         return (
-            <div className="container">
-                <div className="row">
+            <div className="container result">
+                <div className="row header">
                     <div className="col-md-12 page-header">
-                        <h1 className=" text-center">The Adventure - ISFP</h1>
+                        <h1 className="text-center">The Adventure - ISFP</h1>
                         <p className="text-center">"One way to get the most out of life is to look upon it as an adventure. 
                         William Feather"</p>
                         <img src="http://placehold.it/200x250" className="img-responsive center-block"/>
                     </div>
                 </div>            
 
-                <div className="row">
+                <div className="row content">
                     <div className="col-md-8">
                         <h3>You Love Adventure and Enjoy Challenge</h3>
                         <p>

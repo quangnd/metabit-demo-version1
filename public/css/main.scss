@@ -299,7 +299,7 @@ textarea {
 
 
 .question-wrapper{
-  font-size:  25px;
+  font-size:  22px;
   text-align: center;
   padding: 20px 0;
   border: 2px solid #d8d6d6;
@@ -521,9 +521,18 @@ textarea {
 
 
 
-
-
 //*Contact Us*//
+
+.contact-form{
+  padding: 0px 10px;
+}
+
+.form-button {
+  padding: 10px 40px;
+  background: $metabit-blue;
+  border: white;
+  color:white;
+}
 
 .body-type .header{
   padding: 30px;
@@ -580,6 +589,9 @@ textarea {
 }
  
 
+
+
+
 //* Metabit Nav *//
 
 .navbar-default .navbar-brand {
@@ -630,6 +642,15 @@ textarea {
 //*Result Page*//
 
 
+.result .header .page-header h1{
+  color: $dark-blue;
+  font-size: 40px;
+}
+
+
+//**//
+
+
 //*User prompt*//
 
 .user-prompt{
@@ -641,4 +662,16 @@ textarea {
 
 .padding-me{
   padding: 10px 0px;
+}
+
+
+.metabit-button{
+  padding: 10px 45px;
+  background: $metabit-blue;
+  font-size: 15px;
+  color: white;
+}
+
+.metabit-button:active{
+  color:white;
 }

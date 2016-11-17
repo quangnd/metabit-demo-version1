@@ -34,14 +34,16 @@ const Quiz = ({questions, isLastStep, onSubmit, onNext, onOptionChange, progress
             </div>
 
             <form onSubmit={onSubmit}>
-                {questions.map(question => (
-                    <Question key={question.id} question={question} onChange={onOptionChange}/>
-                ))
-                }
-                <div style={{ paddingTop: 10 }}>
+                <div className="row">
+                    {questions.map(question => (
+                        <Question key={question.id} question={question} onChange={onOptionChange}/>
+                    ))
+                    }
+                </div>
+                <div style={{ paddingTop: 10 }} className="row">
                     {isLastStep
-                        ? <button className="btn btn-primary center-block" type="submit">Save</button>
-                        : <button className="btn btn-action center-block" onClick={onNext}>Next</button>
+                        ? <button className="btn btn-primary center-block metabit-button" type="submit">Save</button>
+                        : <button className="btn btn-action center-block metabit-button" onClick={onNext}>Next</button>
                     }
                 </div>
             </form>
