@@ -7209,11 +7209,11 @@ var StartInformationContainer = _wrapComponent('StartInformationContainer')(func
             //     });
 
             console.log(this.state.error);
-            // if (this.validateInput()) {
-            this.props.updateUserInfo({
-                userInfo: this.state.userInfo
-            });
-            // }   
+            if (this.validateInput()) {
+                this.props.updateUserInfo({
+                    userInfo: this.state.userInfo
+                });
+            }
         }
     }, {
         key: 'handleChange',
