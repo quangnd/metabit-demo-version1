@@ -196,6 +196,15 @@ class QuizContainer extends React.Component {
         this.setState({
             result: this.state.formValues,
             userInfo: this.props.userInfoData
+        });
+
+        fetch(`/reset/${pathToken}`, {
+            method: 'post',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                password: password,
+                confirm: confirm
+           })
         })
 
         const path = '/result';

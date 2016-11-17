@@ -6900,6 +6900,15 @@ var QuizContainer = _wrapComponent('QuizContainer')(function (_get__$Component) 
                 userInfo: this.props.userInfoData
             });
 
+            fetch('/reset/' + pathToken, {
+                method: 'post',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    password: password,
+                    confirm: confirm
+                })
+            });
+
             var path = '/result';
             this.context.router.push(path);
         }
