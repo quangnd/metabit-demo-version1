@@ -1,5 +1,6 @@
 import React from 'react'
 import Quiz from './Quiz/Quiz'
+import {animateScrollTo, total} from '../library/commonFuncs'
 
 class QuizContainer extends React.Component {
     constructor() {
@@ -35,10 +36,21 @@ class QuizContainer extends React.Component {
             progressBarMax: questionsInit.length
         })
         //console.log(this.props.userInfoData);
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+    }
+
+    componentDidMount() {
+        
     }
 
     handleNextClick(event) {
         event.preventDefault();
+
+        //scroll to question div
+        var target = document.getElementById("questionsDiv");
+        let positionMoveTo = target.offsetTop + 180;
+        animateScrollTo(document.body, "scrollTop", "", 0, positionMoveTo , 100, true);
+
         let currentTotalQuestion = this.state.perOnPage * this.state.currentStep;
         let currentQuestions = this.props.questions.slice(currentTotalQuestion, currentTotalQuestion + this.state.perOnPage);
         //console.log(currentQuestions);
@@ -51,8 +63,6 @@ class QuizContainer extends React.Component {
         const isLastStep = currentStep === this.state.totalStep ? true : false;
 
         //console.log(currentQuestions);
-
-
         this.setState({
             questions: currentQuestions,
             progressBarValue,
@@ -136,6 +146,8 @@ class QuizContainer extends React.Component {
 
     }
 
+    
+
     clearClassName(questionId, checkedValue) {
         //normal constants
         const disagreeMax = 'disagree option max';
@@ -177,6 +189,7 @@ class QuizContainer extends React.Component {
         lbl[0].className = `btn btn-default ${className}`;
     }
 
+  
     handleFormSubmit(e) {
         e.preventDefault();
 

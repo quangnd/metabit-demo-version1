@@ -29,10 +29,11 @@ const Quiz = ({questions, isLastStep, onSubmit, onNext, onOptionChange, progress
 
             <div className="row">
                 <div className="col-sm-10 col-sm-offset-1">
-                    <ProgressBar now={progressBarValue} label={progressBarValue} max={progressBarMax}/>
+                    <ProgressBar now={progressBarValue} label={progressBarValue} max={progressBarMax} />
                 </div>
             </div>
 
+             <div id="questionsDiv"></div>
             <form onSubmit={onSubmit}>
                 <div className="row">
                     {questions.map(question => (
@@ -46,6 +47,7 @@ const Quiz = ({questions, isLastStep, onSubmit, onNext, onOptionChange, progress
                         : <button className="btn btn-action center-block metabit-button" onClick={onNext}>Next</button>
                     }
                 </div>
+               
             </form>
         </div>
     )

@@ -83,7 +83,6 @@ class StartInformationContainer extends React.Component {
 
     handleNextClick(event) {
         event.preventDefault();
-
         let formData = this.state.userInfo;
         
         // $.ajax({
@@ -103,11 +102,11 @@ class StartInformationContainer extends React.Component {
         //     });
          
         console.log(this.state.error);
-        if (this.validateInput()) {
+       // if (this.validateInput()) {
             this.props.updateUserInfo({
                 userInfo: this.state.userInfo
             })
-        }   
+        //}   
     }
 
     handleChange(event) {
