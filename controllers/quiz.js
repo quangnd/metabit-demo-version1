@@ -202,7 +202,7 @@ function calculateConclusion(questions) {
                     observant += quesValue;
                 }
 
-                energyChar = Math.abs(intuitive) > Math.abs(intuitive)
+                energyChar = Math.abs(intuitive) > Math.abs(observant)
                     ? 'I'
                     : 'S'
                 break;
@@ -330,7 +330,7 @@ exports.getResult = function (req, res, next) {
                             observant += quesValue;
                         }
 
-                        energyChar = Math.abs(intuitive) > Math.abs(intuitive)
+                        energyChar = Math.abs(intuitive) > Math.abs(observant)
                             ? 'I'
                             : 'S'
                         break;

@@ -175,7 +175,7 @@ class StartInformationContainer extends React.Component {
             userInfo,
             error: false
         })
-        console.log(userInfo);
+        //console.log(userInfo);
     }
 
     render() {

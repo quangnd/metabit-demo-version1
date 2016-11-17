@@ -6915,6 +6915,14 @@ var QuizContainer = _wrapComponent('QuizContainer')(function (_get__$Component) 
             lbl[0].className = 'btn btn-default ' + className;
         }
     }, {
+        key: 'checkElementInArray',
+        value: function checkElementInArray(ele, arr) {
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i].id === ele.id) return true;
+            }
+            return false;
+        }
+    }, {
         key: 'handleFormSubmit',
         value: function handleFormSubmit(e) {
             e.preventDefault();
@@ -6922,6 +6930,16 @@ var QuizContainer = _wrapComponent('QuizContainer')(function (_get__$Component) 
             //set remain question to neutral value (0)
             var formValueArr = this.state.formValues.slice();
             var questionArr = this.props.questions;
+            for (var i = 0; i < questionArr.length; i++) {
+                if (!this.checkElementInArray(questionArr[i], formValueArr)) {
+                    formValueArr.push({
+                        id: questionArr[i].id,
+                        questionGroup: questionArr[i].questionGroup,
+                        value: 0
+                    });
+                }
+            }
+
             this.setState({
                 formValues: formValueArr,
                 result: this.state.formValues,
@@ -6929,7 +6947,7 @@ var QuizContainer = _wrapComponent('QuizContainer')(function (_get__$Component) 
             });
 
             var resultObj = {
-                "quizResult": this.state.formValues
+                "quizResult": formValueArr
             };
             fetch('/api/createUserInfo', {
                 method: 'post',
@@ -7338,7 +7356,7 @@ var StartInformationContainer = _wrapComponent('StartInformationContainer')(func
                 userInfo: userInfo,
                 error: false
             });
-            console.log(userInfo);
+            //console.log(userInfo);
         }
     }, {
         key: 'render',

@@ -186,22 +186,37 @@ class QuizContainer extends React.Component {
         lbl[0].className = `btn btn-default ${className}`;
     }
 
-
+    checkElementInArray(ele, arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i].id === ele.id)
+                return true;
+        }
+        return false;
+    }
     handleFormSubmit(e) {
         e.preventDefault();
 
         //set remain question to neutral value (0)
         var formValueArr = this.state.formValues.slice();
         var questionArr = this.props.questions;
+        for (let i = 0; i < questionArr.length; i++) {
+            if (!this.checkElementInArray(questionArr[i], formValueArr)) {
+                formValueArr.push({
+                    id: questionArr[i].id,
+                    questionGroup: questionArr[i].questionGroup,
+                    value: 0
+                })
+            }
+        }
+        
         this.setState({
             formValues: formValueArr,
             result: this.state.formValues,
             userInfo: this.props.userInfoData
         });
 
-
         let resultObj = {
-            "quizResult": this.state.formValues
+            "quizResult": formValueArr
         }
         fetch('/api/createUserInfo', {
             method: 'post',
