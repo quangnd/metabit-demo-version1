@@ -4,6 +4,7 @@ import RadioGroup from '../common/RadioGroup'
 
 const Question = ({question, onChange}) => {
     return (
+       <div className="col-sm-10 col-sm-offset-1"> 
         <div key={question.id} className="question-wrapper">
             <div className="statement">
                  {question.title}
@@ -12,7 +13,7 @@ const Question = ({question, onChange}) => {
               <div className="col-sm-3 caption left">
                 Không
               </div>
-   
+              
                 <RadioGroup name={question.id} key={question.id}>
                     {question.choices.map(choice => {
                         let classDegreeName = ''
@@ -47,6 +48,7 @@ const Question = ({question, onChange}) => {
                         return <RadioOption key={choice.value} label={""} value={choice.value} onChange={onChange} labelClassName={labelClassName} lblId={`lbl${question.id}${choice.value}`}/>
                     })}
                 </RadioGroup>
+            
            
              <div className="col-sm-3 caption right">
                 Có
@@ -56,6 +58,7 @@ const Question = ({question, onChange}) => {
 
             
         </div>
+    </div>
     )
 }
 
