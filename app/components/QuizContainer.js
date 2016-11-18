@@ -14,7 +14,6 @@ class QuizContainer extends React.Component {
             totalStep: 0,
             isLastStep: false,
             userInfo: {},
-            previousCheckedvalue: '',
             progressBarValue: 0,
             progressBarMax: 0
         }
@@ -73,8 +72,8 @@ class QuizContainer extends React.Component {
         const questionId = questionName[0];
         const questionGroup = questionName[1];
 
-        if (this.state.previousCheckedvalue)
-            this.clearClassName(questionId, this.state.previousCheckedvalue);
+        
+            this.clearClassName(questionId);
 
         if (event.target.checked) {
             //active constants
@@ -137,15 +136,13 @@ class QuizContainer extends React.Component {
 
         this.setState({
             formValues,
-            question: questionChoosed,
-            previousCheckedvalue: event.target.value
+            question: questionChoosed
         })
 
-        console.log(`Name ${event.target.name} with value = ${event.target.value}`);
-
+        //console.log(`Question ${event.target.name} with value = ${event.target.value}`);
     }
 
-    clearClassName(questionId, checkedValue) {
+    clearClassName(questionId) {
         //normal constants
         const disagreeMax = 'disagree option max';
         const disagreeMed = 'disagree option med';
@@ -155,35 +152,41 @@ class QuizContainer extends React.Component {
         const agreeMin = 'option agree min';
         const neutra = 'neutral option';
 
-        let labelId = `[data-lblid=lbl${questionId}${checkedValue}]`;
-        let lbl = document.querySelectorAll(labelId);
+        var checkedValueArr = [-3, -2, -1, 0, 1, 2, 3];
+        for (let i = 0; i < checkedValueArr.length; i++) {
+            let labelId = `[data-lblid=lbl${questionId}${checkedValueArr[i]}]`;
+            
+            let lbl = document.querySelectorAll(labelId);
 
-        let className = '';
-        switch (checkedValue) {
-            case '-3':
-                className = disagreeMax;
-                break;
-            case '-2':
-                className = disagreeMed;
-                break;
-            case '-1':
-                className = disagreeMin;
-                break;
-            case '1':
-                className = agreeMin;
-                break;
-            case '2':
-                className = agreeMed;
-                break;
-            case '3':
-                className = agreeMax;
-                break;
-            default:
-                className = neutra;
-                break;
+            let className = '';
+            switch (checkedValueArr[i]) {
+                case -3:
+                    className = disagreeMax;
+                    break;
+                case -2:
+                    className = disagreeMed;
+                    break;
+                case -1:
+                    className = disagreeMin;
+                    break;
+                case 1:
+                    className = agreeMin;
+                    break;
+                case 2:
+                    className = agreeMed;
+                    break;
+                case 3:
+                    className = agreeMax;
+                    break;
+                case 0:
+                    className = neutra;
+                    break;
+            }
+
+            
+            lbl[0].className = `btn btn-default ${className}`;
         }
 
-        lbl[0].className = `btn btn-default ${className}`;
     }
 
     checkElementInArray(ele, arr) {
@@ -208,7 +211,7 @@ class QuizContainer extends React.Component {
                 })
             }
         }
-        
+
         this.setState({
             formValues: formValueArr,
             result: this.state.formValues,
@@ -218,6 +221,8 @@ class QuizContainer extends React.Component {
         let resultObj = {
             "quizResult": formValueArr
         }
+
+        //Save user 
         fetch('/api/createUserInfo', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
@@ -231,8 +236,10 @@ class QuizContainer extends React.Component {
             console.log('request failed', error)
         });
 
-        const path = '/result';
-        this.context.router.push(path)
+        let userId = this.props.userInfoData.userId;
+        const path = `/result/${userId}`;
+
+        this.context.router.push(path);
     }
 
     render() {

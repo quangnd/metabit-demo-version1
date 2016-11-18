@@ -6225,6 +6225,9 @@ textarea {
   color: #13293D;
   font-size: 40px; }
 
+.StatBar .progress-right .progress-bar {
+  float: right; }
+
 .user-prompt {
   padding: 15px; }
 

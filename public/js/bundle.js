@@ -4676,9 +4676,9 @@ var _hobbies = require('./data/hobbies.json');
 
 var _hobbies2 = _interopRequireDefault(_hobbies);
 
-var _questions = require('./data/questions.json');
+var _questionsFull = require('./data/questionsFull.json');
 
-var _questions2 = _interopRequireDefault(_questions);
+var _questionsFull2 = _interopRequireDefault(_questionsFull);
 
 var _QuizContainer = require('./QuizContainer');
 
@@ -4844,7 +4844,7 @@ function _get_original__(variableName) {
             return _QuizContainer2.default;
 
         case 'questionJson':
-            return _questions2.default;
+            return _questionsFull2.default;
 
         case 'Component':
             return _react2.Component;
@@ -4949,7 +4949,7 @@ exports.__set__ = _set__;
 exports.__ResetDependency__ = _reset__;
 exports.__RewireAPI__ = _RewireAPI__;
 
-},{"./QuizContainer":26,"./StartInformationContainer":27,"./data/hobbies.json":31,"./data/questions.json":32,"./data/subjects.json":33,"livereactload/babel-transform":225,"react":689}],19:[function(require,module,exports){
+},{"./QuizContainer":26,"./StartInformationContainer":27,"./data/hobbies.json":31,"./data/questionsFull.json":32,"./data/subjects.json":33,"livereactload/babel-transform":225,"react":689}],19:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5906,18 +5906,132 @@ var Result = _wrapComponent('Result')(function (_get__$Component) {
     function Result() {
         _classCallCheck(this, Result);
 
-        return _possibleConstructorReturn(this, (Result.__proto__ || Object.getPrototypeOf(Result)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (Result.__proto__ || Object.getPrototypeOf(Result)).call(this));
+
+        _this.state = {
+            userResult: {}
+        };
+
+        _this.getResult = _this.getResult.bind(_this);
+        return _this;
     }
 
     _createClass(Result, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            document.body.scrollTop = document.documentElement.scrollTop = 0;
+            var userId = this.props.params.userid;
+            var that = this;
+            var port = window.location.port;
+            var protocol = window.location.protocol.concat('//');
+            var realHost = window.location.hostname === 'localhost' ? protocol.concat(window.location.hostname).concat(':' + port) : protocol.concat(window.location.hostname);
+
+            fetch(realHost + '/api/getResult/' + userId, {
+                method: 'get'
+            }).then(function (response) {
+                response.json().then(function (data) {
+                    return that.getResult(data);
+                });
+            }).catch(function (err) {
+                console.log(err);
+                //go to home
+                //this.context.router.push('/');
+            });
+        }
+    }, {
+        key: 'getResult',
+        value: function getResult(data) {
+            this.setState({
+                userResult: data
+            });
+        }
+    }, {
         key: 'render',
         value: function render() {
-            var text = "Introverted";
+            var userResult = this.state.userResult;
+            console.log(userResult);
+            var characterCode = void 0,
+                characterName = void 0,
+                characterQuote = void 0,
+                characterImageUrl = void 0;
+            var introverted = 0,
+                extraverted = 0; //mind
+            var observant = 0,
+                intuitive = 0; //energy
+            var feeling = 0,
+                thinking = 0; //nature
+            var prostecting = 0,
+                judging = 0; //tactics
+            var turbulent = 0,
+                assertive = 0; //identity
+            if (userResult !== undefined && userResult.mind !== undefined && userResult.energy !== undefined && userResult.nature !== undefined && userResult.tactics !== undefined && userResult.identity !== undefined) {
+                characterName = userResult.yourCharacter;
+                characterCode = userResult.yourCharacterCode;
+                characterQuote = userResult.yourQuote;
+                characterImageUrl = userResult.yourImageUrl;
 
+                introverted = userResult.mind.introverted;
+                extraverted = userResult.mind.extraverted;
+                observant = userResult.energy.observant;
+                intuitive = userResult.energy.intuitive;
+                thinking = userResult.nature.thinking;
+                feeling = userResult.nature.feeling;
+                prostecting = userResult.tactics.prostecting;
+                judging = userResult.tactics.judging;
+                turbulent = userResult.identity.turbulent;
+                assertive = userResult.identity.assertive;
+            }
             var greenBar = "progress-bar-success";
             var blueBar = "progress-bar-info";
-            var yellowBar = "progress-bar-warning";
-            var redBar = "progress-bar-danger";
+            var psBarEnergy = void 0,
+                psBarMind = void 0,
+                psBarNature = void 0,
+                psBarTactics = void 0;
+            var psBarEnergyColor = void 0,
+                psBarMindColor = void 0,
+                psBarNatureColor = void 0,
+                psBarTacticsColor = void 0;
+            var psBarMindRight = void 0,
+                psBarEnergyRight = void 0,
+                psBarNatureRight = void 0,
+                psBarTacticsRight = void 0;
+
+            if (observant > intuitive) {
+                psBarEnergy = observant;
+                psBarEnergyColor = blueBar;
+                psBarEnergyRight = false;
+            } else {
+                psBarEnergy = intuitive;
+                psBarEnergyColor = greenBar;
+                psBarEnergyRight = true;
+            }
+            if (introverted > extraverted) {
+                psBarMind = introverted;
+                psBarMindColor = blueBar;
+                psBarMindRight = false;
+            } else {
+                psBarMind = extraverted;
+                psBarMindColor = greenBar;
+                psBarMindRight = true;
+            }
+            if (thinking > feeling) {
+                psBarNature = thinking;
+                psBarNatureColor = blueBar;
+                psBarNatureRight = false;
+            } else {
+                psBarNature = feeling;
+                psBarNatureColor = greenBar;
+                psBarNatureRight = true;
+            }
+            if (prostecting > judging) {
+                psBarTactics = prostecting;
+                psBarTacticsColor = blueBar;
+                psBarTacticsRight = false;
+            } else {
+                psBarTactics = judging;
+                psBarTacticsColor = greenBar;
+                psBarTacticsRight = true;
+            }
 
             var _StatBar_Component = _get__('StatBar');
 
@@ -5939,12 +6053,14 @@ var Result = _wrapComponent('Result')(function (_get__$Component) {
                         _react3.default.createElement(
                             'h1',
                             { className: 'text-center' },
-                            'The Adventure - ISFP'
+                            characterName,
+                            '- ',
+                            characterCode
                         ),
                         _react3.default.createElement(
                             'p',
                             { className: 'text-center' },
-                            '"One way to get the most out of life is to look upon it as an adventure. William Feather"'
+                            characterQuote
                         ),
                         _react3.default.createElement('img', { src: 'http://placehold.it/200x250', className: 'img-responsive center-block' })
                     )
@@ -5987,12 +6103,14 @@ var Result = _wrapComponent('Result')(function (_get__$Component) {
                         _react3.default.createElement(
                             'h3',
                             null,
-                            'The adventure - ISFP'
+                            characterName,
+                            '- ',
+                            characterCode
                         ),
-                        _react3.default.createElement(_StatBar_Component, { statTitLeft: "Introverted", statTitRight: "Extroverted" }),
-                        _react3.default.createElement(_StatBar_Component2, { statTitLeft: "Intuition", statTitRight: "Sensing" }),
-                        _react3.default.createElement(_StatBar_Component3, { statTitLeft: "Thinking", statTitRight: "Feeling" }),
-                        _react3.default.createElement(_StatBar_Component4, { statTitLeft: "Juding", statTitRight: "Perceiving" })
+                        _react3.default.createElement(_StatBar_Component, { psBarMindRight: psBarMindRight, statColor: blueBar, statTitLeft: "Introverted", statTitRight: "Extroverted", label: psBarMind, value: psBarMind }),
+                        _react3.default.createElement(_StatBar_Component2, { psBarEnergyRight: psBarEnergyRight, statColor: blueBar, statTitLeft: "Intuition", statTitRight: "Sensing", label: psBarEnergy, value: psBarEnergy }),
+                        _react3.default.createElement(_StatBar_Component3, { psBarNatureRight: psBarNatureRight, statColor: blueBar, statTitLeft: "Thinking", statTitRight: "Feeling", label: psBarNature, value: psBarNature }),
+                        _react3.default.createElement(_StatBar_Component4, { psBarTacticsRight: psBarTacticsRight, statColor: blueBar, statTitLeft: "Juding", statTitRight: "Perceiving", label: psBarTactics, value: psBarTactics })
                     )
                 )
             );
@@ -6001,6 +6119,10 @@ var Result = _wrapComponent('Result')(function (_get__$Component) {
 
     return Result;
 }(_get__('React').Component));
+
+_get__('Result').contextTypes = {
+    router: _get__('React').PropTypes.object
+};
 
 exports.default = _get__('Result');
 var _RewiredData__ = {};
@@ -6188,7 +6310,7 @@ var StartInformation = function StartInformation(_ref) {
                 { htmlFor: 'fullName' },
                 'H\u1ECD t\xEAn c\u1EE7a b\u1EA1n \xA0\xA0 \xA0 \xA0 \xA0  \xA0 '
             ),
-            _react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'fullName', id: 'fullName', placeholder: 'Fullname', onChange: onChange, width: '250px' })
+            _react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'fullName', id: 'fullName', placeholder: 'Fullname', onChange: onChange, style: { width: 250 } })
         ),
         _react2.default.createElement('br', null),
         _react2.default.createElement(
@@ -6199,7 +6321,7 @@ var StartInformation = function StartInformation(_ref) {
                 { htmlFor: 'email' },
                 '\u0110\u1ECBa ch\u1EC9 email \xA0\xA0 \xA0\xA0\xA0 \xA0\xA0\xA0 \xA0  \xA0'
             ),
-            _react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'email', id: 'email', placeholder: 'Email', onChange: onChange, width: '250px' })
+            _react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'email', id: 'email', placeholder: 'Email', onChange: onChange, style: { width: 250 } })
         ),
         _react2.default.createElement('br', null),
         _react2.default.createElement(
@@ -6210,7 +6332,7 @@ var StartInformation = function StartInformation(_ref) {
                 { htmlFor: 'age' },
                 'Nh\u1EADp tu\u1ED5i c\u1EE7a b\u1EA1n \xA0\xA0 \xA0  '
             ),
-            _react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'age', id: 'age', placeholder: 'Age', onChange: onChange })
+            _react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'age', id: 'age', placeholder: 'Age', onChange: onChange, style: { width: 250 } })
         ),
         _react2.default.createElement('br', null),
         _react2.default.createElement(
@@ -6499,8 +6621,14 @@ var StatBar = _wrapComponent('StatBar')(function (_get__$Component) {
     _createClass(StatBar, [{
         key: 'render',
         value: function render() {
-            var _ProgressBar_Component = _get__('ProgressBar');
+            var mindClassName = "progress";
+            console.log(this.props.psBarNatureRight);
+            if (this.props.psBarMindRight || this.props.psBarEnergyRight || this.props.psBarNatureRight || this.props.psBarTacticsRight) {
 
+                mindClassName = "progress progress-right";
+            }
+            var widthValue = Math.round(this.props.value / 35 * 100);
+            var width = widthValue + '%';
             return _react3.default.createElement(
                 'div',
                 null,
@@ -6519,7 +6647,17 @@ var StatBar = _wrapComponent('StatBar')(function (_get__$Component) {
                     _react3.default.createElement(
                         'div',
                         { className: 'col-md-6' },
-                        _react3.default.createElement(_ProgressBar_Component, { bsStyle: this.props.statColor, now: 50 })
+                        _react3.default.createElement(
+                            'div',
+                            { className: mindClassName },
+                            _react3.default.createElement(
+                                'div',
+                                { className: 'progress-bar ' + this.props.statColor, role: 'progressbar',
+                                    'aria-valuenow': this.props.value, 'aria-valuemin': '0', 'aria-valuemax': 35,
+                                    style: { "width": width } },
+                                _react3.default.createElement('span', { className: 'sr-only' })
+                            )
+                        )
                     ),
                     _react3.default.createElement(
                         'div',
@@ -6566,9 +6704,6 @@ function _get__(variableName) {
 
 function _get_original__(variableName) {
     switch (variableName) {
-        case 'ProgressBar':
-            return _reactBootstrap.ProgressBar;
-
         case 'React':
             return _react3.default;
 
@@ -6742,7 +6877,6 @@ var QuizContainer = _wrapComponent('QuizContainer')(function (_get__$Component) 
             totalStep: 0,
             isLastStep: false,
             userInfo: {},
-            previousCheckedvalue: '',
             progressBarValue: 0,
             progressBarMax: 0
         };
@@ -6804,7 +6938,7 @@ var QuizContainer = _wrapComponent('QuizContainer')(function (_get__$Component) 
             var questionId = questionName[0];
             var questionGroup = questionName[1];
 
-            if (this.state.previousCheckedvalue) this.clearClassName(questionId, this.state.previousCheckedvalue);
+            this.clearClassName(questionId);
 
             if (event.target.checked) {
                 //active constants
@@ -6866,15 +7000,14 @@ var QuizContainer = _wrapComponent('QuizContainer')(function (_get__$Component) 
 
             this.setState({
                 formValues: formValues,
-                question: questionChoosed,
-                previousCheckedvalue: event.target.value
+                question: questionChoosed
             });
 
-            console.log('Name ' + event.target.name + ' with value = ' + event.target.value);
+            //console.log(`Question ${event.target.name} with value = ${event.target.value}`);
         }
     }, {
         key: 'clearClassName',
-        value: function clearClassName(questionId, checkedValue) {
+        value: function clearClassName(questionId) {
             //normal constants
             var disagreeMax = 'disagree option max';
             var disagreeMed = 'disagree option med';
@@ -6884,35 +7017,39 @@ var QuizContainer = _wrapComponent('QuizContainer')(function (_get__$Component) 
             var agreeMin = 'option agree min';
             var neutra = 'neutral option';
 
-            var labelId = '[data-lblid=lbl' + questionId + checkedValue + ']';
-            var lbl = document.querySelectorAll(labelId);
+            var checkedValueArr = [-3, -2, -1, 0, 1, 2, 3];
+            for (var i = 0; i < checkedValueArr.length; i++) {
+                var labelId = '[data-lblid=lbl' + questionId + checkedValueArr[i] + ']';
 
-            var className = '';
-            switch (checkedValue) {
-                case '-3':
-                    className = disagreeMax;
-                    break;
-                case '-2':
-                    className = disagreeMed;
-                    break;
-                case '-1':
-                    className = disagreeMin;
-                    break;
-                case '1':
-                    className = agreeMin;
-                    break;
-                case '2':
-                    className = agreeMed;
-                    break;
-                case '3':
-                    className = agreeMax;
-                    break;
-                default:
-                    className = neutra;
-                    break;
+                var lbl = document.querySelectorAll(labelId);
+
+                var className = '';
+                switch (checkedValueArr[i]) {
+                    case -3:
+                        className = disagreeMax;
+                        break;
+                    case -2:
+                        className = disagreeMed;
+                        break;
+                    case -1:
+                        className = disagreeMin;
+                        break;
+                    case 1:
+                        className = agreeMin;
+                        break;
+                    case 2:
+                        className = agreeMed;
+                        break;
+                    case 3:
+                        className = agreeMax;
+                        break;
+                    case 0:
+                        className = neutra;
+                        break;
+                }
+
+                lbl[0].className = 'btn btn-default ' + className;
             }
-
-            lbl[0].className = 'btn btn-default ' + className;
         }
     }, {
         key: 'checkElementInArray',
@@ -6949,6 +7086,8 @@ var QuizContainer = _wrapComponent('QuizContainer')(function (_get__$Component) 
             var resultObj = {
                 "quizResult": formValueArr
             };
+
+            //Save user 
             fetch('/api/createUserInfo', {
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -6962,7 +7101,9 @@ var QuizContainer = _wrapComponent('QuizContainer')(function (_get__$Component) 
                 console.log('request failed', error);
             });
 
-            var path = '/result';
+            var userId = this.props.userInfoData.userId;
+            var path = '/result/' + userId;
+
             this.context.router.push(path);
         }
     }, {
@@ -7181,8 +7322,6 @@ function _wrapComponent(id) {
     };
 }
 
-//import $ from 'jquery'
-
 var StartInformationContainer = _wrapComponent('StartInformationContainer')(function (_get__$Component) {
     _inherits(StartInformationContainer, _get__$Component);
 
@@ -7201,22 +7340,6 @@ var StartInformationContainer = _wrapComponent('StartInformationContainer')(func
     }
 
     _createClass(StartInformationContainer, [{
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            //Test ajax
-            // $.ajax({
-            //     url: 'http://localhost:3000/api/getResult/quangnd', //demo API: https://jsonplaceholder.typicode.com/posts
-            //     dataType: 'json',
-            //     cache: false,
-            //     success: function (data) {
-            //         console.log(data);
-            //     },
-            //     error: function (xhr, status, err) {
-            //         console.error('http://localhost:3000/api/getResult/quangnd', status, err.toString());
-            //     }
-            // });
-        }
-    }, {
         key: 'renderError',
         value: function renderError() {
             if (this.state.error) {
@@ -7258,13 +7381,12 @@ var StartInformationContainer = _wrapComponent('StartInformationContainer')(func
                 }
             }
             if (!age) {
-                //empty or undefined
                 errors.push('Bạn phải nhập tuổi.');
             } else {
                 if (isNaN(age)) {
                     errors.push('Tuổi phải có dạng số.');
-                } else if (age > 60) {
-                    errors.push('Tuổi phải nhỏ hơn 60 :D.');
+                } else if (age > 60 || age < 5) {
+                    errors.push('Tuổi phải nhỏ hơn 60 và lớn hơn 5 :D.');
                 }
             }
 
@@ -7294,23 +7416,6 @@ var StartInformationContainer = _wrapComponent('StartInformationContainer')(func
             event.preventDefault();
             var formData = this.state.userInfo;
 
-            // $.ajax({
-            //     type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
-            //     url         : 'http://localhost:3000/api/createUserInfo', // the url where we want to POST
-            //     data        : formData, // our data object
-            //     dataType    : 'json', // what type of data do we expect back from the server
-            //                 encode          : true
-            // })
-            //     // using the done promise callback
-            //     .done(function(data) {
-
-            //         // log data to the console so we can see
-            //         console.log(data); 
-
-            //         // here we will handle errors and validation messages
-            //     });
-
-            //console.log(this.state.error);
             if (this.validateInput()) {
                 this.props.updateUserInfo({
                     userInfo: this.state.userInfo
@@ -7362,7 +7467,6 @@ var StartInformationContainer = _wrapComponent('StartInformationContainer')(func
         key: 'render',
         value: function render() {
             var errorMessage = this.renderError();
-            //console.log(errorMessage);
 
             var _StartInformation_Component = _get__('StartInformation');
 
@@ -8518,6 +8622,1856 @@ module.exports={
       "questionType": "radio",
       "title": "Chiến thằng một quộc tranh luận thì ít quan trọng hơn là việc làm mọi người xung quanh hài lòng",
       "questionGroup": "nature",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "name": "question11",
+      "questionType": "radio",
+      "title": "Bạn thường cảm thấy mình so sánh với người khác",
+      "questionGroup": "identity",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+       "id": "12",
+      "name": "question12",
+      "questionType": "radio",
+      "title": "Nơi ở và nơi làm việc của bạn thường luôn ngăn nắp",
+      "questionGroup": "tactics",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "13",
+      "name": "question13",
+      "questionType": "radio",
+      "title": "Bạn không ngại làm trung tâm của mọi sự chú ý",
+      "questionGroup": "mind",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "name": "question14",
+      "questionType": "radio",
+      "title": "Bạn coi bản thân mình thực tế hơn là sáng tạo",
+      "questionGroup": "energy",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+       "id": "15",
+      "name": "question15",
+      "questionType": "radio",
+      "title": "Người khác ít khi làm bạn buồn",
+      "questionGroup": "identity",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "name": "question16",
+      "questionType": "radio",
+      "title": "Kế hoạch du lịch của bạn luôn được tính toán một cách kĩ càng trước khi đi",
+      "questionGroup": "tactics",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "name": "question17",
+      "questionType": "radio",
+      "title": "Bạn thường cảm thấy khó hiểu được cảm xúc của người khác",
+      "questionGroup": "nature",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+       "id": "18",
+      "name": "question18",
+      "questionType": "radio",
+      "title": "Tâm trạng của bạn thường thay đổi liên tục",
+      "questionGroup": "identity",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+       "id": "19",
+      "name": "question19",
+      "questionType": "radio",
+      "title": "Trong một của đối thoại, sự thật nên được đề cao hơn là sự nhạy cảm của người khác",
+      "questionGroup": "nature",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+       "id": "20",
+      "name": "question20",
+      "questionType": "radio",
+      "title": "Bạn ít khi quan tâm hành động của bạn sẽ ảnh hướng tới người khác ra sao",
+      "questionGroup": "nature",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "name": "question21",
+      "questionType": "radio",
+      "title": "Phong cách làm việc của bạn thường rất ngẫu hứng hơn là một cách có phương pháp và hệ thống",
+      "questionGroup": "tactics",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "22",
+      "name": "question22",
+      "questionType": "radio",
+      "title": "Bạn hay đố kị với người khác",
+      "questionGroup": "identity",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "23",
+      "name": "question23",
+      "questionType": "radio",
+      "title": "Một quyển sách thú vị hoặc một trò chơi game sẽ thường hấp dẫn bạn hơn là một sự kiện xã hội",
+      "questionGroup": "mind",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "24",
+      "name": "question24",
+      "questionType": "radio",
+      "title": "Tạo ra một kế hoạch cụ thể và bám vào nó để hoạt động là phần quan trọng nhất đối với mọi dự án",
+      "questionGroup": "tactics",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "name": "question25",
+      "questionType": "radio",
+      "title": "Bạn ít khi nghĩ tới sự tưởng tượng hoặc ý tưởng lạ",
+      "questionGroup": "energy",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "26",
+      "name": "question26",
+      "questionType": "radio",
+      "title": "Bạn thường mải suy nghĩ khi đi bộ quanh tự nhiên",
+      "questionGroup": "energy",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "name": "question27",
+      "questionType": "radio",
+      "title": "Nếu ai đó không trả lời email của bạn sớm, bạn thường cảm thấy lo lắng là bạn đã viết gì sai",
+      "questionGroup": "identity",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "28",
+      "name": "question28",
+      "questionType": "radio",
+      "title": "Với thiên chức là bố mẹ, bạn thà con mình lớn lên tốt bụng hơn là thông minh",
+      "questionGroup": "nature",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "name": "question29",
+      "questionType": "radio",
+      "title": "Bạn không dễ để người khác tác động đến hành động của bạn",
+      "questionGroup": "identity",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "name": "question30",
+      "questionType": "radio",
+      "title": "Những giấc mơ của bạn thường tập trung vào thế giới thực và nhữg sự kiện quanh nó",
+      "questionGroup": "energy",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "31",
+      "name": "question31",
+      "questionType": "radio",
+      "title": "Nó không tốn nhiều thời gian để bạn bắt đầu tham gia vào hoạt động xã hội tại nơi làm việc mới",
+      "questionGroup": "mind",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "32",
+      "name": "question32",
+      "questionType": "radio",
+      "title": "Bạn thường là người ứng biến tự nhiên hơn là lên kế hoạch cẩn thận",
+      "questionGroup": "tactics",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "33",
+      "name": "question33",
+      "questionType": "radio",
+      "title": "Cảm xúc kiếm soát bạn hơn là bạn kiếm soát cảm xúc",
+      "questionGroup": "identity",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "34",
+      "name": "question34",
+      "questionType": "radio",
+      "title": "Bạn thích tham gia các hoạt động xã hội mà có hoạt động hoá trang hoặc trò chơi nhập vai",
+      "questionGroup": "mind",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "35",
+      "name": "question35",
+      "questionType": "radio",
+      "title": "Bạn thường bỏ nhiều thời gian khám phá những gì thiếu tính thực tiễn và thực tế, tuy nhiên vô cùng thú vị",
+      "questionGroup": "energy",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "36",
+      "name": "question36",
+      "questionType": "radio",
+      "title": "Bạn sẽ chọn ứng biến hơn là bỏ thời gian ra lên một kế hoạch cụ thể",
+      "questionGroup": "tactics",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "37",
+      "name": "question37",
+      "questionType": "radio",
+      "title": "Bạn là một người khá là kín đáo và trầm lặng",
+      "questionGroup": "mind",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "38",
+      "name": "question38",
+      "questionType": "radio",
+      "title": "Nếu bạn có một cơ sở kinh doanh, bạn sẽ cảm thấy rất khó để sa thải một người trung thành nhưng thiếu hiệu quả",
+      "questionGroup": "nature",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "39",
+      "name": "question39",
+      "questionType": "radio",
+      "title": "Bạn thường trầm ngâm suy nghĩ về lý do tồn tại của con người",
+      "questionGroup": "energy",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "40",
+      "name": "question40",
+      "questionType": "radio",
+      "title": "Lý trí luôn quan trọng hơn là tình cảm khi bạn đưa ra một quyết định quan trọng",
+      "questionGroup": "nature",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "41",
+      "name": "question41",
+      "questionType": "radio",
+      "title": "Có nhiều sự lựa chọn sẽ luôn quan trọng hơn là cố một danh sách việc sẽ phải làm",
+      "questionGroup": "tactics",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "42",
+      "name": "question42",
+      "questionType": "radio",
+      "title": "Nếu bạn của bạn buồn vì việc gì đó, bạn sẽ thường chia sẽ cảm xúc với người đó hơn là tìm cách giải quyết vấn đề đó",
+      "questionGroup": "nature",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "43",
+      "name": "question43",
+      "questionType": "radio",
+      "title": "Bạn ít khi cảm thấy thiếu sự an toàn",
+      "questionGroup": "identity",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "44",
+      "name": "question44",
+      "questionType": "radio",
+      "title": "Bạn ít gặp khó khăn để lên thời gian biểu cá nhân và làm theo nó",
+      "questionGroup": "tactics",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "45",
+      "name": "question45",
+      "questionType": "radio",
+      "title": "Điều đúng lẽ phải luôn quan trọng hơn là hợp tác khi làm việc nhóm",
+      "questionGroup": "nature",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "46",
+      "name": "question46",
+      "questionType": "radio",
+      "title": "Bạn tin là quan điểm của mọi người đều nên được tôn trọng cho dù nó có đúng sự thật hay không",
+      "questionGroup": "nature",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "47",
+      "name": "question47",
+      "questionType": "radio",
+      "title": "Bạn cảm thấy mình có nhiều năng lượng khi giành thời gian với một nhóm bạn",
+      "questionGroup": "mind",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "48",
+      "name": "question48",
+      "questionType": "radio",
+      "title": "Bạn hay nhầm vị trí của đồ vật xung quanh",
+      "questionGroup": "tactics",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "49",
+      "name": "question49",
+      "questionType": "radio",
+      "title": "Bạn tự cho bản thân là người có cảm xúc rất ổn định",
+      "questionGroup": "identity",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "50",
+      "name": "question50",
+      "questionType": "radio",
+      "title": "Tâm trí bạn luôn đầy những ý tưởng và kế hoạch mới lại chưa được thực hiện",
+      "questionGroup": "energy",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "51",
+      "name": "question51",
+      "questionType": "radio",
+      "title": "Bạn không coi bản thân là một người mơ mộng",
+      "questionGroup": "energy",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "52",
+      "name": "question52",
+      "questionType": "radio",
+      "title": "Bạn hay cảm thấy khó khăn để trở nên bình tĩnh trước mặt người khác",
+      "questionGroup": "mind",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "53",
+      "name": "question53",
+      "questionType": "radio",
+      "title": "Nói chung, bạn thường dựa vào kinh nghiệm hơn là sự tưởng tượng",
+      "questionGroup": "energy",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "54",
+      "name": "question54",
+      "questionType": "radio",
+      "title": "Bạn hay lo lắng quá mức về những suy nghĩ của người khác",
+      "questionGroup": "identity",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "55",
+      "name": "question55",
+      "questionType": "radio",
+      "title": "Nếu một phòng đang rất đông đúc, bạn thường chọn đứng gần tường và tránh đứng ở trung tâm",
+      "questionGroup": "mind",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "56",
+      "name": "question56",
+      "questionType": "radio",
+      "title": "Bạn có thói quen nước đến chân mới nhảy",
+      "questionGroup": "tactics",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "57",
+      "name": "question57",
+      "questionType": "radio",
+      "title": "Bạn cảm thấy vô cùng lo lắng trong tình huống căng thẳng",
+      "questionGroup": "identity",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "58",
+      "name": "question58",
+      "questionType": "radio",
+      "title": "Bạn tin rằng được mọi người yêu mến tốt hơn là mạnh mẽ hơn người khác",
+      "questionGroup": "nature",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+     "id": "59",
+      "name": "question59",
+      "questionType": "radio",
+      "title": "Bạn đã luôn thích thú với những thứ độc đào và mơ hồ (ví dụ như sách, tác phẩm nghê thuật hay phim)",
+      "questionGroup": "energy",
+      "choices": [
+        {
+          "value": "-3",
+          "text": "Level -3"
+        },
+        {
+          "value": "-2",
+          "text": "Level -2"
+        },
+        {
+          "value": "-1",
+          "text": "Level -1"
+        },
+        {
+          "value": "0",
+          "text": "Level 0"
+        },
+        {
+          "value": "1",
+          "text": "Level 1"
+        },
+        {
+          "value": "2",
+          "text": "Level 2"
+        },
+        {
+          "value": "3",
+          "text": "Level 3"
+        }
+      ]
+    },
+    {
+      "id": "60",
+      "name": "question60",
+      "questionType": "radio",
+      "title": "Bạn thường là người khởi xướng trong một tình huống xã hội",
+      "questionGroup": "mind",
       "choices": [
         {
           "value": "-3",
@@ -10089,7 +12043,7 @@ function getRoutes(store) {
     { path: '/', component: _get__('App') },
     _react2.default.createElement(_IndexRoute_Component, { component: _get__('Home'), onLeave: clearMessages }),
     _react2.default.createElement(_Route_Component2, { path: '/contact', component: _get__('Contact'), onLeave: clearMessages }),
-    _react2.default.createElement(_Route_Component3, { path: '/result', component: _get__('Result') }),
+    _react2.default.createElement(_Route_Component3, { path: '/result/:userid', component: _get__('Result') }),
     _react2.default.createElement(_Route_Component4, { path: '/login', component: _get__('Login'), onEnter: skipIfAuthenticated, onLeave: clearMessages }),
     _react2.default.createElement(_Route_Component5, { path: '/signup', component: _get__('Signup'), onEnter: skipIfAuthenticated, onLeave: clearMessages }),
     _react2.default.createElement(_Route_Component6, { path: '/account', component: _get__('Profile'), onEnter: ensureAuthenticated, onLeave: clearMessages }),

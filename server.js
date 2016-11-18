@@ -79,7 +79,7 @@ app.use(function(req, res, next) {
   }
 });
 
-app.get('/api/getResult/:name', quizController.getResult);
+app.get('/api/getResult/:userid', quizController.getResult);
 app.post('/api/create', quizController.create);
 app.post('/api/createQuestions', quizController.createQuestions);
 app.post('/api/createUserInfo', quizController.createUserInfo);

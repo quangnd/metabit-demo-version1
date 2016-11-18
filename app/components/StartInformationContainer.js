@@ -2,8 +2,6 @@ import React from 'react'
 import StartInformation from './Quiz/StartInformation'
 import {validateEmail} from '../library/commonFuncs'
 
-//import $ from 'jquery'
-
 class StartInformationContainer extends React.Component {
     constructor() {
         super();
@@ -14,21 +12,6 @@ class StartInformationContainer extends React.Component {
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleNextClick = this.handleNextClick.bind(this);  
-    }
-
-    componentDidMount() {
-         //Test ajax
-        // $.ajax({
-        //     url: 'http://localhost:3000/api/getResult/quangnd', //demo API: https://jsonplaceholder.typicode.com/posts
-        //     dataType: 'json',
-        //     cache: false,
-        //     success: function (data) {
-        //         console.log(data);
-        //     },
-        //     error: function (xhr, status, err) {
-        //         console.error('http://localhost:3000/api/getResult/quangnd', status, err.toString());
-        //     }
-        // });
     }
 
     renderError() {
@@ -67,15 +50,15 @@ class StartInformationContainer extends React.Component {
                 errors.push('Email phải đúng định dạng.');
             }
         }
-        if (!age) { //empty or undefined
+        if (!age) { 
             errors.push('Bạn phải nhập tuổi.');
         }
         else {
             if (isNaN(age)) {
                 errors.push('Tuổi phải có dạng số.');
             }
-            else if (age > 60) {
-                errors.push('Tuổi phải nhỏ hơn 60 :D.');
+            else if (age > 60 || age < 5) {
+                errors.push('Tuổi phải nhỏ hơn 60 và lớn hơn 5 :D.');
             }
         }
         
@@ -105,23 +88,6 @@ class StartInformationContainer extends React.Component {
         event.preventDefault();
         let formData = this.state.userInfo;
         
-        // $.ajax({
-        //     type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
-        //     url         : 'http://localhost:3000/api/createUserInfo', // the url where we want to POST
-        //     data        : formData, // our data object
-        //     dataType    : 'json', // what type of data do we expect back from the server
-        //                 encode          : true
-        // })
-        //     // using the done promise callback
-        //     .done(function(data) {
-
-        //         // log data to the console so we can see
-        //         console.log(data); 
-
-        //         // here we will handle errors and validation messages
-        //     });
-         
-        //console.log(this.state.error);
         if (this.validateInput()) {
             this.props.updateUserInfo({
                 userInfo: this.state.userInfo
@@ -180,7 +146,6 @@ class StartInformationContainer extends React.Component {
 
     render() {
          var errorMessage = this.renderError();
-         //console.log(errorMessage);
         return(
             
             <StartInformation subjects={this.props.subjects} 

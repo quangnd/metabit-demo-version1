@@ -7,4 +7,7 @@
 6. At server: Validate request body (controller/quiz.js)
 7. [DONE] ~~At client: Loop all 60 question, if question is not choice, add default =0~~
 8. Re-validate and layout Start Info
-9. Re-check choose question randomly
+9. [DONE] Re-check choose question randomly
+10. Redirect user access Result page if not found
+11. Add admin page for view results.
+       

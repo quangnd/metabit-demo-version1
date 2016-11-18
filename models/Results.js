@@ -42,6 +42,7 @@ var ResultsSchema = new mongoose.Schema({
         },
         yourCharacter: String,
         yourCharacterCode: String,
+        yourGroup: String,
         yourQuote: String,
         yourImageUrl: String
        

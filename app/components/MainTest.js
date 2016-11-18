@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 //import '../lib/bootstrap/css/bootstrap.css';
 import subjectJson from './data/subjects.json';
 import hobbyJson from './data/hobbies.json';
-import questionJson from './data/questions.json';
+import questionJson from './data/questionsFull.json';
 import QuizContainer from './QuizContainer';
 import StartInformationContainer from './StartInformationContainer';
 
