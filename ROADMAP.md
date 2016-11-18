@@ -3,6 +3,7 @@
 - [x] Beta version release: v1.0.0
 
 # Highest Priorities
+- [ ] Test functional website and **FIX BUGS**
 - [ ] User interface for view Test result (now you can use MongoChef and access to Database. **contact Duy for details**)
 - [ ] Vietnamese content for all personalities type.
 - [ ] Re-design website assets including: logo, images, layout...
