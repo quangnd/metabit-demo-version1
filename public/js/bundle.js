@@ -5909,7 +5909,9 @@ var Result = _wrapComponent('Result')(function (_get__$Component) {
         var _this = _possibleConstructorReturn(this, (Result.__proto__ || Object.getPrototypeOf(Result)).call(this));
 
         _this.state = {
-            userResult: {}
+            userResult: {},
+            loadingText: 'Loading...',
+            isLoadDone: false
         };
 
         _this.getResult = _this.getResult.bind(_this);
@@ -5917,9 +5919,8 @@ var Result = _wrapComponent('Result')(function (_get__$Component) {
     }
 
     _createClass(Result, [{
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            document.body.scrollTop = document.documentElement.scrollTop = 0;
+        key: 'componentWillMount',
+        value: function componentWillMount() {
             var userId = this.props.params.userid;
             var that = this;
             var port = window.location.port;
@@ -5939,181 +5940,199 @@ var Result = _wrapComponent('Result')(function (_get__$Component) {
             });
         }
     }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            document.body.scrollTop = document.documentElement.scrollTop = 0;
+        }
+    }, {
         key: 'getResult',
         value: function getResult(data) {
             this.setState({
-                userResult: data
+                userResult: data,
+                isLoadDone: true
             });
         }
     }, {
         key: 'render',
         value: function render() {
-            var userResult = this.state.userResult;
-            console.log(userResult);
-            var characterCode = void 0,
-                characterName = void 0,
-                characterQuote = void 0,
-                characterImageUrl = void 0;
-            var introverted = 0,
-                extraverted = 0; //mind
-            var observant = 0,
-                intuitive = 0; //energy
-            var feeling = 0,
-                thinking = 0; //nature
-            var prostecting = 0,
-                judging = 0; //tactics
-            var turbulent = 0,
-                assertive = 0; //identity
-            if (userResult !== undefined && userResult.mind !== undefined && userResult.energy !== undefined && userResult.nature !== undefined && userResult.tactics !== undefined && userResult.identity !== undefined) {
-                characterName = userResult.yourCharacter;
-                characterCode = userResult.yourCharacterCode;
-                characterQuote = userResult.yourQuote;
-                characterImageUrl = userResult.yourImageUrl;
-
-                introverted = userResult.mind.introverted;
-                extraverted = userResult.mind.extraverted;
-                observant = userResult.energy.observant;
-                intuitive = userResult.energy.intuitive;
-                thinking = userResult.nature.thinking;
-                feeling = userResult.nature.feeling;
-                prostecting = userResult.tactics.prostecting;
-                judging = userResult.tactics.judging;
-                turbulent = userResult.identity.turbulent;
-                assertive = userResult.identity.assertive;
-            }
-            var greenBar = "progress-bar-success";
-            var blueBar = "progress-bar-info";
-            var psBarEnergy = void 0,
-                psBarMind = void 0,
-                psBarNature = void 0,
-                psBarTactics = void 0;
-            var psBarEnergyColor = void 0,
-                psBarMindColor = void 0,
-                psBarNatureColor = void 0,
-                psBarTacticsColor = void 0;
-            var psBarMindRight = void 0,
-                psBarEnergyRight = void 0,
-                psBarNatureRight = void 0,
-                psBarTacticsRight = void 0;
-
-            if (observant > intuitive) {
-                psBarEnergy = observant;
-                psBarEnergyColor = blueBar;
-                psBarEnergyRight = false;
-            } else {
-                psBarEnergy = intuitive;
-                psBarEnergyColor = greenBar;
-                psBarEnergyRight = true;
-            }
-            if (introverted > extraverted) {
-                psBarMind = introverted;
-                psBarMindColor = blueBar;
-                psBarMindRight = false;
-            } else {
-                psBarMind = extraverted;
-                psBarMindColor = greenBar;
-                psBarMindRight = true;
-            }
-            if (thinking > feeling) {
-                psBarNature = thinking;
-                psBarNatureColor = blueBar;
-                psBarNatureRight = false;
-            } else {
-                psBarNature = feeling;
-                psBarNatureColor = greenBar;
-                psBarNatureRight = true;
-            }
-            if (prostecting > judging) {
-                psBarTactics = prostecting;
-                psBarTacticsColor = blueBar;
-                psBarTacticsRight = false;
-            } else {
-                psBarTactics = judging;
-                psBarTacticsColor = greenBar;
-                psBarTacticsRight = true;
-            }
-
-            var _StatBar_Component = _get__('StatBar');
-
-            var _StatBar_Component2 = _get__('StatBar');
-
-            var _StatBar_Component3 = _get__('StatBar');
-
-            var _StatBar_Component4 = _get__('StatBar');
-
-            return _react3.default.createElement(
-                'div',
-                { className: 'container result' },
-                _react3.default.createElement(
+            if (!this.state.isLoadDone) {
+                return _react3.default.createElement(
                     'div',
-                    { className: 'row header' },
+                    { 'class': 'container' },
                     _react3.default.createElement(
-                        'div',
-                        { className: 'col-md-12 page-header' },
-                        _react3.default.createElement(
-                            'h1',
-                            { className: 'text-center' },
-                            characterName,
-                            '- ',
-                            characterCode
-                        ),
-                        _react3.default.createElement(
-                            'p',
-                            { className: 'text-center' },
-                            characterQuote
-                        ),
-                        _react3.default.createElement('img', { src: 'http://placehold.it/200x250', className: 'img-responsive center-block' })
+                        'h1',
+                        null,
+                        'Vui l\xF2ng \u0111\u1EE3i m\u1ED9t ch\xFAt nh\xE9...'
                     )
-                ),
-                _react3.default.createElement(
+                );
+            } else {
+                var userResult = this.state.userResult;
+                console.log(userResult);
+                var characterCode = void 0,
+                    characterName = void 0,
+                    characterQuote = void 0,
+                    characterImageUrl = void 0;
+                var introverted = 0,
+                    extraverted = 0; //mind
+                var observant = 0,
+                    intuitive = 0; //energy
+                var feeling = 0,
+                    thinking = 0; //nature
+                var prostecting = 0,
+                    judging = 0; //tactics
+                var turbulent = 0,
+                    assertive = 0; //identity
+                if (userResult !== undefined && userResult.mind !== undefined && userResult.energy !== undefined && userResult.nature !== undefined && userResult.tactics !== undefined && userResult.identity !== undefined) {
+                    characterName = userResult.yourCharacter;
+                    characterCode = userResult.yourCharacterCode;
+                    characterQuote = userResult.yourQuote;
+                    characterImageUrl = userResult.yourImageUrl;
+
+                    introverted = userResult.mind.introverted;
+                    extraverted = userResult.mind.extraverted;
+                    observant = userResult.energy.observant;
+                    intuitive = userResult.energy.intuitive;
+                    thinking = userResult.nature.thinking;
+                    feeling = userResult.nature.feeling;
+                    prostecting = userResult.tactics.prostecting;
+                    judging = userResult.tactics.judging;
+                    turbulent = userResult.identity.turbulent;
+                    assertive = userResult.identity.assertive;
+                }
+                var greenBar = "progress-bar-success";
+                var blueBar = "progress-bar-info";
+                var psBarEnergy = void 0,
+                    psBarMind = void 0,
+                    psBarNature = void 0,
+                    psBarTactics = void 0;
+                var psBarEnergyColor = void 0,
+                    psBarMindColor = void 0,
+                    psBarNatureColor = void 0,
+                    psBarTacticsColor = void 0;
+                var psBarMindRight = void 0,
+                    psBarEnergyRight = void 0,
+                    psBarNatureRight = void 0,
+                    psBarTacticsRight = void 0;
+
+                if (observant > intuitive) {
+                    psBarEnergy = observant;
+                    psBarEnergyColor = blueBar;
+                    psBarEnergyRight = false;
+                } else {
+                    psBarEnergy = intuitive;
+                    psBarEnergyColor = greenBar;
+                    psBarEnergyRight = true;
+                }
+                if (introverted > extraverted) {
+                    psBarMind = introverted;
+                    psBarMindColor = blueBar;
+                    psBarMindRight = false;
+                } else {
+                    psBarMind = extraverted;
+                    psBarMindColor = greenBar;
+                    psBarMindRight = true;
+                }
+                if (thinking > feeling) {
+                    psBarNature = thinking;
+                    psBarNatureColor = blueBar;
+                    psBarNatureRight = false;
+                } else {
+                    psBarNature = feeling;
+                    psBarNatureColor = greenBar;
+                    psBarNatureRight = true;
+                }
+                if (prostecting > judging) {
+                    psBarTactics = prostecting;
+                    psBarTacticsColor = blueBar;
+                    psBarTacticsRight = false;
+                } else {
+                    psBarTactics = judging;
+                    psBarTacticsColor = greenBar;
+                    psBarTacticsRight = true;
+                }
+
+                var _StatBar_Component5 = _get__('StatBar');
+
+                var _StatBar_Component6 = _get__('StatBar');
+
+                var _StatBar_Component7 = _get__('StatBar');
+
+                var _StatBar_Component8 = _get__('StatBar');
+
+                return _react3.default.createElement(
                     'div',
-                    { className: 'row content' },
+                    { className: 'container result' },
                     _react3.default.createElement(
                         'div',
-                        { className: 'col-md-8' },
+                        { className: 'row header' },
                         _react3.default.createElement(
-                            'h3',
-                            null,
-                            'You Love Adventure and Enjoy Challenge'
-                        ),
-                        _react3.default.createElement(
-                            'p',
-                            null,
-                            'ISFP personality types are true artists, but not necessarily in the typical sense where they\'re out painting happy little trees. Often enough though, they are perfectly capable of this. Rather, it\'s that they use aesthetics, design and even their choices and actions to push the limits of social convention. ISFPs enjoy upsetting traditional expectations with experiments in beauty and behavior \u2013 chances are, they\'ve expressed more than once the phrase "Don\'t box me in!"'
-                        ),
-                        _react3.default.createElement(
-                            'h3',
-                            null,
-                            'Happy to Be Who They Are'
-                        ),
-                        _react3.default.createElement(
-                            'p',
-                            null,
-                            'ISFPs live in a colorful, sensual world, inspired by connections with people and ideas. ISFP personalities take joy in reinterpreting these connections, reinventing and experimenting with both themselves and new perspectives. No other type explores and experiments in this way more. This creates a sense of spontaneity, making ISFPs seem unpredictable, even to their close friends and loved ones. Despite all this, ISFPs are definitely Introverts (I), surprising their friends further when they step out of the spotlight to be by themselves to recharge. Just because they are alone though, doesn\'t mean people with the ISFP personality type sit idle \u2013 they take this time for introspection, assessing their principles. Rather than dwelling on the past or the future, ISFPs think about who they are. They return from their cloister, transformed. ISFPs live to find ways to push their passions. Riskier behaviors like gambling and extreme sports are more common with this personality type than with others. Fortunately their attunement to the moment and their environment allows them to do better than most. ISFPs also enjoy connecting with others, and have a certain irresistible charm.'
-                        ),
-                        _react3.default.createElement(
-                            'p',
-                            null,
-                            'However, if a criticism does get through, it can end poorly. Some ISFPs can handle kindly phrased commentary, valuing it as another perspective to help push their passions in new directions. But if the comments are more biting and less mature, ISFP personalities can lose their tempers in spectacular fashion. ISFPs are sensitive to others\' feelings and value harmony. When faced with criticism, it can be a challenge for people with this type to step away from the moment long enough to not get caught up in the heat of the moment. But living in the moment goes both ways, and once the heightened emotions of an argument cool, ISFPs can usually call the past the past and move on as though it never occurred.'
+                            'div',
+                            { className: 'col-md-12 page-header' },
+                            _react3.default.createElement(
+                                'h1',
+                                { className: 'text-center' },
+                                characterName,
+                                '- ',
+                                characterCode
+                            ),
+                            _react3.default.createElement(
+                                'p',
+                                { className: 'text-center' },
+                                characterQuote
+                            ),
+                            _react3.default.createElement('img', { src: 'http://placehold.it/200x250', className: 'img-responsive center-block' })
                         )
                     ),
                     _react3.default.createElement(
                         'div',
-                        { className: 'col-md-4 personality-card' },
+                        { className: 'row content' },
                         _react3.default.createElement(
-                            'h3',
-                            null,
-                            characterName,
-                            '- ',
-                            characterCode
+                            'div',
+                            { className: 'col-md-8' },
+                            _react3.default.createElement(
+                                'h3',
+                                null,
+                                'You Love Adventure and Enjoy Challenge'
+                            ),
+                            _react3.default.createElement(
+                                'p',
+                                null,
+                                'ISFP personality types are true artists, but not necessarily in the typical sense where they\'re out painting happy little trees. Often enough though, they are perfectly capable of this. Rather, it\'s that they use aesthetics, design and even their choices and actions to push the limits of social convention. ISFPs enjoy upsetting traditional expectations with experiments in beauty and behavior \u2013 chances are, they\'ve expressed more than once the phrase "Don\'t box me in!"'
+                            ),
+                            _react3.default.createElement(
+                                'h3',
+                                null,
+                                'Happy to Be Who They Are'
+                            ),
+                            _react3.default.createElement(
+                                'p',
+                                null,
+                                'ISFPs live in a colorful, sensual world, inspired by connections with people and ideas. ISFP personalities take joy in reinterpreting these connections, reinventing and experimenting with both themselves and new perspectives. No other type explores and experiments in this way more. This creates a sense of spontaneity, making ISFPs seem unpredictable, even to their close friends and loved ones. Despite all this, ISFPs are definitely Introverts (I), surprising their friends further when they step out of the spotlight to be by themselves to recharge. Just because they are alone though, doesn\'t mean people with the ISFP personality type sit idle \u2013 they take this time for introspection, assessing their principles. Rather than dwelling on the past or the future, ISFPs think about who they are. They return from their cloister, transformed. ISFPs live to find ways to push their passions. Riskier behaviors like gambling and extreme sports are more common with this personality type than with others. Fortunately their attunement to the moment and their environment allows them to do better than most. ISFPs also enjoy connecting with others, and have a certain irresistible charm.'
+                            ),
+                            _react3.default.createElement(
+                                'p',
+                                null,
+                                'However, if a criticism does get through, it can end poorly. Some ISFPs can handle kindly phrased commentary, valuing it as another perspective to help push their passions in new directions. But if the comments are more biting and less mature, ISFP personalities can lose their tempers in spectacular fashion. ISFPs are sensitive to others\' feelings and value harmony. When faced with criticism, it can be a challenge for people with this type to step away from the moment long enough to not get caught up in the heat of the moment. But living in the moment goes both ways, and once the heightened emotions of an argument cool, ISFPs can usually call the past the past and move on as though it never occurred.'
+                            )
                         ),
-                        _react3.default.createElement(_StatBar_Component, { psBarMindRight: psBarMindRight, statColor: blueBar, statTitLeft: "Introverted", statTitRight: "Extroverted", label: psBarMind, value: psBarMind }),
-                        _react3.default.createElement(_StatBar_Component2, { psBarEnergyRight: psBarEnergyRight, statColor: blueBar, statTitLeft: "Intuition", statTitRight: "Sensing", label: psBarEnergy, value: psBarEnergy }),
-                        _react3.default.createElement(_StatBar_Component3, { psBarNatureRight: psBarNatureRight, statColor: blueBar, statTitLeft: "Thinking", statTitRight: "Feeling", label: psBarNature, value: psBarNature }),
-                        _react3.default.createElement(_StatBar_Component4, { psBarTacticsRight: psBarTacticsRight, statColor: blueBar, statTitLeft: "Juding", statTitRight: "Perceiving", label: psBarTactics, value: psBarTactics })
+                        _react3.default.createElement(
+                            'div',
+                            { className: 'col-md-4 personality-card' },
+                            _react3.default.createElement(
+                                'h3',
+                                null,
+                                characterName,
+                                '- ',
+                                characterCode
+                            ),
+                            _react3.default.createElement(_StatBar_Component5, { psBarMindRight: psBarMindRight, statColor: blueBar, statTitLeft: "Introverted", statTitRight: "Extroverted", label: psBarMind, value: psBarMind }),
+                            _react3.default.createElement(_StatBar_Component6, { psBarEnergyRight: psBarEnergyRight, statColor: blueBar, statTitLeft: "Intuition", statTitRight: "Sensing", label: psBarEnergy, value: psBarEnergy }),
+                            _react3.default.createElement(_StatBar_Component7, { psBarNatureRight: psBarNatureRight, statColor: blueBar, statTitLeft: "Thinking", statTitRight: "Feeling", label: psBarNature, value: psBarNature }),
+                            _react3.default.createElement(_StatBar_Component8, { psBarTacticsRight: psBarTacticsRight, statColor: blueBar, statTitLeft: "Juding", statTitRight: "Perceiving", label: psBarTactics, value: psBarTactics })
+                        )
                     )
-                )
-            );
+                );
+            }
         }
     }]);
 
