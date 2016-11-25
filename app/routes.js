@@ -13,6 +13,8 @@ import Result from './components/Quiz/Result';
 import MainTest from './components/MainTest';
 import Questions from './components/design/Questions'
 
+import AdminDashboard from './components/Admin/AdminDashboard';
+
 export default function getRoutes(store) {
   const ensureAuthenticated = (nextState, replace) => {
     if (!store.getState().auth.token) {
@@ -33,7 +35,7 @@ export default function getRoutes(store) {
     <Route path="/" component={App}>
       <IndexRoute component={Home} onLeave={clearMessages}/>
       <Route path="/contact" component={Contact} onLeave={clearMessages}/>
-      <Route path="/result/:userid" component={Result} />
+      <Route path="/result/:userid" component={Result} onLeave={clearMessages}/>
       <Route path="/login" component={Login} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>
       <Route path="/signup" component={Signup} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>
       <Route path="/account" component={Profile} onEnter={ensureAuthenticated} onLeave={clearMessages}/>
@@ -41,6 +43,7 @@ export default function getRoutes(store) {
       <Route path='/reset/:token' component={Reset} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>
       <Route path='/questions' component={Questions} onLeave={clearMessages}/>
       <Route path='/metabit-test' component={MainTest} onLeave={clearMessages}/>
+      <Route path='/dashboard' component={AdminDashboard} onEnter={ensureAuthenticated} onLeave={clearMessages} />
       <Route path="*" component={NotFound} onLeave={clearMessages}/>
     </Route>
   );

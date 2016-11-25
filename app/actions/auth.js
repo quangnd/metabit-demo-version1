@@ -23,7 +23,12 @@ export function login(email, password) {
             user: json.user
           });
           cookie.save('token', json.token, { expires: moment().add(1, 'hour').toDate() });
-          browserHistory.push('/account');
+          if (json.user.email === 'quangnd@gmail.com') {
+              browserHistory.push('/dashboard');
+          }
+          else {
+            browserHistory.push('/account');
+          }
         });
       } else {
         return response.json().then((json) => {

@@ -8,7 +8,7 @@ import getRoutes from './routes';
 import {loadQuestions} from './actions/quiz';
 
 const store = configureStore(window.INITIAL_STATE);
-store.dispatch(loadQuestions());
+//store.dispatch(loadQuestions());
 
 ReactDOM.render(
   <Provider store={store}>
