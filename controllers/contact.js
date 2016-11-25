@@ -31,10 +31,10 @@ exports.contactPost = function(req, res) {
   if (errors) {
     return res.status(400).send(errors);
   }
-
+  
   var mailOptions = {
     from: req.body.name + ' ' + '<'+ req.body.email + '>',
-    to: 'quangnd.edu@gmail.com',
+    to: 'duynguyen@metabit.com.vn',
     subject: '✔ Contact Form | Metabit website',
     text: req.body.message
   };
