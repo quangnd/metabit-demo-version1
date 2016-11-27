@@ -679,3 +679,109 @@ textarea {
 .metabit-button:active{
   color:white;
 }
+
+
+#adminDashboard {
+  @media (min-width: 768px) {
+    .sidebar {
+         z-index: 1;
+        position: absolute;
+        width: 250px;
+    }
+  }
+  .navbar-default {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+  }
+
+  .sidebar .arrow {
+    float: right;
+  }
+
+  .fa {
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  }
+
+  .arrow {
+      float: right;
+      line-height: 1.42857;
+  }
+
+  .nav-second-level {
+      padding-left:15px;
+  }
+
+  #page-wrapper {
+    left: 270px;
+    position: absolute;
+    top: -30px;
+    min-width: 960px;
+    .paddingR {
+      padding-right:0;
+    }
+    .panel {
+        margin-bottom: 20px;
+        background-color: #fff;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    }
+    .panel-footer {
+        padding: 10px 15px;
+        background-color: #f5f5f5;
+        border-top: 1px solid #ddd;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+    .panel-primary {
+       border-color: #337ab7;
+    }
+    .panel-green {
+      border-color: #5cb85c;
+      .panel-heading {
+        border-color: #5cb85c;
+        color: white;
+        background-color: #5cb85c;
+      }
+      a {
+        color: #5cb85c
+      }
+    }
+
+    .panel-yellow {
+      border-color: #f0ad4e;
+      .panel-heading {
+        border-color: #f0ad4e;
+        color: white;
+        background-color: #f0ad4e;
+      }
+      a {
+        color: #f0ad4e
+      }
+    }
+
+    .panel-red {
+        border-color: #d9534f;
+        .panel-heading {
+          border-color: #d9534f;
+          color: white;
+          background-color: #d9534f;
+        }
+        a {
+         color: #d9534f
+        }
+    }
+    .huge {
+        font-size: 40px;
+    }
+    .fa-5x {
+        font-size: 5em !important;
+    }
+  }
+} 
