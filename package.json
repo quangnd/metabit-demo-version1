@@ -57,6 +57,7 @@
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.0.1",
     "request": "^2.69.0",
+    "smoothscroll-polyfill": "^0.3.4",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0",

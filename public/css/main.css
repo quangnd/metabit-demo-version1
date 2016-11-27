@@ -6247,7 +6247,7 @@ textarea {
   #adminDashboard .sidebar {
     z-index: 1;
     position: absolute;
-    width: 250px; } }
+    width: 220px; } }
 
 #adminDashboard .navbar-default {
   background-color: #f8f8f8;
@@ -6272,7 +6272,7 @@ textarea {
   padding-left: 15px; }
 
 #adminDashboard #page-wrapper {
-  left: 270px;
+  left: 240px;
   position: absolute;
   top: -30px;
   min-width: 960px; }

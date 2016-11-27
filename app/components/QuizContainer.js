@@ -2,6 +2,7 @@ import React from 'react'
 import Quiz from './Quiz/Quiz'
 import { animateScrollTo, total } from '../library/commonFuncs'
 
+
 class QuizContainer extends React.Component {
     constructor() {
         super();
@@ -24,6 +25,7 @@ class QuizContainer extends React.Component {
     }
 
     componentWillMount() {
+        require('smoothscroll-polyfill').polyfill();
         const questionsInit = this.props.questions;
         const perOnPage = this.state.perOnPage;
         const progressBarValue = perOnPage;
@@ -35,17 +37,16 @@ class QuizContainer extends React.Component {
             progressBarValue,
             progressBarMax: questionsInit.length
         })
-        //console.log(this.props.userInfoData);
-        document.body.scrollTop = document.documentElement.scrollTop = 0;
+    }
+
+    componentDidMount() {
+         document.querySelector('#app').scrollIntoView({ behavior: 'smooth' });
     }
 
     handleNextClick(event) {
         event.preventDefault();
 
-        //scroll to question div
-        var target = document.getElementById("questionsDiv");
-        let positionMoveTo = target.offsetTop + 180;
-        animateScrollTo(document.body, "scrollTop", "", 0, positionMoveTo, 100, true);
+        document.querySelector('.progress').scrollIntoView({ behavior: 'smooth' });
 
         let currentTotalQuestion = this.state.perOnPage * this.state.currentStep;
         let currentQuestions = this.props.questions.slice(currentTotalQuestion, currentTotalQuestion + this.state.perOnPage);

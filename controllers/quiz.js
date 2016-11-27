@@ -125,7 +125,7 @@ exports.createUserInfo = function (req, res, next) {
 
     var userInfo = req.body.userInfo;
     var quizResult = req.body.quizResult.quizResult;
-    console.log(quizResult);
+    //console.log(quizResult);
     var questions = [];
     quizResult.forEach(function (question) {
         questions.push({
@@ -405,6 +405,9 @@ exports.getResult = function (req, res, next) {
             };
 
             res.json(conclusion);
+        }
+        else {
+            res.status(400).send({ msg: 'User not found' });
         }
 
     });

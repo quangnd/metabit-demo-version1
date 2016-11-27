@@ -14,6 +14,13 @@ class StartInformationContainer extends React.Component {
         this.handleNextClick = this.handleNextClick.bind(this);  
     }
 
+    componentWillMount() {
+        require('smoothscroll-polyfill').polyfill();
+    }
+    componentDidMount() { 
+         document.querySelector('#app').scrollIntoView({ behavior: 'smooth' });      
+    }
+    
     renderError() {
         if (this.state.error) {
          let errorStyle = {color: 'red', textAlign: 'center'};
