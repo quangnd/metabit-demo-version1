@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+
 class SideBar extends React.Component {
     render() {
         return (
@@ -12,7 +13,7 @@ class SideBar extends React.Component {
                         <a href="/admin/questionManage"><i className="fa fa-table fa-fw"></i> Questions</a>
                     </li>
                     <li>
-                        <a href="forms.html"><i className="fa fa-edit fa-fw"></i> View Results</a>
+                        <a href="/admin/resultManage"><i className="fa fa-edit fa-fw"></i> View Results</a>
                     </li>
                     <li id="multiLevel1">
                         <a href="#">
