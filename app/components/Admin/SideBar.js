@@ -7,15 +7,20 @@ class SideBar extends React.Component {
             <div className="sidebar-nav navbar-collapse">
                 <ul className="nav metismenu" id="side-menu" >
                     <li>
-                        <a href="/admin/dashboard"><i className="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        <Link to='/admin'><i className="fa fa-dashboard fa-fw"></i> Dashboard</Link>
                     </li>
                     <li>
-                        <a href="/admin/questionManage"><i className="fa fa-table fa-fw"></i> Questions</a>
+                        <Link to='/admin/questionManage'><i className="fa fa-question-circle-o fa-fw"></i> Questions</Link>
                     </li>
                     <li>
-                        <a href="/admin/resultManage"><i className="fa fa-edit fa-fw"></i> View Results</a>
+                        <Link to='/admin/personalityManage'><i className="fa fa-cubes fa-fw"></i> Personalities</Link>
                     </li>
-                    <li id="multiLevel1">
+                    <li>
+                        <Link to='/admin/resultManage'><i className="fa fa-trophy fa-fw"></i> View Results</Link>
+                    </li>
+
+                    {/*
+                          <li id="multiLevel1">
                         <a href="#">
                             <i className="fa fa-bar-chart-o fa-fw"></i> Charts
                              <span className="fa arrow"></span>
@@ -30,7 +35,6 @@ class SideBar extends React.Component {
                         </ul>
 
                     </li>
-                    {/*
                  <li id="multiLevel2">
                 <a href="#"><i className="fa fa-wrench fa-fw"></i> Demo multilevel<span className="fa arrow"></span></a>
                 <ul className="nav nav-second-level">

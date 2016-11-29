@@ -24,7 +24,7 @@ export function login(email, password) {
           });
           cookie.save('token', json.token, { expires: moment().add(1, 'hour').toDate() });
           if (json.user.email === 'quangnd@gmail.com') {
-              browserHistory.push('/admin/dashboard');
+              browserHistory.push('/admin');
           }
           else {
             browserHistory.push('/account');

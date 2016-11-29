@@ -22,12 +22,12 @@ class AdminDashboard extends React.Component {
                         <i className="fa fa-comments fa-5x"></i>
                       </div>
                       <div className="col-xs-9 text-right paddingR">
-                        <div className="huge">03</div>
-                        <div>Surveys!</div>
+                        <div className="huge">16</div>
+                        <div>Personalities!</div>
                       </div>
                     </div>
                   </div>
-                  <a href="#">
+                  <a href="/admin/personalityManage">
                     <div className="panel-footer">
                       <span className="pull-left">View Details</span>
                       <span className="pull-right"><i className="fa fa-arrow-circle-right"></i></span>
