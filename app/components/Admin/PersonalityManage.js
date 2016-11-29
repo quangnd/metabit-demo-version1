@@ -8,15 +8,10 @@ class PersonalityManage extends React.Component {
 
         this.state = {editorState: EditorState.createEmpty()};
         this.onChange = (editorState) => this.setState({editorState});
-
-        //this.handlerChange = this.handlerChange.bind(this);
     }
 
-
-
-    render() {
-          
-          const {editorState} = this.state;
+    render() {          
+        const {editorState} = this.state;
         return (
             <div id="adminDashboard">
                 <div className="navbar-default sidebar" role="navigation">
@@ -56,4 +51,5 @@ class PersonalityManage extends React.Component {
           textAlign: 'center',
         },
       };
+      
 export default PersonalityManage;
