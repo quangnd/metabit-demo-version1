@@ -49,7 +49,7 @@ export default function getRoutes(store) {
       <Route path='/admin' component={AdminDashboard} onEnter={ensureAuthenticated} onLeave={clearMessages} />
       <Route path='/admin/questionManage' component={QuestionManage} onEnter={ensureAuthenticated} onLeave={clearMessages} />
       <Route path='/admin/resultManage' component={ResultManage} onEnter={ensureAuthenticated} onLeave={clearMessages} />
-      <Route path='/admin/PersonalityManage' component={PersonalityManage} onEnter={ensureAuthenticated} onLeave={clearMessages} />
+      <Route path='/admin/personalityManage' component={PersonalityManage} onEnter={ensureAuthenticated} onLeave={clearMessages} />
       <Route path="*" component={NotFound} onLeave={clearMessages}/>
     </Route>
   );
