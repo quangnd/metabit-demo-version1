@@ -15,9 +15,10 @@ class StartInformationContainer extends React.Component {
     }
 
     componentWillMount() {
-        require('smoothscroll-polyfill').polyfill();
+       
     }
     componentDidMount() { 
+         require('smoothscroll-polyfill').polyfill();
          document.querySelector('#app').scrollIntoView({ behavior: 'smooth' });      
     }
     
