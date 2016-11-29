@@ -29,6 +29,7 @@
 
 ### Notes
 
+- Container components have postfix is **Container** or **Manage**
 - Mongo Local Database was created automatically at the first time running.
 - Google, Facebook OpenID was registered for testing purpose.
 - Inspired by Sahat Yalkabov's projects.
