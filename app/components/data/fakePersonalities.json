@@ -1,9 +1,100 @@
 {
-  "characters": {
-    "charCode": "INTJ",
-    "charName": "Architect",
-    "charGroup": "Analysts",
-    "charQuote": "Là những người giàu trí tưởng tượng. Từng suy nghĩ, tư tưởng của họ đều mang tính chiến lược và họ luôn luôn có kế hoạch cho những công việc trong cuộc sống của mình.",
-    "charContent": "<h3>You Love Adventure and Enjoy Challenge</h3> <p> ISFP personality types are true artists, but not necessarily in the typical sense where they're out painting happy little trees. Often enough though, they are perfectly capable of this. Rather, it's that they use aesthetics, design and even their choices and actions to push the limits of social convention. ISFPs enjoy upsetting traditional expectations with experiments in beauty and behavior – chances are, they've expressed more than once the phrase \"Don't box me in!\" </p> <h3>Happy to Be Who They Are</h3> <p> ISFPs live in a colorful, sensual world, inspired by connections with people and ideas. ISFP personalities take joy in reinterpreting these connections, reinventing and experimenting with both themselves and new perspectives. No other type explores and experiments in this way more. This creates a sense of spontaneity, making ISFPs seem unpredictable, even to their close friends and loved ones. Despite all this, ISFPs are definitely Introverts (I), surprising their friends further when they step out of the spotlight to be by themselves to recharge. Just because they are alone though, doesn't mean people with the ISFP personality type sit idle – they take this time for introspection, assessing their principles. Rather than dwelling on the past or the future, ISFPs think about who they are. They return from their cloister, transformed. ISFPs live to find ways to push their passions. Riskier behaviors like gambling and extreme sports are more common with this personality type than with others. Fortunately their attunement to the moment and their environment allows them to do better than most. ISFPs also enjoy connecting with others, and have a certain irresistible charm. </p> <p>However, if a criticism does get through, it can end poorly. Some ISFPs can handle kindly phrased commentary, valuing it as another perspective to help push their passions in new directions. But if the comments are more biting and less mature, ISFP personalities can lose their tempers in spectacular fashion. ISFPs are sensitive to others' feelings and value harmony. When faced with criticism, it can be a challenge for people with this type to step away from the moment long enough to not get caught up in the heat of the moment. But living in the moment goes both ways, and once the heightened emotions of an argument cool, ISFPs can usually call the past the past and move on as though it never occurred. </p>"
+  "characters": [
+      {
+        "charCode": "INTJ",
+        "charName": "Architect",
+        "charGroup": "Analysts",
+        "charQuote": "Là những người giàu trí tưởng tượng. Từng suy nghĩ, tư tưởng của họ đều mang tính chiến lược và họ luôn luôn có kế hoạch cho những công việc trong cuộc sống của mình.",
+        "charContent": "<h3>You Love Adventure and Enjoy Challenge</h3> <p> ISFP personality types are true artists, but not necessarily in the typical sense where they're out painting happy little trees. Often enough though, they are perfectly capable of this. Rather, it's that they use aesthetics, design and even their choices and actions to push the limits of social convention. ISFPs enjoy upsetting traditional expectations with experiments in beauty and behavior – chances are, they've expressed more than once the phrase \"Don't box me in!\" </p> <h3>Happy to Be Who They Are</h3> <p> ISFPs live in a colorful, sensual world, inspired by connections with people and ideas. ISFP personalities take joy in reinterpreting these connections, reinventing and experimenting with both themselves and new perspectives. No other type explores and experiments in this way more. This creates a sense of spontaneity, making ISFPs seem unpredictable, even to their close friends and loved ones. Despite all this, ISFPs are definitely Introverts (I), surprising their friends further when they step out of the spotlight to be by themselves to recharge. Just because they are alone though, doesn't mean people with the ISFP personality type sit idle – they take this time for introspection, assessing their principles. Rather than dwelling on the past or the future, ISFPs think about who they are. They return from their cloister, transformed. ISFPs live to find ways to push their passions. Riskier behaviors like gambling and extreme sports are more common with this personality type than with others. Fortunately their attunement to the moment and their environment allows them to do better than most. ISFPs also enjoy connecting with others, and have a certain irresistible charm. </p> <p>However, if a criticism does get through, it can end poorly. Some ISFPs can handle kindly phrased commentary, valuing it as another perspective to help push their passions in new directions. But if the comments are more biting and less mature, ISFP personalities can lose their tempers in spectacular fashion. ISFPs are sensitive to others' feelings and value harmony. When faced with criticism, it can be a challenge for people with this type to step away from the moment long enough to not get caught up in the heat of the moment. But living in the moment goes both ways, and once the heightened emotions of an argument cool, ISFPs can usually call the past the past and move on as though it never occurred. </p>"
+      },
+      {
+        "charCode": "INTJ",
+        "charName": "Architect",
+        "charGroup": "Analysts",
+        "charQuote": "Là những người giàu trí tưởng tượng. Từng suy nghĩ, tư tưởng của họ đều mang tính chiến lược và họ luôn luôn có kế hoạch cho những công việc trong cuộc sống của mình.",
+        "charContent": "<h3>You Love Adventure and Enjoy Challenge</h3> <p> ISFP personality types are true artists, but not necessarily in the typical sense where they're out painting happy little trees. Often enough though, they are perfectly capable of this. Rather, it's that they use aesthetics, design and even their choices and actions to push the limits of social convention. ISFPs enjoy upsetting traditional expectations with experiments in beauty and behavior – chances are, they've expressed more than once the phrase \"Don't box me in!\" </p> <h3>Happy to Be Who They Are</h3> <p> ISFPs live in a colorful, sensual world, inspired by connections with people and ideas. ISFP personalities take joy in reinterpreting these connections, reinventing and experimenting with both themselves and new perspectives. No other type explores and experiments in this way more. This creates a sense of spontaneity, making ISFPs seem unpredictable, even to their close friends and loved ones. Despite all this, ISFPs are definitely Introverts (I), surprising their friends further when they step out of the spotlight to be by themselves to recharge. Just because they are alone though, doesn't mean people with the ISFP personality type sit idle – they take this time for introspection, assessing their principles. Rather than dwelling on the past or the future, ISFPs think about who they are. They return from their cloister, transformed. ISFPs live to find ways to push their passions. Riskier behaviors like gambling and extreme sports are more common with this personality type than with others. Fortunately their attunement to the moment and their environment allows them to do better than most. ISFPs also enjoy connecting with others, and have a certain irresistible charm. </p> <p>However, if a criticism does get through, it can end poorly. Some ISFPs can handle kindly phrased commentary, valuing it as another perspective to help push their passions in new directions. But if the comments are more biting and less mature, ISFP personalities can lose their tempers in spectacular fashion. ISFPs are sensitive to others' feelings and value harmony. When faced with criticism, it can be a challenge for people with this type to step away from the moment long enough to not get caught up in the heat of the moment. But living in the moment goes both ways, and once the heightened emotions of an argument cool, ISFPs can usually call the past the past and move on as though it never occurred. </p>"
+      }
+    ]
   }
-}
+  /*
+ case 'INTJ':
+            characterName = 'Architect';
+            characterGroup = 'Analysts';
+            quote = 'Là những người giàu trí tưởng tượng. Từng suy nghĩ, tư tưởng của họ đều mang tính chiến lược và họ luôn luôn có kế hoạch cho những công việc trong cuộc sống của mình.';
+            break;
+        case 'INTP':
+            characterName = 'Logician';
+            characterGroup = 'Analysts';
+            quote = 'Là những nhà phát minh với những phát kiến mang tính đột phá. Sự thèm khát được chạm tới tận cùng của tri thức trong mọi lĩnh vực của đời sống là phẩm chất ta có thể dễ nhận ra ở những người mang nét tính cách này.';
+            break;
+        case 'ENTJ':
+            characterName = 'Commander';
+            characterGroup = 'Analysts';
+            quote = 'là những người táo bạo, cứng cỏi , kiên quyết nhưng cũng rất giàu tính sáng tạo. Nếu như trong một cuộc thám hiểm, những người mang nét tính cách này sẽ đóng vai trò là người dẫn đường, hoặc đôi khi chính họ sẽ khai phá ra một con đường mới cho cả đoàn.';
+            break;
+        case 'ENTP':
+            characterName = 'Debater';
+            characterGroup = 'Analysts';
+            quote = 'Những người thuộc nhóm tính cách này rất thông minh và trí tò mò của họ là vô tận. Nếu có ý định làm bạn với những người có tính cách này thì tốt nhất nên rủ họ cùng tham gia những thử thách trí tuệ vì nó là thứ có sức cám dỗ vô cùng lớn đối với những ng giỏi tranh luận.';
+            break;
+        case 'INFJ':
+            characterName = 'Advocate';
+            characterGroup = 'Diplomats';
+            quote = 'Họ rất kín tiếng và có nét gì nó bí ẩn. Tuy nhiên, những lời nói và hành động của họ rất dễ truyền cảm hứng với người khác. Đồng thời, những người có tính cách này cảm thấy không biết mệt mỏi trong việc đưa ra những ý tưởng của mình.';
+            break;
+         case 'INFP':
+            characterName = 'Mediator';
+            characterGroup = 'Diplomats';
+            quote = 'Một nhóm tính cách hội tụ những con người tốt bụng, giàu lòng vị tha và đặc biệt là họ sở hữu một tâm hồn mộng mơ đầy thi vị. Bạn đang có ý định làm một việc gì đó với mục đích tốt cho con người xã hội và cần đến sự giúp đỡ? Đừng ngần ngại gọi cho những ng mang nét tính cách này.';
+            break;
+         case 'ENFJ':
+            characterName = 'Protagonist';
+            characterGroup = 'Diplomats';
+            quote = 'Đúng như tên gọi, những người thuộc nhóm tính cách này được ví như quân vua trên bàn cờ. Họ rất có uy tín với mọi người và trên tất cả, những người lãnh đạo rất dễ dàng truyền cảm hứng và mê hoặc được quần chúng.';
+            break;
+        case 'ENFP':
+            characterName = 'Campaigner';
+            characterGroup = 'Diplomats';
+            quote = 'Giàu lòng nhiệt huyết, giàu sức sáng tạo, phóng khoáng. Nụ cười luôn nở trên môi là đặc điểm ta có thể dễ nhận thấy ở những người có tính cách này';
+            break;
+        case 'ISTJ':
+            characterName = 'Logistician';
+            characterGroup = 'Sentinels';
+            quote = 'Thực dụng và có lối suy nghĩ độc lập. Họ là những người mà bạn có thể không cần do dự để đặt trọn niềm tin của mình.';
+            break;
+        case 'ISFJ':
+            characterName = 'Defender';
+            characterGroup = 'Sentinels';
+            quote = 'Một người bảo vệ tận tuỵ và vô cùng ấm áp. Họ luôn luôn trong tư thế sẵn sàng để bảo vệ những người họ yêu thương.';
+            break;
+        case 'ESTJ':
+            characterName = 'Executive';
+            characterGroup = 'Sentinels';
+            quote = 'là những người xuất sắc trong lĩnh vực quản lý, không vượt trội trog khả năng kiểm soát công việc.';
+            break;
+         case 'ESFJ':
+            characterName = 'Consult';
+            characterGroup = 'Sentinels';
+            quote = 'Một cá nhân luôn quan tâm, thích giao tiếp xã hội và thường được ngưỡng mộ và luôn mong muốn được giúp đỡ người khác.';
+            break;
+        case 'ISTP':
+            characterName = 'Virtuoso';
+            characterGroup = 'Explorers';
+            quote = 'Vô cùng táo bạo và ưa thích những trải nghiệm thực tế. Thông thạo cách sử dụng của tất thảy các đồ dùng, dụng cụ.';
+            break;
+        case 'ISFP':
+            characterName = 'Adventurer';
+            characterGroup = 'Explorers';
+            quote = 'Họ là những người nghệ sĩ vô cùng linh hoạt và rất đỗi duyên dáng. Họ không ngần ngại khám phá và trải nghiệm những điều mới mẻ trog cuộc sống.';
+            break;
+        case 'ESTP':
+            characterName = 'Entrepreneur';
+            characterGroup = 'Explorers';
+            quote = 'Thông minh, năng động và vô cùng sâu sắc. Họ sẵn sàng chấp nhận muộn cuộc sống gắn liền với những sự mạo hiểm, rủi ro.';
+            break;
+        case 'ESFP':
+            characterName = 'Entertainer';
+            characterGroup = 'Explorers';
+            quote = 'Một con người phóng khoáng, tràn trề năng lượng, nhiệt huyết, say mê. Họ có mặt ở đâu thì nơi đó được tô điểm bởi màu hồng của hạnh phúc và niềm vui.';
+            break;
+*/ 

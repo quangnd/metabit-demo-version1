@@ -299,7 +299,7 @@ function calculateConclusion(questions) {
             quote = 'là những người xuất sắc trong lĩnh vực quản lý, không vượt trội trog khả năng kiểm soát công việc.';
             break;
          case 'ESFJ':
-            characterName = 'Consul';
+            characterName = 'Consult';
             characterGroup = 'Sentinels';
             quote = 'Một cá nhân luôn quan tâm, thích giao tiếp xã hội và thường được ngưỡng mộ và luôn mong muốn được giúp đỡ người khác.';
             break;

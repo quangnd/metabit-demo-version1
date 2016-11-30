@@ -54,7 +54,7 @@ class Result extends React.Component {
     }
 
     render() {
-        const characterContent = fakePersonalities.characters.charContent;
+        const characterContent = fakePersonalities.characters[0].charContent;
         if (this.state.isLoadDone && !this.state.userFound) {
             return <div className="container"><h3>Không tìm thấy người dùng phù hợp</h3></div>
         }
