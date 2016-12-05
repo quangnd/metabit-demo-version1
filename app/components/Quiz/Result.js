@@ -54,7 +54,6 @@ class Result extends React.Component {
     }
 
     render() {
-        const characterContent = fakePersonalities.characters[0].charContent;
         if (this.state.isLoadDone && !this.state.userFound) {
             return <div className="container"><h3>Không tìm thấy người dùng phù hợp</h3></div>
         }
@@ -64,7 +63,8 @@ class Result extends React.Component {
         }
 
         let userResult = this.state.userResult;
-        let characterCode, characterName, characterQuote, characterImageUrl;
+        let characterFeatures = this.state.characterFeatures;
+        let characterCode, characterSimpleCode, characterName, characterQuote, characterGroup, characterImageUrl, characterContent;
         let introverted = 0, extraverted = 0; //mind
         let observant = 0, intuitive = 0; //energy
         let feeling = 0, thinking = 0; //nature
@@ -76,8 +76,8 @@ class Result extends React.Component {
             && userResult.nature !== undefined
             && userResult.tactics !== undefined
             && userResult.identity !== undefined) {
-            characterName = userResult.yourCharacter;
             characterCode = userResult.yourCharacterCode;
+            // characterName = userResult.yourCharacter;
             characterQuote = userResult.yourQuote;
             characterImageUrl = userResult.yourImageUrl;
 
@@ -91,6 +91,21 @@ class Result extends React.Component {
             judging = userResult.tactics.judging;
             turbulent = userResult.identity.turbulent;
             assertive = userResult.identity.assertive;
+
+            let charCode = characterCode.slice(0, characterCode.length-2)
+            fakePersonalities.characters.forEach(character => {
+                if (character.charCode.toUpperCase() === charCode.toUpperCase()) {
+                    characterFeatures = character;
+                }
+            })
+        
+            if (characterFeatures !== undefined) {
+                characterSimpleCode = characterFeatures.charCode;
+                characterName = characterFeatures.charName;
+                characterGroup = characterFeatures.charGroup;
+                characterContent = characterFeatures.charContent;
+            }
+                
         }
         const greenBar = "progress-bar-success";
         const blueBar = "progress-bar-info";
@@ -139,21 +154,19 @@ class Result extends React.Component {
             <div className="container result">
                 <div className="row header">
                     <div className="col-md-12 page-header">
-                        <h1 className="text-center">{characterName}- {characterCode}</h1>
+                        <h1 className="text-center">{characterName} - {characterGroup} - {characterSimpleCode}</h1>
                         <p className="text-center">{characterQuote}</p>
-                        <img src="http://placehold.it/200x250" className="img-responsive center-block" />
+                       {/* <img src="http://placehold.it/200x250" className="img-responsive center-block" />*/}
                     </div>
                 </div>
 
-                <div className="row content">
-                    <div className="col-md-8">
-                            
-                            <div dangerouslySetInnerHTML={ { __html: characterContent } }></div>
-                        
+                <div className="row">
+                    <div className="col-md-8 characterContent">
+                            <div dangerouslySetInnerHTML={ { __html: characterContent } }></div>                    
                     </div>
 
                     <div className="col-md-4 personality-card">
-                        <h3>{characterName}- {characterCode}</h3>
+                        <h3>{characterName} - {characterSimpleCode}</h3>
 
                         <StatBar psBarMindRight={psBarMindRight} statColor={blueBar} statTitLeft={"Introverted"} statTitRight={"Extroverted"} label={psBarMind} value={psBarMind} />
                         <StatBar psBarEnergyRight={psBarEnergyRight} statColor={blueBar} statTitLeft={"Intuition"} statTitRight={"Sensing"} label={psBarEnergy} value={psBarEnergy} />

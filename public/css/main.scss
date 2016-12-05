@@ -580,17 +580,17 @@ textarea {
 }
 
 .personality-card {
-  text-align:center;
+    text-align:center;
+    background-color: #f5f5f5;
+    margin-top: 10px;
+
+    h3 {
+      padding-bottom: 15px;
+    }
+    .progress {
+      border: 2px solid #999;
+    }
 }
-
-
-.personality-card h3 {
-  padding-bottom: 15px;
-}
- 
-
-
-
 
 //* Metabit Nav *//
 
@@ -647,6 +647,10 @@ textarea {
   font-size: 40px;
 }
 
+.page-header {
+    padding-bottom: 40px;
+}
+
 .StatBar .progress-right .progress-bar {
     float: right;
 }
@@ -668,7 +672,6 @@ textarea {
   padding: 10px 0px;
 }
 
-
 .metabit-button{
   padding: 10px 45px;
   background: $metabit-blue;
@@ -679,6 +682,18 @@ textarea {
 .metabit-button:active{
   color:white;
 }
+
+.characterContent {
+  text-align: justify;
+  line-height: 25px;
+  padding-right: 40px;
+  margin-top:10px;
+}
+
+.characterContent p {
+  text-indent: 20px;
+}
+
 
 
 #adminDashboard {

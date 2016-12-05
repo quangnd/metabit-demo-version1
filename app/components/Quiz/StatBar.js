@@ -3,8 +3,8 @@ import {ProgressBar} from 'react-bootstrap';
 
 class StatBar extends React.Component {
     render() {
-        let mindClassName = "progress"
-        console.log(this.props.psBarNatureRight);
+        let mindClassName = "progress";
+        
         if (this.props.psBarMindRight
            || this.props.psBarEnergyRight
            || this.props.psBarNatureRight

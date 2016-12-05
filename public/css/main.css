@@ -6186,10 +6186,13 @@ textarea {
   margin-bottom: 15px; }
 
 .personality-card {
-  text-align: center; }
-
-.personality-card h3 {
-  padding-bottom: 15px; }
+  text-align: center;
+  background-color: #f5f5f5;
+  margin-top: 10px; }
+  .personality-card h3 {
+    padding-bottom: 15px; }
+  .personality-card .progress {
+    border: 2px solid #999; }
 
 .navbar-default .navbar-brand {
   color: white; }
@@ -6225,6 +6228,9 @@ textarea {
   color: #13293D;
   font-size: 40px; }
 
+.page-header {
+  padding-bottom: 40px; }
+
 .StatBar .progress-right .progress-bar {
   float: right; }
 
@@ -6242,6 +6248,15 @@ textarea {
 
 .metabit-button:active {
   color: white; }
+
+.characterContent {
+  text-align: justify;
+  line-height: 25px;
+  padding-right: 40px;
+  margin-top: 10px; }
+
+.characterContent p {
+  text-indent: 20px; }
 
 @media (min-width: 768px) {
   #adminDashboard .sidebar {
